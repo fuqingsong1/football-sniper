@@ -18,6 +18,7 @@ import strength
 import watchlist
 
 HORIZON_H = 72
+LIVE_KEEP_H = 3     # 开赛后保留时长：进行中仍显示在赛程里，踢完才移除
 WATCH_PROB = 0.70
 TIERS = [  # 临界值取高
     {"min_prob": 0.85, "discount": 0.90, "position_pct": 0.11},
@@ -86,7 +87,7 @@ def scan_binance(key, secret):
         if not league or not tp.get("startDate"):
             continue
         start = datetime.fromtimestamp(tp["startDate"] / 1000, tz=timezone.utc)
-        if start <= now or start > horizon:
+        if start < now - timedelta(hours=LIVE_KEEP_H) or start > horizon:
             continue
         for m in tp.get("markets", []):
             if m.get("tradingStatus") != "OPEN":
@@ -100,7 +101,8 @@ def scan_binance(key, secret):
             if not yes:
                 continue
             prob = float(yes.get("chance") or yes.get("price") or 0)
-            if prob > WATCH_PROB:
+            # 已开赛的比赛无条件保留（实时赔率随比分波动，不能再按 0.70 阈值筛掉）
+            if prob > WATCH_PROB or start <= now:
                 tick = 10 ** -int(m.get("decimalPrecision", 2))
                 rows.append(to_row(league, tp["title"], team, prob,
                                    start.isoformat(), tick))

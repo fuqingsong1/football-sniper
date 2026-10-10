@@ -8,7 +8,7 @@
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <style>
   * { box-sizing: border-box; margin: 0; }
-  body { background: #0b0e11; color: #eaecef; font-family: -apple-system, "Segoe UI", "Microsoft YaHei", sans-serif; }
+  body { background: #0b0e11; color: #eaecef; font-family: -apple-system, "Segoe UI", "Microsoft YaHei", sans-serif; font-variant-numeric: tabular-nums; }
   .nav { background: #161a1e; border-bottom: 1px solid #2b3139; padding: 0 16px; display: flex; align-items: center; gap: 4px; flex-wrap: wrap; position: sticky; top: 0; z-index: 10; }
   .nav .brand { color: #f0b90b; font-weight: 700; padding: 12px 16px 12px 0; font-size: 15px; }
   .nav a { color: #848e9c; text-decoration: none; padding: 12px 14px; font-size: 14px; border-bottom: 2px solid transparent; }
@@ -102,6 +102,14 @@ async function refresh(){
   document.getElementById('src').textContent =
     '数据源: ' + (d.schedule_source || '-') + ' | 赛程刷新: ' + (d.schedule_updated || '-');
 
+  document.getElementById('log').textContent = d.log_tail || '';
+
+  // 数据没变化就跳过下面的 DOM 重建：每 5 秒无条件重建表格/<img>/图表会让文字与队徽反复抖动
+  const sig = JSON.stringify([d.schedule, d.orders, d.watchlist, d.account, d.stats,
+                              d.bankroll_history, d.standings]);
+  if (sig === window._lastSig) return;
+  window._lastSig = sig;
+
   const bal = (d.account && d.account.balances) || {};
   document.getElementById('avail').textContent = Object.keys(bal).length
     ? '$' + (bal.CeDeFi ?? Object.values(bal).reduce((a,b)=>a+b,0)).toFixed(2) : '-';
@@ -116,8 +124,10 @@ async function refresh(){
   const sched = d.schedule || [];
   document.getElementById('schedCount').textContent = sched.length;
   document.getElementById('schedule').innerHTML = sched.map(s => {
+    const started = s.start && new Date(s.start) <= new Date();
     const tier = s.discount ? `${(s.discount*10).toFixed(1).replace('.0','')}折 / ${(s.position_pct*100).toFixed(0)}%仓` : '观察(70-75%)';
-    const status = s.placed ? '<span class="tag t-placed">已挂单</span>'
+    const status = started ? '<span class="tag t-open">进行中</span>'
+      : s.placed ? '<span class="tag t-placed">已挂单</span>'
       : s.discount ? '<span class="tag t-ready">可挂</span>' : '<span class="tag t-watch">观察</span>';
     const match = (s.home_zh && s.away_zh)
       ? `${teamLogo(s.home_logo,s.home_zh)}${s.home_zh} <span class="muted">vs</span> ${teamLogo(s.away_logo,s.away_zh)}${s.away_zh}`
@@ -158,8 +168,6 @@ async function refresh(){
       <td>${w.live || '-'}</td>
       <td>${w.limit_price != null ? w.limit_price : '-'}</td><td>${status}</td></tr>`;
   }).join('') || '<tr><td colspan="10" class="muted">未来 72 小时暂无比赛</td></tr>';
-
-  document.getElementById('log').textContent = d.log_tail || '';
 
   const hist = d.bankroll_history || [];
   if (window._chart) window._chart.destroy();

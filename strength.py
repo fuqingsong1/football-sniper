@@ -28,7 +28,7 @@ PRIOR_W = 0.6   # 上赛季场均分再打 6 折（阵容会变，不能完全�
 LEAGUE_ESPN = {"英超": "eng.1", "西甲": "esp.1", "德甲": "ger.1",
                "意甲": "ita.1", "法甲": "fra.1"}
 
-_STRIP = re.compile(r"\b(fc|cf|afc|sc|ac|as|ss|us|sv|tsv|ssc|rc|rcd|ud|ogc|sco|bc|calcio|1909|1913|1901|05|07|04|1\.)\b")
+_STRIP = re.compile(r"\b(fc|cf|cfc|acf|afc|sc|ac|as|ss|us|sv|tsv|ssc|rc|rcd|ud|ogc|sco|bc|calcio|1909|1913|1901|05|07|04|1\.)\b")
 
 
 def _norm(name: str) -> str:
