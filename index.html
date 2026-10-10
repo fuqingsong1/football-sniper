@@ -55,9 +55,22 @@
 <div class="panel">
   <h2>🔥 未来强队赛程（盘前胜率 &gt; 70% · 币安预测市场）</h2>
   <table>
-    <thead><tr><th>开赛时间</th><th>联赛</th><th>对阵</th><th>强队</th><th>盘前胜率</th><th>排名差</th><th>档位</th><th>挂单价</th><th>状态</th></tr></thead>
+    <thead><tr><th>开赛时间</th><th>联赛</th><th>对阵</th><th>强队</th><th>盘前胜率</th><th>排名差</th><th>排名比</th><th>档位</th><th>挂单价</th><th>状态</th></tr></thead>
     <tbody id="schedule"></tbody>
   </table>
+</div>
+
+<div class="panel">
+  <h2>👀 尾盘观察清单（领先≥3球 & 剩<10分钟 & 排名差达标 → 触发买入）</h2>
+  <table>
+    <thead><tr><th>开赛</th><th>联赛</th><th>对阵</th><th>排名差</th><th>触发条件</th><th>状态</th></tr></thead>
+    <tbody id="watchlist"></tbody>
+  </table>
+</div>
+
+<div class="panel">
+  <h2>🏆 五大联赛积分榜（上赛季+本赛季融合 · <span class="muted" id="stUpdated"></span>）</h2>
+  <div id="standings" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px"></div>
 </div>
 
 <div class="grid2">
@@ -94,9 +107,9 @@ async function refresh(){
       : s.discount ? '<span class="tag t-ready">可挂</span>' : '<span class="tag t-watch">观察</span>';
     return `<tr><td>${fmtTime(s.start)}</td><td class="muted">${s.league}</td><td>${s.title_zh||s.title}</td>
       <td>${s.team_zh||s.team}</td><td class="${probClass(s.prob)}">${(s.prob*100).toFixed(1)}%</td>
-      <td>${s.rank_gap != null ? s.rank_gap + '位 · ' + s.rank_ratio + 'x (' + s.rank_pair + ')' : '-'}</td>
+      <td>${s.rank_gap != null ? s.rank_gap + '位 (' + s.rank_pair + ')' : '-'}</td><td>${s.rank_ratio != null ? s.rank_ratio + 'x' : '-'}</td>
       <td>${tier}</td><td>${s.limit_price ?? '-'}</td><td>${status}</td></tr>`;
-  }).join('') || '<tr><td colspan="9" class="muted">未来几天暂无胜率&gt;70%的强弱对阵</td></tr>';
+  }).join('') || '<tr><td colspan="10" class="muted">未来几天暂无胜率&gt;70%的强弱对阵</td></tr>';
 
   const orders = (d.orders || []).slice().sort((a,b)=>(a.start||'').localeCompare(b.start||''));
   document.getElementById('orders').innerHTML = orders.map(o => {
@@ -106,6 +119,29 @@ async function refresh(){
       <td>${o.price}</td><td>$${o.usd.toFixed(2)}</td>
       <td><span class="tag ${cls}">${stText}</span></td></tr>`;
   }).join('') || '<tr><td colspan="6" class="muted">暂无挂单</td></tr>';
+
+  // 尾盘观察清单（来自本机推送的 data.json）
+  const wl = d.watchlist || [];
+  document.getElementById('watchlist').innerHTML = wl.map(w => {
+    let status;
+    if (w.signal === 'TRIGGERED') status = '<span class="tag t-filled">🔥 已触发</span>';
+    else if (w.signal === 'FILTERED') status = '<span class="tag t-watch">已过滤</span>';
+    else if (w.live) status = '<span class="tag t-open">进行中 ' + w.live + '</span>';
+    else status = w.watching ? '<span class="tag t-ready">观察中</span>' : '<span class="tag t-watch">未纳入</span>';
+    return `<tr><td>${fmtTime(w.start)}</td><td class="muted">${w.league}</td><td>${w.title_zh}</td>
+      <td>${w.rank_gap != null ? w.rank_gap + '位' : '-'}</td><td class="muted">${w.rule}</td>
+      <td>${status}</td></tr>`;
+  }).join('') || '<tr><td colspan="6" class="muted">暂无</td></tr>';
+
+  // 积分榜（data.json 或 schedule.json 哪个有用哪个）
+  const stData = (d.standings && d.standings.leagues) ? d.standings : (sd.standings || {});
+  document.getElementById('stUpdated').textContent = stData.updated || '';
+  document.getElementById('standings').innerHTML = Object.entries(stData.leagues || {}).map(([lg, rows]) => {
+    const trs = rows.slice(0, 8).map(r =>
+      `<tr><td>${r.rank}</td><td>${r.team}</td><td>${r.score.toFixed(2)}</td></tr>`).join('');
+    return `<div><table><thead><tr><th colspan="3" style="color:#f0b90b">${lg}</th></tr>
+      <tr><th>#</th><th>球队</th><th>融合分</th></tr></thead><tbody>${trs}</tbody></table></div>`;
+  }).join('');
 
   const hist = d.bankroll_history || [];
   if (window._chart) window._chart.destroy();

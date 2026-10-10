@@ -43,6 +43,8 @@ def _norm(name: str) -> str:
 ALIAS = {
     "bayern munchen": "bayern munich",
     "internazionale milano": "inter",
+    "inter milan": "inter",          # ESPN 叫法
+    "internazionale": "inter",      # ESPN 积分榜简称
     "paris saint-germain": "paris saint-germain",
     "paris": "paris",   # Paris FC — 注意别匹配到 PSG（下方用最长匹配优先规避）
     "bayer leverkusen": "bayer leverkusen",
@@ -169,4 +171,25 @@ def split_teams(title: str):
     """'A vs. B' / 'A vs B' → (A, B)"""
     t = re.split(r"\s+vs\.?\s+", title or "")
     return (t[0], t[1]) if len(t) == 2 else (None, None)
+
+
+def teams_match(name_a: str, name_b: str) -> bool:
+    """跨数据源的队名匹配（ESPN 'Bayern Munich' vs 币安 'FC Bayern München'）。
+    规范化 + 别名 + 双向包含 + 词重合（≥2 词或 ≥5 字母特征词）。"""
+    a = ALIAS.get(_norm(name_a), _norm(name_a))
+    b = ALIAS.get(_norm(name_b), _norm(name_b))
+    if not a or not b:
+        return False
+    if a == b:
+        return True
+    if a in b or b in a:
+        # 排除纯首词前缀误伤：Paris FC(paris) 不能匹配 Paris Saint-Germain
+        shorter, longer = (a, b) if len(a) < len(b) else (b, a)
+        if shorter == longer.split()[0]:
+            return False
+        return True
+    shared = set(a.split()) & set(b.split())
+    if len(shared) >= 2:
+        return True
+    return bool(shared) and max(len(w) for w in shared) >= 5
     return (t[0], t[1]) if len(t) == 2 else (None, None)

@@ -15,6 +15,7 @@ import requests
 
 from teams_zh import zh_team, zh_title
 import strength
+import watchlist
 
 HORIZON_H = 72
 WATCH_PROB = 0.70
@@ -169,7 +170,8 @@ def main():
     now_cn = datetime.now(timezone.utc) + timedelta(hours=8)
     out = {"updated": now_cn.strftime("%Y-%m-%d %H:%M:%S") + " (北京时间)",
            "source": f"GitHub Actions 自动更新（{source}）",
-           "schedule": rows}
+           "schedule": rows,
+           "standings": watchlist.build_standings()}
     with open("schedule.json", "w", encoding="utf-8") as f:
         json.dump(out, f, ensure_ascii=False, indent=2)
     print(f"schedule.json: {len(rows)} 场 | {source}")
