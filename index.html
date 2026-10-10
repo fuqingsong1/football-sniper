@@ -139,7 +139,9 @@ async function refresh(){
   const orders = Object.values(d.orders || {}).sort((a,b)=>(a.start||'').localeCompare(b.start||''));
   document.getElementById('orders').innerHTML = orders.map(o => {
     const cls = o.status==='OPEN'?'t-open':o.status==='FILLED'?'t-filled':'t-missed';
-    const stText = o.status==='FILLED' && o.result ? (o.result==='WIN'?'赢 $'+o.pnl:'输 $'+o.pnl) : o.status;
+    // 尾盘在策略一持仓上的加仓单 → 标出来，和首笔建仓区分
+    const stText = (o.stack ? '🔺加仓 · ' : '')
+      + (o.status==='FILLED' && o.result ? (o.result==='WIN'?'赢 $'+o.pnl:'输 $'+o.pnl) : o.status);
     return `<tr><td>${o.title_zh||o.title}</td><td>${teamLogo(o.team_logo, o.team_zh||o.team)}${o.team_zh||o.team}</td><td>${(o.prob*100).toFixed(1)}%</td>
       <td>${o.price}</td><td>$${o.usd.toFixed(2)}</td>
       <td><span class="tag ${cls}">${stText}</span></td></tr>`;
