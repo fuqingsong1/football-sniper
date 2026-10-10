@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-11 03:59:23",
+  "updated": "2026-10-11 04:29:37",
   "account": {
     "balances": {
       "CeDeFi": 0.17,
@@ -148,10 +148,10 @@
       "threshold": 8,
       "watching": false,
       "force": false,
-      "live": "1:0 52'",
+      "live": "3:1 83'",
       "in_play": true,
-      "signal": null,
-      "signal_detail": null
+      "signal": "FILTERED",
+      "signal_detail": "排名差 ? < 8"
     },
     {
       "league": "法甲",
@@ -168,12 +168,12 @@
       "rank_pair": "-",
       "limit_price": null,
       "threshold": 8,
-      "watching": false,
-      "force": false,
-      "live": "4:1 54'",
+      "watching": true,
+      "force": true,
+      "live": "5:1 84'",
       "in_play": true,
-      "signal": null,
-      "signal_detail": null
+      "signal": "TRY",
+      "signal_detail": "Brest 领先4球 80'（≥3球，无视排名差）"
     },
     {
       "league": "意甲",
@@ -192,10 +192,10 @@
       "threshold": 8,
       "watching": false,
       "force": false,
-      "live": "2:0 56'",
+      "live": "2:0 86'",
       "in_play": true,
-      "signal": null,
-      "signal_detail": null
+      "signal": "FILTERED",
+      "signal_detail": "排名差 ? < 8"
     },
     {
       "league": "法甲",
@@ -214,7 +214,7 @@
       "threshold": 8,
       "watching": false,
       "force": false,
-      "live": "2:1 52'",
+      "live": "2:2 83'",
       "in_play": true,
       "signal": null,
       "signal_detail": null
@@ -236,7 +236,7 @@
       "threshold": 8,
       "watching": false,
       "force": false,
-      "live": "0:0 57'",
+      "live": "1:0 87'",
       "in_play": true,
       "signal": null,
       "signal_detail": null
@@ -258,7 +258,7 @@
       "threshold": 8,
       "watching": false,
       "force": false,
-      "live": "0:0 45'",
+      "live": "1:0 70'",
       "in_play": true,
       "signal": null,
       "signal_detail": null
