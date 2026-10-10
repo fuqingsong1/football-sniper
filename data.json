@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-10 20:38:10",
+  "updated": "2026-10-10 20:42:41",
   "account": {
     "balances": {
       "CeDeFi": 11.26,
@@ -7,7 +7,7 @@
       "FUNDING": 0.0
     },
     "realized_pnl": -2151.86651246,
-    "unrealized_pnl": -264.20973058,
+    "unrealized_pnl": -264.20981221,
     "active_positions": 29
   },
   "orders": [
