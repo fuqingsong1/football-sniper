@@ -1,28 +1,7 @@
 {
-  "updated": "2026-10-10 21:44:37",
+  "updated": "2026-10-10 21:52:53",
   "source": "本机推送（Binance 预测市场）",
   "schedule": [
-    {
-      "league": "德甲",
-      "title": "FC Augsburg vs. FC Bayern München",
-      "title_zh": "奥格斯堡 vs 拜仁慕尼黑",
-      "team": "FC Bayern München",
-      "team_zh": "拜仁慕尼黑",
-      "home_zh": "奥格斯堡",
-      "away_zh": "拜仁慕尼黑",
-      "home_logo": "https://a.espncdn.com/i/teamlogos/soccer/500/3841.png",
-      "away_logo": "https://a.espncdn.com/i/teamlogos/soccer/500/132.png",
-      "team_logo": "https://a.espncdn.com/i/teamlogos/soccer/500/132.png",
-      "prob": 0.835,
-      "start": "2026-10-10T13:30:00+00:00",
-      "tick": 0.01,
-      "rank_gap": 7,
-      "rank_pair": "1 vs 8",
-      "rank_ratio": 8.0,
-      "discount": 0.85,
-      "position_pct": 0.1,
-      "limit_price": 0.7
-    },
     {
       "league": "意甲",
       "title": "FC Internazionale Milano vs. Parma Calcio 1913",

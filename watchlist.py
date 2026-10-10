@@ -48,35 +48,51 @@ def _signal_for(title: str, signals: dict):
     return None
 
 
+def _logo_of(league: str, name: str) -> str:
+    r = strength.rank_of(league, name) if name else None
+    return r.get("logo", "") if r else ""
+
+
 def build_watchlist(schedule: list, live: list, signals: dict, cfg: dict) -> list:
-    thresholds = cfg.get("inplay_min_rank_gap", {})
-    from_min = cfg.get("inplay_from_minute", 80)
-    min_lead = cfg.get("inplay_min_lead", 3)
+    base_gap = cfg.get("inplay_min_rank_gap", {})
+    top1_gap = cfg.get("inplay_top1_rank_gap", {})
     out = []
     for r in schedule:
-        th = thresholds.get(r["league"], 10)
+        league = r["league"]
+        home, away = strength.split_teams(r["title"])
+        # 阈值：基础 8；强队（即领先方）恰是联赛第 1 名时放宽
+        th = base_gap.get(league, 8)
+        strong = r.get("team") or home
+        strong_zh = r.get("team_zh") or (zh_of_norm(strength._norm(strong)) if strong else "")
+        strong_logo = r.get("team_logo") or _logo_of(league, strong)
+        sr = strength.rank_of(league, strong) if strong else None
+        if sr and sr.get("rank") == 1:
+            th = top1_gap.get(league, th)
         gap = r.get("rank_gap")
         watching = gap is not None and gap >= th
-        g = _live_for(r["title"], r["league"], live) if live else None
+        g = _live_for(r["title"], league, live) if live else None
         sig = _signal_for(r["title"], signals) if signals else None
-        live_txt = None
-        if g:
-            live_txt = f"{g['home']['score']}:{g['away']['score']} {g['minute']}'"
+        live_txt = f"{g['home']['score']}:{g['away']['score']} {g['minute']}'" if g else None
         out.append({
-            "league": r["league"], "title_zh": r.get("title_zh") or r["title"],
+            "league": league, "title_zh": r.get("title_zh") or r["title"],
+            "home_zh": zh_of_norm(strength._norm(home)) if home else "",
+            "away_zh": zh_of_norm(strength._norm(away)) if away else "",
+            "home_logo": _logo_of(league, home), "away_logo": _logo_of(league, away),
+            "team_zh": strong_zh, "team_logo": strong_logo,
             "start": r.get("start", ""), "prob": r.get("prob"),
-            "rank_gap": gap, "threshold": th, "watching": watching,
+            "rank_gap": gap, "rank_pair": r.get("rank_pair"),
+            "limit_price": r.get("limit_price"),
+            "threshold": th, "watching": watching,
             "live": live_txt,
             "signal": sig["result"] if sig else None,
             "signal_detail": sig.get("detail") if sig else None,
-            "rule": f"≥{min_lead}球 & ≥{from_min}' & 差≥{th}位",
         })
     out.sort(key=lambda x: x["start"] or "")
     return out
 
 
 def build_standings() -> dict:
-    """融合积分榜 → {联赛: [{rank, zh, score}]}，用于网页展示。"""
+    """融合积分榜 → {联赛: [{rank, zh, score, logo}]}，用于网页展示。"""
     try:
         d = strength._load()
     except Exception:
@@ -84,6 +100,7 @@ def build_standings() -> dict:
     out = {}
     for league, table in d.get("table", {}).items():
         rows = sorted(table.items(), key=lambda x: x[1]["rank"])
-        out[league] = [{"rank": v["rank"], "team": zh_of_norm(t), "score": v["score"]}
+        out[league] = [{"rank": v["rank"], "team": zh_of_norm(t), "score": v["score"],
+                        "logo": v.get("logo", "")}
                        for t, v in rows]
     return {"updated": d.get("updated", ""), "leagues": out}

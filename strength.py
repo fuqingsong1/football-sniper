@@ -84,7 +84,11 @@ def _fetch(league_code: str, season: int) -> dict:
             stats = {s["name"]: s.get("value") for s in e.get("stats", [])}
             pts, gp = stats.get("points"), stats.get("gamesPlayed")
             if pts is not None and gp:
-                out[_norm(e["team"]["displayName"])] = (float(pts), float(gp))
+                logos = e["team"].get("logos") or []
+                out[_norm(e["team"]["displayName"])] = {
+                    "pts": float(pts), "gp": float(gp),
+                    "logo": logos[0].get("href", "") if logos else "",
+                }
     return out
 
 
@@ -102,16 +106,23 @@ def refresh() -> dict:
             log.warning("[%s] 积分榜拉取失败: %s", league, e)
             continue
         blended = {}
+        logos = {}
         for team in set(cur) | set(prev):
-            cp, cg = cur.get(team, (None, 0))
-            pp, pg = prev.get(team, (None, 0))
+            c = cur.get(team)
+            p = prev.get(team)
+            cp, cg = (c["pts"], c["gp"]) if c else (None, 0)
+            pp, pg = (p["pts"], p["gp"]) if p else (None, 0)
+            logo = (c or p or {}).get("logo", "")
+            if logo:
+                logos[team] = logo
             prev_ppg = (pp / pg) * PRIOR_W if pg else 1.0 * PRIOR_W  # 升班马按场均1分算
             if cg:
                 blended[team] = (cp + prev_ppg * K) / (cg + K)
             else:
                 blended[team] = prev_ppg
         ranked = sorted(blended, key=lambda t: -blended[t])
-        table[league] = {t: {"rank": i + 1, "score": round(blended[t], 3)}
+        table[league] = {t: {"rank": i + 1, "score": round(blended[t], 3),
+                             "logo": logos.get(t, "")}
                          for i, t in enumerate(ranked)}
     data = {"updated": now.strftime("%Y-%m-%d %H:%M"), "table": table}
     CACHE.write_text(json.dumps(data, ensure_ascii=False, indent=1), encoding="utf-8")
@@ -150,6 +161,15 @@ def _match_team(league_table: dict, name: str):
         if shared > best_n:
             best, best_n = league_table[key], shared
     return best if best_n >= 2 else None
+
+
+def rank_of(league: str, team: str):
+    """单队查询，返回 {rank, score, logo} 或 None。"""
+    d = _load()
+    table = d.get("table", {}).get(league)
+    if not table:
+        return None
+    return _match_team(table, team)
 
 
 def rank_gap(league: str, team_a: str, team_b: str):

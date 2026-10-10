@@ -32,13 +32,21 @@ def to_row(league, title, team, prob, start_iso, tick=0.01):
     tier = next((t for t in TIERS if prob >= t["min_prob"]), None)
     home, away = strength.split_teams(title)
     rg = strength.rank_gap(league, home, away) if home and away else None
+    ro_home = strength.rank_of(league, home) if home else None
+    ro_away = strength.rank_of(league, away) if away else None
+    ro_team = strength.rank_of(league, team) if team else None
     return {
         "league": league, "title": title, "title_zh": zh_title(title),
         "team": team, "team_zh": zh_team(team),
+        "home_zh": watchlist.zh_of_norm(strength._norm(home)) if home else "",
+        "away_zh": watchlist.zh_of_norm(strength._norm(away)) if away else "",
+        "home_logo": (ro_home or {}).get("logo", ""),
+        "away_logo": (ro_away or {}).get("logo", ""),
+        "team_logo": (ro_team or {}).get("logo", ""),
         "prob": round(prob, 4), "start": start_iso,
         "rank_gap": rg[2] if rg else None,
         "rank_pair": f"{rg[0]} vs {rg[1]}" if rg else "-",
-                "rank_ratio": round(rg[1] / rg[0], 1) if rg else None,
+        "rank_ratio": round(rg[1] / rg[0], 1) if rg else None,
         "discount": tier["discount"] if tier else None,
         "position_pct": tier["position_pct"] if tier else None,
         "limit_price": round(int(prob * tier["discount"] / tick) * tick, 4) if tier else None,
