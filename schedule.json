@@ -1,6 +1,6 @@
 {
-  "updated": "2026-10-10 20:41:07",
-  "source": "本机推送（Binance 预测市场）",
+  "updated": "2026-10-10 20:50:51 (北京时间)",
+  "source": "GitHub Actions 自动更新（Polymarket（公开数据））",
   "schedule": [
     {
       "league": "德甲",
@@ -10,7 +10,9 @@
       "team_zh": "拜仁慕尼黑",
       "prob": 0.825,
       "start": "2026-10-10T13:30:00+00:00",
-      "tick": 0.01,
+      "rank_gap": 7,
+      "rank_pair": "1 vs 8",
+      "rank_ratio": 8.0,
       "discount": 0.85,
       "position_pct": 0.1,
       "limit_price": 0.7
@@ -23,7 +25,9 @@
       "team_zh": "国际米兰",
       "prob": 0.855,
       "start": "2026-10-10T16:00:00+00:00",
-      "tick": 0.01,
+      "rank_gap": 14,
+      "rank_pair": "1 vs 15",
+      "rank_ratio": 15.0,
       "discount": 0.9,
       "position_pct": 0.11,
       "limit_price": 0.76
@@ -36,7 +40,9 @@
       "team_zh": "巴塞罗那",
       "prob": 0.895,
       "start": "2026-10-10T16:30:00+00:00",
-      "tick": 0.01,
+      "rank_gap": 8,
+      "rank_pair": "1 vs 9",
+      "rank_ratio": 9.0,
       "discount": 0.9,
       "position_pct": 0.11,
       "limit_price": 0.8
@@ -49,7 +55,9 @@
       "team_zh": "巴黎圣日耳曼",
       "prob": 0.875,
       "start": "2026-10-10T18:45:00+00:00",
-      "tick": 0.01,
+      "rank_gap": 14,
+      "rank_pair": "1 vs 15",
+      "rank_ratio": 15.0,
       "discount": 0.9,
       "position_pct": 0.11,
       "limit_price": 0.78
@@ -62,7 +70,9 @@
       "team_zh": "皇家马德里",
       "prob": 0.715,
       "start": "2026-10-10T19:00:00+00:00",
-      "tick": 0.01,
+      "rank_gap": 3,
+      "rank_pair": "2 vs 5",
+      "rank_ratio": 2.5,
       "discount": null,
       "position_pct": null,
       "limit_price": null
