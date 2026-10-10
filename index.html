@@ -2,19 +2,16 @@
 <html lang="zh">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-<title>强队错杀 · 总览</title>
+<meta http-equiv="Pragma" content="no-cache">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>强队错杀 · 赛程看板</title>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <style>
   * { box-sizing: border-box; margin: 0; }
-  body { background: #0b0e11; color: #eaecef; font-family: -apple-system, "Segoe UI", "Microsoft YaHei", sans-serif; }
-  .nav { background: #161a1e; border-bottom: 1px solid #2b3139; padding: 0 16px; display: flex; align-items: center; gap: 4px; flex-wrap: wrap; position: sticky; top: 0; z-index: 10; }
-  .nav .brand { color: #f0b90b; font-weight: 700; padding: 12px 16px 12px 0; font-size: 15px; }
-  .nav a { color: #848e9c; text-decoration: none; padding: 12px 14px; font-size: 14px; border-bottom: 2px solid transparent; }
-  .nav a:hover { color: #eaecef; }
-  .nav a.active { color: #f0b90b; border-bottom-color: #f0b90b; }
-  .wrap { padding: 16px; max-width: 1200px; margin: 0 auto; }
+  body { background: #0b0e11; color: #eaecef; font-family: -apple-system, "Segoe UI", "Microsoft YaHei", sans-serif; padding: 16px; max-width: 1200px; margin: 0 auto; }
+  .topbar { display: flex; justify-content: space-between; align-items: center; padding: 8px 4px 16px; border-bottom: 1px solid #1e2329; flex-wrap: wrap; gap: 8px; }
+  .topbar h1 { font-size: 18px; color: #f0b90b; }
   .muted { color: #848e9c; font-size: 12px; }
   .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; margin: 16px 0; }
   .card { background: #1e2329; border-radius: 8px; padding: 14px 16px; }
@@ -39,24 +36,14 @@
   .p-obs { color: #848e9c; }
   .grid2 { display: grid; grid-template-columns: 3fr 2fr; gap: 16px; }
   @media (max-width: 900px) { .grid2 { grid-template-columns: 1fr; } }
-  #log { font-family: Consolas, monospace; font-size: 12px; color: #aeb4bc; white-space: pre-wrap; max-height: 220px; overflow-y: auto; }
-  #errbar { display: none; background: #3b1518; color: #f6465d; padding: 10px 16px; font-size: 13px; }
 </style>
 </head>
 <body>
-<nav class="nav">
-  <span class="brand">⚽ 强队错杀</span>
-  <a href="index.html" class="active">总览</a>
-  <a href="standings.html?league=英超">英超</a>
-  <a href="standings.html?league=西甲">西甲</a>
-  <a href="standings.html?league=德甲">德甲</a>
-  <a href="standings.html?league=意甲">意甲</a>
-  <a href="standings.html?league=法甲">法甲</a>
-  <a href="watchlist.html">尾盘观察清单</a>
-</nav>
-<div id="errbar"></div>
-<div class="wrap">
-<div class="muted" id="clock" style="padding-top:10px"></div>
+<div class="topbar">
+  <h1>⚽ 强队错杀 · 赛程看板</h1>
+  <span class="muted" id="updated">加载中…</span>
+</div>
+
 <div class="cards">
   <div class="card"><div class="label">预测钱包可用</div><div class="value" id="avail">-</div></div>
   <div class="card"><div class="label">策略净盈亏</div><div class="value" id="netPnl">-</div></div>
@@ -66,11 +53,24 @@
 </div>
 
 <div class="panel">
-  <h2>🔥 未来强队赛程（盘前胜率 &gt; 70%）　<span class="muted" id="src"></span></h2>
+  <h2>🔥 未来强队赛程（盘前胜率 &gt; 70% · 币安预测市场）</h2>
   <table>
     <thead><tr><th>开赛时间</th><th>联赛</th><th>对阵</th><th>强队</th><th>盘前胜率</th><th>排名差</th><th>排名比</th><th>档位</th><th>挂单价</th><th>状态</th></tr></thead>
     <tbody id="schedule"></tbody>
   </table>
+</div>
+
+<div class="panel">
+  <h2>👀 尾盘观察清单（领先≥3球 & 剩<10分钟 & 排名差达标 → 触发买入）</h2>
+  <table>
+    <thead><tr><th>开赛</th><th>联赛</th><th>对阵</th><th>排名差</th><th>触发条件</th><th>状态</th></tr></thead>
+    <tbody id="watchlist"></tbody>
+  </table>
+</div>
+
+<div class="panel">
+  <h2>🏆 五大联赛积分榜（上赛季+本赛季融合 · <span class="muted" id="stUpdated"></span>）</h2>
+  <div id="standings" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px"></div>
 </div>
 
 <div class="grid2">
@@ -80,24 +80,17 @@
   <div class="panel"><h2>每日资金曲线</h2><canvas id="chart"></canvas></div>
 </div>
 
-<div class="panel" id="logPanel"><h2>运行日志</h2><div id="log"></div></div>
-</div>
-<script src="shared.js"></script>
 <script>
 function probClass(p){ return p>=0.85?'p-hot':p>=0.80?'p-mid':p>=0.75?'p-low':'p-obs'; }
+function fmtTime(iso){ if(!iso) return '-';
+  return new Date(iso).toLocaleString('zh-CN',{month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit'}); }
 async function refresh(){
-  const d = await loadData();
-  if (!d) return;
-  const isLocal = location.hostname === '127.0.0.1' || location.hostname === 'localhost';
-  document.getElementById('logPanel').style.display = isLocal ? '' : 'none';
-  document.getElementById('clock').textContent =
-    'exchange: ' + (d.exchange||'-') + ' | dry_run: ' + (d.dry_run??'-') + ' | 更新: ' + new Date().toLocaleTimeString();
-  document.getElementById('src').textContent =
-    '数据源: ' + (d.schedule_source || '-') + ' | 赛程刷新: ' + (d.schedule_updated || '-');
+  const r = await fetch('data.json?t=' + Date.now()); const d = await r.json();
+  document.getElementById('updated').textContent = '数据更新: ' + (d.updated || '-');
 
   const bal = (d.account && d.account.balances) || {};
   document.getElementById('avail').textContent = Object.keys(bal).length
-    ? '$' + (bal.CeDeFi ?? Object.values(bal).reduce((a,b)=>a+b,0)).toFixed(2) : '-';
+    ? '$' + Object.values(bal).reduce((a,b)=>a+b,0).toFixed(2) : '-';
   const st = d.stats || {};
   const npEl = document.getElementById('netPnl');
   npEl.textContent = st.net_pnl == null ? '暂无成交' : (st.net_pnl>=0?'+$':'-$') + Math.abs(st.net_pnl).toFixed(2);
@@ -106,7 +99,7 @@ async function refresh(){
     st.win_rate == null ? '暂无成交' : st.win_rate + '%（' + st.wins + '胜' + st.losses + '负）';
   document.getElementById('pf').textContent = st.profit_factor == null ? '暂无成交' : st.profit_factor;
 
-  const sched = d.schedule || [];
+  const sched = sd.schedule || [];
   document.getElementById('schedCount').textContent = sched.length;
   document.getElementById('schedule').innerHTML = sched.map(s => {
     const tier = s.discount ? `${(s.discount*10).toFixed(1).replace('.0','')}折 / ${(s.position_pct*100).toFixed(0)}%仓` : '观察(70-75%)';
@@ -114,12 +107,11 @@ async function refresh(){
       : s.discount ? '<span class="tag t-ready">可挂</span>' : '<span class="tag t-watch">观察</span>';
     return `<tr><td>${fmtTime(s.start)}</td><td class="muted">${s.league}</td><td>${s.title_zh||s.title}</td>
       <td>${s.team_zh||s.team}</td><td class="${probClass(s.prob)}">${(s.prob*100).toFixed(1)}%</td>
-      <td>${s.rank_gap != null ? s.rank_gap + '位 (' + s.rank_pair + ')' : '-'}</td>
-      <td>${s.rank_ratio != null ? s.rank_ratio + 'x' : '-'}</td>
+      <td>${s.rank_gap != null ? s.rank_gap + '位 (' + s.rank_pair + ')' : '-'}</td><td>${s.rank_ratio != null ? s.rank_ratio + 'x' : '-'}</td>
       <td>${tier}</td><td>${s.limit_price ?? '-'}</td><td>${status}</td></tr>`;
   }).join('') || '<tr><td colspan="10" class="muted">未来几天暂无胜率&gt;70%的强弱对阵</td></tr>';
 
-  const orders = Object.values(d.orders || {}).sort((a,b)=>(a.start||'').localeCompare(b.start||''));
+  const orders = (d.orders || []).slice().sort((a,b)=>(a.start||'').localeCompare(b.start||''));
   document.getElementById('orders').innerHTML = orders.map(o => {
     const cls = o.status==='OPEN'?'t-open':o.status==='FILLED'?'t-filled':'t-missed';
     const stText = o.status==='FILLED' && o.result ? (o.result==='WIN'?'赢 $'+o.pnl:'输 $'+o.pnl) : o.status;
@@ -128,7 +120,28 @@ async function refresh(){
       <td><span class="tag ${cls}">${stText}</span></td></tr>`;
   }).join('') || '<tr><td colspan="6" class="muted">暂无挂单</td></tr>';
 
-  document.getElementById('log').textContent = d.log_tail || '';
+  // 尾盘观察清单（来自本机推送的 data.json）
+  const wl = d.watchlist || [];
+  document.getElementById('watchlist').innerHTML = wl.map(w => {
+    let status;
+    if (w.signal === 'TRIGGERED') status = '<span class="tag t-filled">🔥 已触发</span>';
+    else if (w.signal === 'FILTERED') status = '<span class="tag t-watch">已过滤</span>';
+    else if (w.live) status = '<span class="tag t-open">进行中 ' + w.live + '</span>';
+    else status = w.watching ? '<span class="tag t-ready">观察中</span>' : '<span class="tag t-watch">未纳入</span>';
+    return `<tr><td>${fmtTime(w.start)}</td><td class="muted">${w.league}</td><td>${w.title_zh}</td>
+      <td>${w.rank_gap != null ? w.rank_gap + '位' : '-'}</td><td class="muted">${w.rule}</td>
+      <td>${status}</td></tr>`;
+  }).join('') || '<tr><td colspan="6" class="muted">暂无</td></tr>';
+
+  // 积分榜（data.json 或 schedule.json 哪个有用哪个）
+  const stData = (d.standings && d.standings.leagues) ? d.standings : (sd.standings || {});
+  document.getElementById('stUpdated').textContent = stData.updated || '';
+  document.getElementById('standings').innerHTML = Object.entries(stData.leagues || {}).map(([lg, rows]) => {
+    const trs = rows.slice(0, 8).map(r =>
+      `<tr><td>${r.rank}</td><td>${r.team}</td><td>${r.score.toFixed(2)}</td></tr>`).join('');
+    return `<div><table><thead><tr><th colspan="3" style="color:#f0b90b">${lg}</th></tr>
+      <tr><th>#</th><th>球队</th><th>融合分</th></tr></thead><tbody>${trs}</tbody></table></div>`;
+  }).join('');
 
   const hist = d.bankroll_history || [];
   if (window._chart) window._chart.destroy();
@@ -142,7 +155,17 @@ async function refresh(){
       y:{ticks:{color:'#848e9c',callback:v=>'$'+(+v).toFixed(1)},grid:{color:'#1e2329'}}}}
   });
 }
-refresh(); setInterval(refresh, 5000);
+refresh(); setInterval(refresh, 60000);
+</script>
+</body>
+</html>
+adius:3 }]},
+    options: { plugins:{legend:{display:false}}, scales:{
+      x:{ticks:{color:'#848e9c'},grid:{color:'#1e2329'}},
+      y:{ticks:{color:'#848e9c',callback:v=>'$'+(+v).toFixed(1)},grid:{color:'#1e2329'}}}}
+  });
+}
+refresh(); setInterval(refresh, 60000);
 </script>
 </body>
 </html>
