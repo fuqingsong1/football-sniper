@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-11 02:59:04",
+  "updated": "2026-10-11 03:29:15",
   "account": {
     "balances": {
       "CeDeFi": 0.17,
@@ -148,7 +148,7 @@
       "threshold": 8,
       "watching": false,
       "force": false,
-      "live": "0:0 14'",
+      "live": "1:0 44'",
       "in_play": true,
       "signal": null,
       "signal_detail": null
@@ -170,7 +170,7 @@
       "threshold": 8,
       "watching": false,
       "force": false,
-      "live": "1:0 14'",
+      "live": "3:0 44'",
       "in_play": true,
       "signal": null,
       "signal_detail": null
@@ -192,7 +192,7 @@
       "threshold": 8,
       "watching": false,
       "force": false,
-      "live": "0:0 13'",
+      "live": "2:0 43'",
       "in_play": true,
       "signal": null,
       "signal_detail": null
@@ -214,7 +214,7 @@
       "threshold": 8,
       "watching": false,
       "force": false,
-      "live": "0:0 11'",
+      "live": "2:0 41'",
       "in_play": true,
       "signal": null,
       "signal_detail": null
@@ -236,7 +236,7 @@
       "threshold": 8,
       "watching": false,
       "force": false,
-      "live": "0:0 14'",
+      "live": "0:0 44'",
       "in_play": true,
       "signal": null,
       "signal_detail": null
@@ -258,8 +258,8 @@
       "threshold": 8,
       "watching": false,
       "force": false,
-      "live": null,
-      "in_play": false,
+      "live": "0:0 26'",
+      "in_play": true,
       "signal": null,
       "signal_detail": null
     }
