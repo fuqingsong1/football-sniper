@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-10 23:09:08",
+  "updated": "2026-10-10 23:38:51",
   "account": {
     "balances": {
       "CeDeFi": 10.14,
@@ -819,8 +819,8 @@
       "threshold": 8,
       "watching": false,
       "force": false,
-      "live": "2:4 80'",
-      "in_play": true,
+      "live": null,
+      "in_play": false,
       "signal": null,
       "signal_detail": null
     },
@@ -841,8 +841,8 @@
       "threshold": 8,
       "watching": false,
       "force": false,
-      "live": "2:1 76'",
-      "in_play": true,
+      "live": null,
+      "in_play": false,
       "signal": null,
       "signal_detail": null
     },
@@ -863,8 +863,8 @@
       "threshold": 8,
       "watching": true,
       "force": false,
-      "live": "0:1 80'",
-      "in_play": true,
+      "live": null,
+      "in_play": false,
       "signal": null,
       "signal_detail": null
     },
@@ -885,8 +885,8 @@
       "threshold": 7,
       "watching": true,
       "force": false,
-      "live": "2:1 78'",
-      "in_play": true,
+      "live": null,
+      "in_play": false,
       "signal": null,
       "signal_detail": null
     },
@@ -907,8 +907,8 @@
       "threshold": 8,
       "watching": false,
       "force": false,
-      "live": "0:0 80'",
-      "in_play": true,
+      "live": null,
+      "in_play": false,
       "signal": null,
       "signal_detail": null
     },
@@ -927,9 +927,9 @@
       "rank_pair": "10 vs 14",
       "limit_price": 0.82,
       "threshold": 8,
-      "watching": false,
-      "force": false,
-      "live": "3:0 50'",
+      "watching": true,
+      "force": true,
+      "live": "5:1 80'",
       "in_play": true,
       "signal": null,
       "signal_detail": null
@@ -951,7 +951,7 @@
       "threshold": 8,
       "watching": false,
       "force": false,
-      "live": "0:0 51'",
+      "live": "0:1 81'",
       "in_play": true,
       "signal": null,
       "signal_detail": null
@@ -973,7 +973,7 @@
       "threshold": 8,
       "watching": true,
       "force": false,
-      "live": "0:0 50'",
+      "live": "0:1 80'",
       "in_play": true,
       "signal": null,
       "signal_detail": null
@@ -995,7 +995,7 @@
       "threshold": 8,
       "watching": false,
       "force": false,
-      "live": "1:1 47'",
+      "live": "1:1 77'",
       "in_play": true,
       "signal": null,
       "signal_detail": null
@@ -1017,7 +1017,29 @@
       "threshold": 8,
       "watching": true,
       "force": false,
-      "live": "1:1 52'",
+      "live": "1:1 62'",
+      "in_play": true,
+      "signal": null,
+      "signal_detail": null
+    },
+    {
+      "league": "法甲",
+      "title_zh": "里尔 vs 勒阿弗尔",
+      "home_zh": "里尔",
+      "away_zh": "勒阿弗尔",
+      "home_logo": "logos/166.png",
+      "away_logo": "logos/3236.png",
+      "team_zh": "里尔",
+      "team_logo": "logos/166.png",
+      "start": "2026-10-10T15:15Z",
+      "prob": null,
+      "rank_gap": 15,
+      "rank_pair": "3 vs 18",
+      "limit_price": null,
+      "threshold": 8,
+      "force": false,
+      "watching": true,
+      "live": "1:0 24'",
       "in_play": true,
       "signal": null,
       "signal_detail": null
