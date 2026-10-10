@@ -55,7 +55,7 @@
 <div class="panel">
   <h2>🔥 未来强队赛程（盘前胜率 &gt; 70% · 币安预测市场）</h2>
   <table>
-    <thead><tr><th>开赛时间</th><th>联赛</th><th>对阵</th><th>强队</th><th>盘前胜率</th><th>档位</th><th>挂单价</th><th>状态</th></tr></thead>
+    <thead><tr><th>开赛时间</th><th>联赛</th><th>对阵</th><th>强队</th><th>盘前胜率</th><th>排名差</th><th>档位</th><th>挂单价</th><th>状态</th></tr></thead>
     <tbody id="schedule"></tbody>
   </table>
 </div>
@@ -94,8 +94,9 @@ async function refresh(){
       : s.discount ? '<span class="tag t-ready">可挂</span>' : '<span class="tag t-watch">观察</span>';
     return `<tr><td>${fmtTime(s.start)}</td><td class="muted">${s.league}</td><td>${s.title_zh||s.title}</td>
       <td>${s.team_zh||s.team}</td><td class="${probClass(s.prob)}">${(s.prob*100).toFixed(1)}%</td>
+      <td>${s.rank_gap != null ? s.rank_gap + '位 (' + s.rank_pair + ')' : '-'}</td>
       <td>${tier}</td><td>${s.limit_price ?? '-'}</td><td>${status}</td></tr>`;
-  }).join('') || '<tr><td colspan="8" class="muted">未来几天暂无胜率&gt;70%的强弱对阵</td></tr>';
+  }).join('') || '<tr><td colspan="9" class="muted">未来几天暂无胜率&gt;70%的强弱对阵</td></tr>';
 
   const orders = (d.orders || []).slice().sort((a,b)=>(a.start||'').localeCompare(b.start||''));
   document.getElementById('orders').innerHTML = orders.map(o => {

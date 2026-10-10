@@ -14,6 +14,7 @@ from urllib.parse import urlencode
 import requests
 
 from teams_zh import zh_team, zh_title
+import strength
 
 HORIZON_H = 72
 WATCH_PROB = 0.70
@@ -28,10 +29,14 @@ TEAM_RE = re.compile(r"Will (.+?) win on")
 
 def to_row(league, title, team, prob, start_iso, tick=0.01):
     tier = next((t for t in TIERS if prob >= t["min_prob"]), None)
+    home, away = strength.split_teams(title)
+    rg = strength.rank_gap(league, home, away) if home and away else None
     return {
         "league": league, "title": title, "title_zh": zh_title(title),
         "team": team, "team_zh": zh_team(team),
         "prob": round(prob, 4), "start": start_iso,
+        "rank_gap": rg[2] if rg else None,
+        "rank_pair": f"{rg[0]} vs {rg[1]}" if rg else "-",
         "discount": tier["discount"] if tier else None,
         "position_pct": tier["position_pct"] if tier else None,
         "limit_price": round(int(prob * tier["discount"] / tick) * tick, 4) if tier else None,
