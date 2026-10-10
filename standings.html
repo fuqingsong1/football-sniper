@@ -13,11 +13,19 @@
   .nav a { color: #848e9c; text-decoration: none; padding: 12px 14px; font-size: 14px; border-bottom: 2px solid transparent; }
   .nav a:hover { color: #eaecef; }
   .nav a.active { color: #f0b90b; border-bottom-color: #f0b90b; }
-  .wrap { padding: 16px; max-width: 720px; margin: 0 auto; }
+  .wrap { padding: 16px; max-width: 1600px; margin: 0 auto; }
   .muted { color: #848e9c; font-size: 12px; }
-  table { width: 100%; border-collapse: collapse; font-size: 14px; background: #1e2329; border-radius: 8px; }
-  th { text-align: left; color: #848e9c; font-weight: 500; padding: 8px 12px; border-bottom: 1px solid #2b3139; }
-  td { padding: 9px 12px; border-bottom: 1px solid #161a1e; }
+  /* 五大联赛并排：一行放得下就 5 列，窗口窄时自动换行 */
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(268px, 1fr)); gap: 12px; margin-top: 12px; }
+  .panel { background: #1e2329; border-radius: 8px; padding: 12px 14px; overflow: hidden; }
+  .panel h2 { font-size: 14px; color: #f0b90b; margin-bottom: 8px; font-weight: 600; display: flex; justify-content: space-between; align-items: baseline; }
+  .panel h2 .cnt { font-size: 12px; color: #848e9c; font-weight: 400; }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  th { text-align: left; color: #848e9c; font-weight: 500; padding: 5px 6px; border-bottom: 1px solid #2b3139; white-space: nowrap; }
+  td { padding: 5px 6px; border-bottom: 1px solid #161a1e; white-space: nowrap; }
+  tr:last-child td { border-bottom: none; }
+  td.rk { width: 28px; color: #848e9c; }
+  td.sc { text-align: right; width: 52px; }
   tr.top4 td { color: #0ecb81; }
   tr.bottom3 td { color: #f6465d; }
   h1 { font-size: 20px; color: #f0b90b; margin: 14px 0 4px; }
@@ -28,41 +36,37 @@
 <nav class="nav">
   <span class="brand">⚽ 足球观察</span>
   <a href="index.html">总览</a>
-  <a href="standings.html?league=英超">英超</a>
-  <a href="standings.html?league=西甲">西甲</a>
-  <a href="standings.html?league=德甲">德甲</a>
-  <a href="standings.html?league=意甲">意甲</a>
-  <a href="standings.html?league=法甲">法甲</a>
+  <a href="standings.html" class="active">积分榜</a>
 </nav>
 <div id="errbar"></div>
 <div class="wrap">
-  <h1 id="title">积分榜</h1>
+  <h1>五大联赛融合积分榜</h1>
   <div class="muted" id="sub"></div>
-  <div class="muted" style="margin:10px 0">绿色 = 前四（欧冠区），红色 = 后三（降级区）。融合分 = 本赛季场均分与上赛季场均分按场次加权。</div>
-  <table>
-    <thead><tr><th>#</th><th>球队</th><th>融合分</th></tr></thead>
-    <tbody id="tbody"></tbody>
-  </table>
+  <div class="muted" style="margin:8px 0 0">绿色 = 前四（欧冠区），红色 = 后三（降级区）。融合分 = 本赛季场均分与上赛季场均分按场次加权。</div>
+  <div class="grid" id="grid"></div>
 </div>
 <script src="shared.js"></script>
 <script>
-const league = new URLSearchParams(location.search).get('league') || '英超';
-document.getElementById('title').textContent = league + '积分榜';
-document.title = league + '积分榜 · 足球观察';
-document.querySelectorAll('.nav a').forEach(a => {
-  if (a.href.includes('league=' + encodeURIComponent(league))) a.classList.add('active');
-});
+const ORDER = ['英超', '西甲', '德甲', '意甲', '法甲'];
 async function refresh(){
   const d = await loadData();
   if (!d) return;
   const st = d.standings || {};
   document.getElementById('sub').textContent = '更新: ' + (st.updated || '-');
-  const rows = (st.leagues || {})[league] || [];
-  const n = rows.length;
-  document.getElementById('tbody').innerHTML = rows.map(r => {
-    const cls = r.rank <= 4 ? 'top4' : (r.rank > n - 3 ? 'bottom3' : '');
-    return `<tr class="${cls}"><td>${r.rank}</td><td>${teamLogo(r.logo, r.team)}${r.team}</td><td>${r.score.toFixed(3)}</td></tr>`;
-  }).join('') || '<tr><td colspan="3" class="muted">暂无数据</td></tr>';
+  const leagues = st.leagues || {};
+  const names = ORDER.filter(n => leagues[n]).concat(
+    Object.keys(leagues).filter(n => ORDER.indexOf(n) < 0));
+  document.getElementById('grid').innerHTML = names.map(league => {
+    const rows = leagues[league] || [];
+    const n = rows.length;
+    const body = rows.map(r => {
+      const cls = r.rank <= 4 ? 'top4' : (r.rank > n - 3 ? 'bottom3' : '');
+      return `<tr class="${cls}"><td class="rk">${r.rank}</td><td>${teamLogo(r.logo, r.team)}${r.team}</td><td class="sc">${r.score.toFixed(3)}</td></tr>`;
+    }).join('') || '<tr><td colspan="3" class="muted">暂无数据</td></tr>';
+    return `<div class="panel"><h2>${league}<span class="cnt">${n} 队</span></h2>
+      <table><thead><tr><th>#</th><th>球队</th><th style="text-align:right">融合分</th></tr></thead>
+      <tbody>${body}</tbody></table></div>`;
+  }).join('') || '<div class="panel muted">暂无数据</div>';
 }
 refresh(); setInterval(refresh, 60000);
 </script>

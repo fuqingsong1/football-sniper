@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-10 22:57:53",
+  "updated": "2026-10-10 23:03:38",
   "account": {
     "balances": {
       "CeDeFi": 10.14,
@@ -819,10 +819,10 @@
       "threshold": 8,
       "watching": false,
       "force": false,
-      "live": "2:4 68'",
+      "live": "2:4 74'",
       "in_play": true,
-      "signal": null,
-      "signal_detail": null
+      "signal": "FILTERED",
+      "signal_detail": "排名差 5 < 8"
     },
     {
       "league": "德甲",
@@ -841,7 +841,7 @@
       "threshold": 8,
       "watching": false,
       "force": false,
-      "live": "2:1 65'",
+      "live": "2:1 71'",
       "in_play": true,
       "signal": null,
       "signal_detail": null
@@ -863,7 +863,7 @@
       "threshold": 8,
       "watching": true,
       "force": false,
-      "live": "0:1 69'",
+      "live": "0:1 75'",
       "in_play": true,
       "signal": null,
       "signal_detail": null
@@ -885,7 +885,7 @@
       "threshold": 7,
       "watching": true,
       "force": false,
-      "live": "2:1 67'",
+      "live": "2:1 73'",
       "in_play": true,
       "signal": null,
       "signal_detail": null
@@ -907,7 +907,7 @@
       "threshold": 8,
       "watching": false,
       "force": false,
-      "live": "0:0 68'",
+      "live": "0:0 74'",
       "in_play": true,
       "signal": null,
       "signal_detail": null
@@ -1017,7 +1017,7 @@
       "threshold": 8,
       "watching": true,
       "force": false,
-      "live": "0:1 43'",
+      "live": "0:1 48'",
       "in_play": true,
       "signal": null,
       "signal_detail": null
