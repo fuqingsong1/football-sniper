@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-10 20:50:51 (北京时间)",
+  "updated": "2026-10-10 21:08:35 (北京时间)",
   "source": "GitHub Actions 自动更新（Polymarket（公开数据））",
   "schedule": [
     {
@@ -8,7 +8,7 @@
       "title_zh": "奥格斯堡 vs 拜仁慕尼黑",
       "team": "FC Bayern München",
       "team_zh": "拜仁慕尼黑",
-      "prob": 0.825,
+      "prob": 0.835,
       "start": "2026-10-10T13:30:00+00:00",
       "rank_gap": 7,
       "rank_pair": "1 vs 8",
@@ -55,9 +55,9 @@
       "team_zh": "巴黎圣日耳曼",
       "prob": 0.875,
       "start": "2026-10-10T18:45:00+00:00",
-      "rank_gap": 14,
-      "rank_pair": "1 vs 15",
-      "rank_ratio": 15.0,
+      "rank_gap": 13,
+      "rank_pair": "1 vs 14",
+      "rank_ratio": 14.0,
       "discount": 0.9,
       "position_pct": 0.11,
       "limit_price": 0.78
