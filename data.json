@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-10 23:38:51",
+  "updated": "2026-10-10 23:42:12",
   "account": {
     "balances": {
       "CeDeFi": 10.14,
@@ -929,10 +929,10 @@
       "threshold": 8,
       "watching": true,
       "force": true,
-      "live": "5:1 80'",
+      "live": "5:1 83'",
       "in_play": true,
-      "signal": null,
-      "signal_detail": null
+      "signal": "FILTERED",
+      "signal_detail": "排名差 4 < 10"
     },
     {
       "league": "英超",
@@ -951,7 +951,7 @@
       "threshold": 8,
       "watching": false,
       "force": false,
-      "live": "0:1 81'",
+      "live": "0:1 84'",
       "in_play": true,
       "signal": null,
       "signal_detail": null
@@ -973,7 +973,7 @@
       "threshold": 8,
       "watching": true,
       "force": false,
-      "live": "0:1 80'",
+      "live": "0:1 83'",
       "in_play": true,
       "signal": null,
       "signal_detail": null
@@ -995,7 +995,7 @@
       "threshold": 8,
       "watching": false,
       "force": false,
-      "live": "1:1 77'",
+      "live": "2:2 81'",
       "in_play": true,
       "signal": null,
       "signal_detail": null
@@ -1017,7 +1017,7 @@
       "threshold": 8,
       "watching": true,
       "force": false,
-      "live": "1:1 62'",
+      "live": "1:1 65'",
       "in_play": true,
       "signal": null,
       "signal_detail": null
@@ -1039,7 +1039,7 @@
       "threshold": 8,
       "force": false,
       "watching": true,
-      "live": "1:0 24'",
+      "live": "1:0 27'",
       "in_play": true,
       "signal": null,
       "signal_detail": null
