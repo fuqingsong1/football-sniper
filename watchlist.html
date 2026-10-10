@@ -42,12 +42,8 @@
 <div class="wrap">
 <div class="panel">
   <h2>👀 尾盘观察清单</h2>
-  <div class="muted" style="margin-bottom:10px">
-    触发条件：比赛 ≥80 分钟 且 一方领先 ≥2 球 且 领先方排名差达标 → 买领先方 10% 仓位。<br>
-    清单按未来 72 小时赛程每天滚动更新；排名差达标的标"观察中"，未达标的不会触发买入。
-  </div>
   <table>
-    <thead><tr><th>开赛</th><th>联赛</th><th>对阵</th><th>盘前胜率</th><th>排名差</th><th>触发条件</th><th>实时比分</th><th>状态</th></tr></thead>
+    <thead><tr><th>开赛</th><th>联赛</th><th>对阵</th><th>强队</th><th>盘前胜率</th><th>排名差</th><th>排名比</th><th>挂单价</th><th>实时比分</th><th>状态</th></tr></thead>
     <tbody id="watchlist"></tbody>
   </table>
 </div>
@@ -63,12 +59,19 @@ async function refresh(){
     if (w.signal === 'TRIGGERED') status = '<span class="tag t-filled">🔥 已触发买入</span>';
     else if (w.signal === 'FILTERED') status = '<span class="tag t-watch">已过滤</span>';
     else if (w.live) status = '<span class="tag t-open">进行中</span>';
-    else status = w.watching ? '<span class="tag t-ready">观察中</span>' : '<span class="tag t-watch">未纳入（差不足）</span>';
-    return `<tr><td>${fmtTime(w.start)}</td><td class="muted">${w.league}</td><td>${w.title_zh}</td>
+    else status = w.watching ? '<span class="tag t-ready">观察中</span>' : '<span class="tag t-watch">未纳入</span>';
+    const match = (w.home_zh && w.away_zh)
+      ? `${teamLogo(w.home_logo,w.home_zh)}${w.home_zh} <span class="muted">vs</span> ${teamLogo(w.away_logo,w.away_zh)}${w.away_zh}`
+      : (w.title_zh || '');
+    const strong = `${teamLogo(w.team_logo, w.team_zh||w.team)}${w.team_zh||w.team||'-'}`;
+    return `<tr><td>${fmtTime(w.start)}</td><td class="muted">${w.league}</td><td>${match}</td>
+      <td>${strong}</td>
       <td>${w.prob != null ? (w.prob*100).toFixed(1) + '%' : '-'}</td>
-      <td>${w.rank_gap != null ? w.rank_gap + '位' : '-'}</td><td class="muted">${w.rule}</td>
+      <td>${w.rank_gap != null ? w.rank_gap + '位' : '-'}</td>
+      <td>${w.rank_pair && w.rank_pair !== '-' ? w.rank_pair : '-'}</td>
+      <td>${w.limit_price != null ? w.limit_price : '-'}</td>
       <td>${w.live || '-'}</td><td>${status}</td></tr>`;
-  }).join('') || '<tr><td colspan="8" class="muted">未来 72 小时暂无比赛</td></tr>';
+  }).join('') || '<tr><td colspan="10" class="muted">未来 72 小时暂无比赛</td></tr>';
 }
 refresh(); setInterval(refresh, 15000);
 </script>

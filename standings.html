@@ -62,7 +62,7 @@ async function refresh(){
   const n = rows.length;
   document.getElementById('tbody').innerHTML = rows.map(r => {
     const cls = r.rank <= 4 ? 'top4' : (r.rank > n - 3 ? 'bottom3' : '');
-    return `<tr class="${cls}"><td>${r.rank}</td><td>${r.team}</td><td>${r.score.toFixed(3)}</td></tr>`;
+    return `<tr class="${cls}"><td>${r.rank}</td><td>${teamLogo(r.logo, r.team)}${r.team}</td><td>${r.score.toFixed(3)}</td></tr>`;
   }).join('') || '<tr><td colspan="3" class="muted">暂无数据</td></tr>';
 }
 refresh(); setInterval(refresh, 60000);

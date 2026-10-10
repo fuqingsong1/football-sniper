@@ -80,6 +80,14 @@
   <div class="panel"><h2>每日资金曲线</h2><canvas id="chart"></canvas></div>
 </div>
 
+<div class="panel">
+  <h2>👀 尾盘观察清单</h2>
+  <table>
+    <thead><tr><th>开赛</th><th>联赛</th><th>对阵</th><th>强队</th><th>盘前胜率</th><th>排名差</th><th>排名比</th><th>挂单价</th><th>实时比分</th><th>状态</th></tr></thead>
+    <tbody id="watchlist"></tbody>
+  </table>
+</div>
+
 <div class="panel" id="logPanel"><h2>运行日志</h2><div id="log"></div></div>
 </div>
 <script src="shared.js"></script>
@@ -112,8 +120,12 @@ async function refresh(){
     const tier = s.discount ? `${(s.discount*10).toFixed(1).replace('.0','')}折 / ${(s.position_pct*100).toFixed(0)}%仓` : '观察(70-75%)';
     const status = s.placed ? '<span class="tag t-placed">已挂单</span>'
       : s.discount ? '<span class="tag t-ready">可挂</span>' : '<span class="tag t-watch">观察</span>';
-    return `<tr><td>${fmtTime(s.start)}</td><td class="muted">${s.league}</td><td>${s.title_zh||s.title}</td>
-      <td>${s.team_zh||s.team}</td><td class="${probClass(s.prob)}">${(s.prob*100).toFixed(1)}%</td>
+    const match = (s.home_zh && s.away_zh)
+      ? `${teamLogo(s.home_logo,s.home_zh)}${s.home_zh} <span class="muted">vs</span> ${teamLogo(s.away_logo,s.away_zh)}${s.away_zh}`
+      : (s.title_zh||s.title);
+    const strong = `${teamLogo(s.team_logo,s.team_zh||s.team)}${s.team_zh||s.team}`;
+    return `<tr><td>${fmtTime(s.start)}</td><td class="muted">${s.league}</td><td>${match}</td>
+      <td>${strong}</td><td class="${probClass(s.prob)}">${(s.prob*100).toFixed(1)}%</td>
       <td>${s.rank_gap != null ? s.rank_gap + '位' : '-'}</td>
       <td>${s.rank_pair && s.rank_pair !== '-' ? s.rank_pair : '-'}</td>
       <td>${tier}</td><td>${s.limit_price ?? '-'}</td><td>${status}</td></tr>`;
@@ -123,10 +135,30 @@ async function refresh(){
   document.getElementById('orders').innerHTML = orders.map(o => {
     const cls = o.status==='OPEN'?'t-open':o.status==='FILLED'?'t-filled':'t-missed';
     const stText = o.status==='FILLED' && o.result ? (o.result==='WIN'?'赢 $'+o.pnl:'输 $'+o.pnl) : o.status;
-    return `<tr><td>${o.title_zh||o.title}</td><td>${o.team_zh||o.team}</td><td>${(o.prob*100).toFixed(1)}%</td>
+    return `<tr><td>${o.title_zh||o.title}</td><td>${teamLogo(o.team_logo, o.team_zh||o.team)}${o.team_zh||o.team}</td><td>${(o.prob*100).toFixed(1)}%</td>
       <td>${o.price}</td><td>$${o.usd.toFixed(2)}</td>
       <td><span class="tag ${cls}">${stText}</span></td></tr>`;
   }).join('') || '<tr><td colspan="6" class="muted">暂无挂单</td></tr>';
+
+  const wl = d.watchlist || [];
+  document.getElementById('watchlist').innerHTML = wl.map(w => {
+    let status;
+    if (w.signal === 'TRIGGERED') status = '<span class="tag t-filled">🔥 已触发买入</span>';
+    else if (w.signal === 'FILTERED') status = '<span class="tag t-watch">已过滤</span>';
+    else if (w.live) status = '<span class="tag t-open">进行中</span>';
+    else status = w.watching ? '<span class="tag t-ready">观察中</span>' : '<span class="tag t-watch">未纳入</span>';
+    const match = (w.home_zh && w.away_zh)
+      ? `${teamLogo(w.home_logo,w.home_zh)}${w.home_zh} <span class="muted">vs</span> ${teamLogo(w.away_logo,w.away_zh)}${w.away_zh}`
+      : (w.title_zh || '');
+    const strong = `${teamLogo(w.team_logo, w.team_zh||w.team)}${w.team_zh||w.team||'-'}`;
+    return `<tr><td>${fmtTime(w.start)}</td><td class="muted">${w.league}</td><td>${match}</td>
+      <td>${strong}</td>
+      <td>${w.prob != null ? (w.prob*100).toFixed(1) + '%' : '-'}</td>
+      <td>${w.rank_gap != null ? w.rank_gap + '位' : '-'}</td>
+      <td>${w.rank_pair && w.rank_pair !== '-' ? w.rank_pair : '-'}</td>
+      <td>${w.limit_price != null ? w.limit_price : '-'}</td>
+      <td>${w.live || '-'}</td><td>${status}</td></tr>`;
+  }).join('') || '<tr><td colspan="10" class="muted">未来 72 小时暂无比赛</td></tr>';
 
   document.getElementById('log').textContent = d.log_tail || '';
 

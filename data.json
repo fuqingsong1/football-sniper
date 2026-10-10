@@ -1,15 +1,6 @@
 {
-  "updated": "2026-10-10 21:21:24",
-  "account": {
-    "balances": {
-      "CeDeFi": 11.26,
-      "SPOT": 0.0,
-      "FUNDING": 0.0
-    },
-    "realized_pnl": -2151.86651246,
-    "unrealized_pnl": -264.20915915,
-    "active_positions": 29
-  },
+  "updated": "2026-10-10 21:50:03",
+  "account": {},
   "orders": [
     {
       "order_id": "26101000001954855288",
@@ -67,7 +58,7 @@
       "usd": 1.13,
       "start": "2026-10-10T13:30:00+00:00",
       "placed_date": "2026-10-10",
-      "status": "OPEN",
+      "status": "FILLED",
       "title_zh": "奥格斯堡 vs 拜仁慕尼黑",
       "team_zh": "拜仁慕尼黑"
     }
@@ -79,566 +70,676 @@
     }
   ],
   "standings": {
-    "updated": "2026-10-10 20:10",
+    "updated": "2026-10-10 21:39",
     "leagues": {
       "英超": [
         {
           "rank": 1,
           "team": "曼城",
-          "score": 1.674
+          "score": 1.674,
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/382.png"
         },
         {
           "rank": 2,
           "team": "阿森纳",
-          "score": 1.607
+          "score": 1.673,
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/359.png"
         },
         {
           "rank": 3,
           "team": "利物浦",
-          "score": 1.161
+          "score": 1.161,
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/364.png"
         },
         {
           "rank": 4,
           "team": "布莱顿",
-          "score": 1.128
+          "score": 1.128,
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/331.png"
         },
         {
           "rank": 5,
           "team": "曼联",
-          "score": 1.091
+          "score": 1.091,
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/360.png"
         },
         {
           "rank": 6,
           "team": "布伦特福德",
-          "score": 1.078
+          "score": 1.078,
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/337.png"
         },
         {
           "rank": 7,
           "team": "埃弗顿",
-          "score": 1.03
+          "score": 1.03,
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/368.png"
         },
         {
           "rank": 8,
-          "team": "利兹联",
-          "score": 1.007
+          "team": "纽卡斯尔",
+          "score": 0.98,
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/361.png"
         },
         {
           "rank": 9,
-          "team": "纽卡斯尔",
-          "score": 0.98
+          "team": "阿斯顿维拉",
+          "score": 0.97,
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/362.png"
         },
         {
           "rank": 10,
-          "team": "阿斯顿维拉",
-          "score": 0.97
+          "team": "切尔西",
+          "score": 0.966,
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/363.png"
         },
         {
           "rank": 11,
-          "team": "切尔西",
-          "score": 0.966
+          "team": "利兹联",
+          "score": 0.959,
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/357.png"
         },
         {
           "rank": 12,
           "team": "赫尔城",
-          "score": 0.85
+          "score": 0.85,
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/306.png"
         },
         {
           "rank": 13,
           "team": "桑德兰",
-          "score": 0.839
+          "score": 0.839,
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/366.png"
         },
         {
           "rank": 14,
           "team": "伯恩茅斯",
-          "score": 0.825
+          "score": 0.825,
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/349.png"
         },
         {
           "rank": 15,
           "team": "诺丁汉森林",
-          "score": 0.771
+          "score": 0.771,
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/393.png"
         },
         {
           "rank": 16,
           "team": "伊普斯维奇",
-          "score": 0.75
+          "score": 0.75,
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/373.png"
         },
         {
           "rank": 17,
           "team": "水晶宫",
-          "score": 0.733
+          "score": 0.733,
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/384.png"
         },
         {
           "rank": 18,
           "team": "富勒姆",
-          "score": 0.716
+          "score": 0.716,
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/370.png"
         },
         {
           "rank": 19,
           "team": "西汉姆联",
-          "score": 0.616
+          "score": 0.616,
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/371.png"
         },
         {
           "rank": 20,
           "team": "Coventry City",
-          "score": 0.6
+          "score": 0.6,
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/388.png"
         },
         {
           "rank": 21,
           "team": "热刺",
-          "score": 0.586
+          "score": 0.586,
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/367.png"
         },
         {
           "rank": 22,
           "team": "伯恩利",
-          "score": 0.347
+          "score": 0.347,
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/379.png"
         },
         {
           "rank": 23,
           "team": "狼队",
-          "score": 0.316
+          "score": 0.316,
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/380.png"
         }
       ],
       "西甲": [
         {
           "rank": 1,
           "team": "巴塞罗那",
-          "score": 1.967
+          "score": 1.967,
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/83.png"
         },
         {
           "rank": 2,
           "team": "皇家马德里",
-          "score": 1.608
+          "score": 1.608,
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/86.png"
         },
         {
           "rank": 3,
           "team": "马德里竞技",
-          "score": 1.47
+          "score": 1.47,
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/1068.png"
         },
         {
           "rank": 4,
           "team": "皇家贝蒂斯",
-          "score": 1.373
+          "score": 1.373,
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/244.png"
         },
         {
           "rank": 5,
           "team": "比利亚雷亚尔",
-          "score": 1.139
+          "score": 1.139,
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/102.png"
         },
         {
           "rank": 6,
           "team": "塞维利亚",
-          "score": 1.054
+          "score": 1.054,
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/243.png"
         },
         {
           "rank": 7,
           "team": "阿拉维斯",
-          "score": 0.963
+          "score": 0.963,
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/96.png"
         },
         {
           "rank": 8,
           "team": "皇家社会",
-          "score": 0.95
+          "score": 0.95,
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/89.png"
         },
         {
           "rank": 9,
           "team": "赫塔菲",
-          "score": 0.913
+          "score": 0.913,
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/2922.png"
         },
         {
           "rank": 10,
           "team": "巴列卡诺",
-          "score": 0.902
+          "score": 0.902,
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/101.png"
         },
         {
           "rank": 11,
           "team": "塞尔塔",
-          "score": 0.9
+          "score": 0.9,
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/85.png"
         },
         {
           "rank": 12,
           "team": "毕尔巴鄂竞技",
-          "score": 0.888
+          "score": 0.888,
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/93.png"
         },
         {
           "rank": 13,
           "team": "Deportivo",
-          "score": 0.864
+          "score": 0.864,
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/90.png"
         },
         {
           "rank": 14,
           "team": "西班牙人",
-          "score": 0.822
+          "score": 0.822,
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/88.png"
         },
         {
           "rank": 15,
           "team": "奥萨苏纳",
-          "score": 0.816
+          "score": 0.816,
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/97.png"
         },
         {
           "rank": 16,
           "team": "Racing Santander",
-          "score": 0.727
+          "score": 0.727,
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/87.png"
         },
         {
           "rank": 17,
           "team": "莱万特",
-          "score": 0.712
+          "score": 0.712,
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/1538.png"
         },
         {
           "rank": 18,
           "team": "瓦伦西亚",
-          "score": 0.709
+          "score": 0.709,
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/94.png"
         },
         {
           "rank": 19,
           "team": "埃尔切",
-          "score": 0.69
+          "score": 0.69,
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/3751.png"
         },
         {
           "rank": 20,
           "team": "马略卡",
-          "score": 0.663
+          "score": 0.663,
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/84.png"
         },
         {
           "rank": 21,
           "team": "赫罗纳",
-          "score": 0.647
+          "score": 0.647,
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/9812.png"
         },
         {
           "rank": 22,
           "team": "Malaga",
-          "score": 0.565
+          "score": 0.565,
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/99.png"
         },
         {
           "rank": 23,
           "team": "奥维耶多",
-          "score": 0.458
+          "score": 0.458,
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/92.png"
         }
       ],
       "德甲": [
         {
           "rank": 1,
           "team": "拜仁慕尼黑",
-          "score": 1.766
+          "score": 1.766,
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/132.png"
         },
         {
           "rank": 2,
           "team": "多特蒙德",
-          "score": 1.616
+          "score": 1.616,
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/124.png"
         },
         {
           "rank": 3,
           "team": "莱比锡红牛",
-          "score": 1.221
+          "score": 1.221,
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/11420.png"
         },
         {
           "rank": 4,
           "team": "勒沃库森",
-          "score": 1.19
+          "score": 1.19,
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/131.png"
         },
         {
           "rank": 5,
           "team": "弗赖堡",
-          "score": 1.181
+          "score": 1.181,
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/126.png"
         },
         {
           "rank": 6,
           "team": "斯图加特",
-          "score": 1.022
+          "score": 1.022,
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/134.png"
         },
         {
           "rank": 7,
           "team": "Tsg Hoffenheim",
-          "score": 1.008
+          "score": 1.008,
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/7911.png"
         },
         {
           "rank": 8,
           "team": "奥格斯堡",
-          "score": 0.967
+          "score": 0.967,
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/3841.png"
         },
         {
           "rank": 9,
           "team": "美因茨",
-          "score": 0.926
+          "score": 0.926,
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/2950.png"
         },
         {
           "rank": 10,
           "team": "法兰克福",
-          "score": 0.876
+          "score": 0.876,
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/125.png"
         },
         {
           "rank": 11,
           "team": "埃尔弗斯贝格",
-          "score": 0.842
+          "score": 0.842,
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/10388.png"
         },
         {
           "rank": 12,
           "team": "云达不莱梅",
-          "score": 0.824
+          "score": 0.824,
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/137.png"
         },
         {
           "rank": 13,
           "team": "沙尔克04",
-          "score": 0.737
+          "score": 0.737,
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/133.png"
         },
         {
           "rank": 14,
           "team": "Hamburg",
-          "score": 0.687
+          "score": 0.687,
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/127.png"
         },
         {
           "rank": 15,
           "team": "帕德博恩",
-          "score": 0.684
+          "score": 0.684,
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/3307.png"
         },
         {
           "rank": 16,
           "team": "Cologne",
-          "score": 0.656
+          "score": 0.656,
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/122.png"
         },
         {
           "rank": 17,
           "team": "柏林联合",
-          "score": 0.596
+          "score": 0.596,
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/598.png"
         },
         {
           "rank": 18,
           "team": "门兴",
-          "score": 0.529
+          "score": 0.529,
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/268.png"
         },
         {
           "rank": 19,
           "team": "沃尔夫斯堡",
-          "score": 0.512
+          "score": 0.512,
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/138.png"
         },
         {
           "rank": 20,
-          "team": "圣保利",
-          "score": 0.459
+          "team": "1. Heidenheim 1846",
+          "score": 0.459,
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/6418.png"
         },
         {
           "rank": 21,
-          "team": "1. Heidenheim 1846",
-          "score": 0.459
+          "team": "圣保利",
+          "score": 0.459,
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/270.png"
         }
       ],
       "意甲": [
         {
           "rank": 1,
           "team": "国际米兰",
-          "score": 1.68
+          "score": 1.68,
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/110.png"
         },
         {
           "rank": 2,
           "team": "罗马",
-          "score": 1.514
+          "score": 1.514,
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/104.png"
         },
         {
           "rank": 3,
           "team": "AC米兰",
-          "score": 1.379
+          "score": 1.379,
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/103.png"
         },
         {
           "rank": 4,
           "team": "科莫",
-          "score": 1.341
+          "score": 1.341,
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/2572.png"
         },
         {
           "rank": 5,
           "team": "尤文图斯",
-          "score": 1.317
+          "score": 1.317,
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/111.png"
         },
         {
           "rank": 6,
           "team": "拉齐奥",
-          "score": 1.289
+          "score": 1.289,
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/112.png"
         },
         {
           "rank": 7,
           "team": "那不勒斯",
-          "score": 1.25
+          "score": 1.25,
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/114.png"
         },
         {
           "rank": 8,
           "team": "卡利亚里",
-          "score": 1.109
+          "score": 1.109,
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/2925.png"
         },
         {
           "rank": 9,
           "team": "亚特兰大",
-          "score": 0.999
+          "score": 0.999,
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/105.png"
         },
         {
           "rank": 10,
           "team": "弗罗西诺内",
-          "score": 0.95
+          "score": 0.95,
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/4057.png"
         },
         {
           "rank": 11,
           "team": "萨索洛",
-          "score": 0.93
+          "score": 0.93,
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/3997.png"
         },
         {
           "rank": 12,
           "team": "乌迪内斯",
-          "score": 0.792
+          "score": 0.792,
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/118.png"
         },
         {
           "rank": 13,
           "team": "博洛尼亚",
-          "score": 0.763
+          "score": 0.763,
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/107.png"
         },
         {
           "rank": 14,
           "team": "莱切",
-          "score": 0.75
+          "score": 0.75,
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/113.png"
         },
         {
           "rank": 15,
-          "team": "都灵",
-          "score": 0.733
+          "team": "帕尔马",
+          "score": 0.733,
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/115.png"
         },
         {
           "rank": 16,
-          "team": "帕尔马",
-          "score": 0.733
+          "team": "都灵",
+          "score": 0.733,
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/239.png"
         },
         {
           "rank": 17,
           "team": "佛罗伦萨",
-          "score": 0.697
+          "score": 0.697,
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/109.png"
         },
         {
           "rank": 18,
           "team": "蒙扎",
-          "score": 0.65
+          "score": 0.65,
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/4007.png"
         },
         {
           "rank": 19,
           "team": "Cremonese",
-          "score": 0.537
+          "score": 0.537,
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/4050.png"
         },
         {
           "rank": 20,
           "team": "热那亚",
-          "score": 0.536
+          "score": 0.536,
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/3263.png"
         },
         {
           "rank": 21,
           "team": "威尼斯",
-          "score": 0.45
+          "score": 0.45,
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/17530.png"
         },
         {
           "rank": 22,
           "team": "维罗纳",
-          "score": 0.332
+          "score": 0.332,
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/119.png"
         },
         {
           "rank": 23,
           "team": "Pisa",
-          "score": 0.284
+          "score": 0.284,
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/3956.png"
         }
       ],
       "法甲": [
         {
           "rank": 1,
           "team": "巴黎圣日耳曼",
-          "score": 1.406
+          "score": 1.406,
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/160.png"
         },
         {
           "rank": 2,
           "team": "摩纳哥",
-          "score": 1.365
+          "score": 1.365,
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/174.png"
         },
         {
           "rank": 3,
           "team": "里尔",
-          "score": 1.307
+          "score": 1.307,
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/166.png"
         },
         {
           "rank": 4,
           "team": "雷恩",
-          "score": 1.281
+          "score": 1.281,
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/169.png"
         },
         {
           "rank": 5,
           "team": "里昂",
-          "score": 1.28
+          "score": 1.28,
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/167.png"
         },
         {
           "rank": 6,
           "team": "朗斯",
-          "score": 1.216
+          "score": 1.216,
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/175.png"
         },
         {
           "rank": 7,
           "team": "巴黎FC",
-          "score": 1.132
+          "score": 1.132,
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/6851.png"
         },
         {
           "rank": 8,
           "team": "斯特拉斯堡",
-          "score": 1.051
+          "score": 1.051,
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/180.png"
         },
         {
           "rank": 9,
           "team": "马赛",
-          "score": 0.931
+          "score": 0.931,
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/176.png"
         },
         {
           "rank": 10,
           "team": "图卢兹",
-          "score": 0.85
+          "score": 0.85,
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/179.png"
         },
         {
           "rank": 11,
           "team": "洛里昂",
-          "score": 0.846
+          "score": 0.846,
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/273.png"
         },
         {
           "rank": 12,
           "team": "昂热",
-          "score": 0.826
+          "score": 0.826,
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/7868.png"
         },
         {
           "rank": 13,
           "team": "布雷斯特",
-          "score": 0.766
+          "score": 0.766,
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/6997.png"
         },
         {
           "rank": 14,
           "team": "勒芒",
-          "score": 0.75
+          "score": 0.75,
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/2697.png"
         },
         {
           "rank": 15,
           "team": "欧塞尔",
-          "score": 0.75
+          "score": 0.75,
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/172.png"
         },
         {
           "rank": 16,
           "team": "尼斯",
-          "score": 0.674
+          "score": 0.674,
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/2502.png"
         },
         {
           "rank": 17,
           "team": "Troyes",
-          "score": 0.65
+          "score": 0.65,
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/170.png"
         },
         {
           "rank": 18,
           "team": "勒阿弗尔",
-          "score": 0.563
+          "score": 0.563,
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/3236.png"
         },
         {
           "rank": 19,
           "team": "南特",
-          "score": 0.418
+          "score": 0.418,
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/165.png"
         },
         {
           "rank": 20,
           "team": "Metz",
-          "score": 0.3
+          "score": 0.3,
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/177.png"
         }
       ]
     }
@@ -650,25 +751,25 @@
       "start": "2026-10-10T13:30:00+00:00",
       "prob": 0.835,
       "rank_gap": 7,
-      "threshold": 10,
+      "threshold": 8,
       "watching": false,
       "live": null,
       "signal": null,
       "signal_detail": null,
-      "rule": "≥2球 & ≥80' & 差≥10位"
+      "rule": "≥2球 & ≥80' & 差≥8位"
     },
     {
       "league": "意甲",
       "title_zh": "国际米兰 vs 帕尔马",
       "start": "2026-10-10T16:00:00+00:00",
       "prob": 0.855,
-      "rank_gap": 15,
-      "threshold": 10,
+      "rank_gap": 14,
+      "threshold": 8,
       "watching": true,
       "live": null,
       "signal": null,
       "signal_detail": null,
-      "rule": "≥2球 & ≥80' & 差≥10位"
+      "rule": "≥2球 & ≥80' & 差≥8位"
     },
     {
       "league": "西甲",
@@ -676,12 +777,12 @@
       "start": "2026-10-10T16:30:00+00:00",
       "prob": 0.895,
       "rank_gap": 8,
-      "threshold": 10,
-      "watching": false,
+      "threshold": 8,
+      "watching": true,
       "live": null,
       "signal": null,
       "signal_detail": null,
-      "rule": "≥2球 & ≥80' & 差≥10位"
+      "rule": "≥2球 & ≥80' & 差≥8位"
     },
     {
       "league": "法甲",
@@ -702,12 +803,12 @@
       "start": "2026-10-10T19:00:00+00:00",
       "prob": 0.715,
       "rank_gap": 3,
-      "threshold": 10,
+      "threshold": 8,
       "watching": false,
       "live": null,
       "signal": null,
       "signal_detail": null,
-      "rule": "≥2球 & ≥80' & 差≥10位"
+      "rule": "≥2球 & ≥80' & 差≥8位"
     }
   ],
   "stats": {
