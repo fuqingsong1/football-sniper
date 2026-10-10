@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>强队错杀 · 赛程看板</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<style>
+  * { box-sizing: border-box; margin: 0; }
+  body { background: #0b0e11; color: #eaecef; font-family: -apple-system, "Segoe UI", "Microsoft YaHei", sans-serif; padding: 16px; max-width: 1200px; margin: 0 auto; }
+  .topbar { display: flex; justify-content: space-between; align-items: center; padding: 8px 4px 16px; border-bottom: 1px solid #1e2329; flex-wrap: wrap; gap: 8px; }
+  .topbar h1 { font-size: 18px; color: #f0b90b; }
+  .muted { color: #848e9c; font-size: 12px; }
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; margin: 16px 0; }
+  .card { background: #1e2329; border-radius: 8px; padding: 14px 16px; }
+  .card .label { font-size: 12px; color: #848e9c; }
+  .card .value { font-size: 22px; font-weight: 600; margin-top: 6px; }
+  .up { color: #0ecb81; } .down { color: #f6465d; } .warn { color: #f0b90b; }
+  .panel { background: #1e2329; border-radius: 8px; padding: 14px 16px; margin-bottom: 16px; overflow-x: auto; }
+  .panel h2 { font-size: 14px; color: #848e9c; margin-bottom: 10px; font-weight: 500; }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  th { text-align: left; color: #848e9c; font-weight: 500; padding: 6px 8px; border-bottom: 1px solid #2b3139; white-space: nowrap; }
+  td { padding: 8px; border-bottom: 1px solid #161a1e; white-space: nowrap; }
+  .tag { padding: 2px 8px; border-radius: 4px; font-size: 12px; }
+  .t-open { background: #2b3139; color: #f0b90b; }
+  .t-filled { background: rgba(14,203,129,.15); color: #0ecb81; }
+  .t-missed { background: rgba(70,80,100,.3); color: #848e9c; }
+  .t-placed { background: rgba(240,185,11,.15); color: #f0b90b; }
+  .t-watch { background: rgba(70,80,100,.3); color: #848e9c; }
+  .t-ready { background: rgba(14,203,129,.15); color: #0ecb81; }
+  .p-hot { color: #f6465d; font-weight: 600; }
+  .p-mid { color: #f0b90b; font-weight: 600; }
+  .p-low { color: #0ecb81; font-weight: 600; }
+  .p-obs { color: #848e9c; }
+  .grid2 { display: grid; grid-template-columns: 3fr 2fr; gap: 16px; }
+  @media (max-width: 900px) { .grid2 { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<div class="topbar">
+  <h1>⚽ 强队错杀 · 赛程看板</h1>
+  <span class="muted" id="updated">加载中…</span>
+</div>
+
+<div class="cards">
+  <div class="card"><div class="label">预测钱包可用</div><div class="value" id="avail">-</div></div>
+  <div class="card"><div class="label">策略净盈亏</div><div class="value" id="netPnl">-</div></div>
+  <div class="card"><div class="label">胜率</div><div class="value up" id="winRate">-</div></div>
+  <div class="card"><div class="label">盈亏比</div><div class="value" id="pf">-</div></div>
+  <div class="card"><div class="label">强队场次 (&gt;70%)</div><div class="value warn" id="schedCount">-</div></div>
+</div>
+
+<div class="panel">
+  <h2>🔥 未来强队赛程（盘前胜率 &gt; 70% · 币安预测市场）</h2>
+  <table>
+    <thead><tr><th>开赛时间</th><th>联赛</th><th>对阵</th><th>强队</th><th>盘前胜率</th><th>档位</th><th>挂单价</th><th>状态</th></tr></thead>
+    <tbody id="schedule"></tbody>
+  </table>
+</div>
+
+<div class="grid2">
+  <div class="panel"><h2>我的挂单 / 成交</h2><table>
+    <thead><tr><th>比赛</th><th>强队</th><th>胜率</th><th>挂单价</th><th>金额</th><th>状态</th></tr></thead>
+    <tbody id="orders"></tbody></table></div>
+  <div class="panel"><h2>每日资金曲线</h2><canvas id="chart"></canvas></div>
+</div>
+
+<script>
+function probClass(p){ return p>=0.85?'p-hot':p>=0.80?'p-mid':p>=0.75?'p-low':'p-obs'; }
+function fmtTime(iso){ if(!iso) return '-';
+  return new Date(iso).toLocaleString('zh-CN',{month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit'}); }
+async function refresh(){
+  const r = await fetch('data.json?t=' + Date.now()); const d = await r.json();
+  document.getElementById('updated').textContent = '数据更新: ' + (d.updated || '-');
+
+  const bal = (d.account && d.account.balances) || {};
+  document.getElementById('avail').textContent = Object.keys(bal).length
+    ? '$' + Object.values(bal).reduce((a,b)=>a+b,0).toFixed(2) : '-';
+  const st = d.stats || {};
+  const npEl = document.getElementById('netPnl');
+  npEl.textContent = st.net_pnl == null ? '暂无成交' : (st.net_pnl>=0?'+$':'-$') + Math.abs(st.net_pnl).toFixed(2);
+  npEl.className = 'value ' + (st.net_pnl == null ? '' : st.net_pnl>=0?'up':'down');
+  document.getElementById('winRate').textContent =
+    st.win_rate == null ? '暂无成交' : st.win_rate + '%（' + st.wins + '胜' + st.losses + '负）';
+  document.getElementById('pf').textContent = st.profit_factor == null ? '暂无成交' : st.profit_factor;
+
+  const sched = d.schedule || [];
+  document.getElementById('schedCount').textContent = sched.length;
+  document.getElementById('schedule').innerHTML = sched.map(s => {
+    const tier = s.discount ? `${(s.discount*10).toFixed(1).replace('.0','')}折 / ${(s.position_pct*100).toFixed(0)}%仓` : '观察(70-75%)';
+    const status = s.placed ? '<span class="tag t-placed">已挂单</span>'
+      : s.discount ? '<span class="tag t-ready">可挂</span>' : '<span class="tag t-watch">观察</span>';
+    return `<tr><td>${fmtTime(s.start)}</td><td class="muted">${s.league}</td><td>${s.title_zh||s.title}</td>
+      <td>${s.team_zh||s.team}</td><td class="${probClass(s.prob)}">${(s.prob*100).toFixed(1)}%</td>
+      <td>${tier}</td><td>${s.limit_price ?? '-'}</td><td>${status}</td></tr>`;
+  }).join('') || '<tr><td colspan="8" class="muted">未来几天暂无胜率&gt;70%的强弱对阵</td></tr>';
+
+  const orders = (d.orders || []).slice().sort((a,b)=>(a.start||'').localeCompare(b.start||''));
+  document.getElementById('orders').innerHTML = orders.map(o => {
+    const cls = o.status==='OPEN'?'t-open':o.status==='FILLED'?'t-filled':'t-missed';
+    const stText = o.status==='FILLED' && o.result ? (o.result==='WIN'?'赢 $'+o.pnl:'输 $'+o.pnl) : o.status;
+    return `<tr><td>${o.title_zh||o.title}</td><td>${o.team_zh||o.team}</td><td>${(o.prob*100).toFixed(1)}%</td>
+      <td>${o.price}</td><td>$${o.usd.toFixed(2)}</td>
+      <td><span class="tag ${cls}">${stText}</span></td></tr>`;
+  }).join('') || '<tr><td colspan="6" class="muted">暂无挂单</td></tr>';
+
+  const hist = d.bankroll_history || [];
+  if (window._chart) window._chart.destroy();
+  window._chart = new Chart(document.getElementById('chart'), {
+    type: 'line',
+    data: { labels: hist.map(h=>h.date.slice(5)),
+      datasets: [{ data: hist.map(h=>h.bankroll), borderColor:'#f0b90b',
+        backgroundColor:'rgba(240,185,11,.1)', fill:true, tension:.3, pointRadius:3 }]},
+    options: { plugins:{legend:{display:false}}, scales:{
+      x:{ticks:{color:'#848e9c'},grid:{color:'#1e2329'}},
+      y:{ticks:{color:'#848e9c',callback:v=>'$'+v},grid:{color:'#1e2329'}}}}
+  });
+}
+refresh(); setInterval(refresh, 60000);
+</script>
+</body>
+</html>
