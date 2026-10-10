@@ -1,0 +1,40 @@
+name: 赛程自动更新
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "*/30 * * * *"   # 每 30 分钟（GitHub Actions 境外运行，无需代理）
+
+permissions:
+  contents: write
+
+concurrency:
+  group: schedule-update
+  cancel-in-progress: true
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - run: pip install requests
+
+      - name: 扫描五大联赛赛程
+        env:
+          BINANCE_API_KEY: ${{ secrets.BINANCE_API_KEY }}
+          BINANCE_API_SECRET: ${{ secrets.BINANCE_API_SECRET }}
+        run: python update_online.py
+
+      - name: 提交更新
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add schedule.json
+          git diff --cached --quiet || git commit -m "schedule $(date -u +%Y-%m-%d\ %H:%M)"
+          git push

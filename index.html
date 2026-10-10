@@ -86,7 +86,7 @@ async function refresh(){
     st.win_rate == null ? '暂无成交' : st.win_rate + '%（' + st.wins + '胜' + st.losses + '负）';
   document.getElementById('pf').textContent = st.profit_factor == null ? '暂无成交' : st.profit_factor;
 
-  const sched = d.schedule || [];
+  const sched = sd.schedule || [];
   document.getElementById('schedCount').textContent = sched.length;
   document.getElementById('schedule').innerHTML = sched.map(s => {
     const tier = s.discount ? `${(s.discount*10).toFixed(1).replace('.0','')}折 / ${(s.position_pct*100).toFixed(0)}%仓` : '观察(70-75%)';
@@ -113,6 +113,16 @@ async function refresh(){
     data: { labels: hist.map(h=>h.date.slice(5)),
       datasets: [{ data: hist.map(h=>h.bankroll), borderColor:'#f0b90b',
         backgroundColor:'rgba(240,185,11,.1)', fill:true, tension:.3, pointRadius:3 }]},
+    options: { plugins:{legend:{display:false}}, scales:{
+      x:{ticks:{color:'#848e9c'},grid:{color:'#1e2329'}},
+      y:{ticks:{color:'#848e9c',callback:v=>'$'+(+v).toFixed(1)},grid:{color:'#1e2329'}}}}
+  });
+}
+refresh(); setInterval(refresh, 60000);
+</script>
+</body>
+</html>
+adius:3 }]},
     options: { plugins:{legend:{display:false}}, scales:{
       x:{ticks:{color:'#848e9c'},grid:{color:'#1e2329'}},
       y:{ticks:{color:'#848e9c',callback:v=>'$'+(+v).toFixed(1)},grid:{color:'#1e2329'}}}}
