@@ -57,7 +57,17 @@ def _live_key(g: dict) -> str:
     return g.get("espn_name") or f"{g['league']}|{g['home']['name']}|{g['away']['name']}"
 
 
-def _row_from_live(g: dict, signals: dict, base_gap: dict, top1_gap: dict):
+def _force_qualified(g: dict, cfg: dict) -> bool:
+    """无脑买条件：进入尾盘时间窗（第 from_min 分钟起）且净胜 ≥ inplay_force_lead 球。
+    满足时无视排名差，直接 10% 仓位买入。"""
+    force_lead = cfg.get("inplay_force_lead", 3)
+    if not force_lead:
+        return False
+    lead = abs(g["home"]["score"] - g["away"]["score"])
+    return lead >= force_lead and g["minute"] >= cfg.get("inplay_from_minute", 70)
+
+
+def _row_from_live(g: dict, signals: dict, base_gap: dict, top1_gap: dict, cfg: dict):
     """进行中（已开赛、已从 72h 赛程移除）的比赛 → 尾盘清单行。
     盘前胜率/挂单价拿不到记 None，其余（排名差、实时比分、信号）照常。"""
     league = g["league"]
@@ -85,7 +95,8 @@ def _row_from_live(g: dict, signals: dict, base_gap: dict, top1_gap: dict):
         "team_logo": _logo_of(league, strong),
         "start": g.get("date", ""), "prob": None,
         "rank_gap": gap, "rank_pair": pair, "limit_price": None,
-        "threshold": th, "watching": gap is not None and gap >= th,
+        "threshold": th, "force": _force_qualified(g, cfg),
+        "watching": (gap is not None and gap >= th) or _force_qualified(g, cfg),
         "live": f"{g['home']['score']}:{g['away']['score']} {g['minute']}'",
         "in_play": True,
         "signal": sig["result"] if sig else None,
@@ -110,8 +121,10 @@ def build_watchlist(schedule: list, live: list, signals: dict, cfg: dict) -> lis
         if sr and sr.get("rank") == 1:
             th = top1_gap.get(league, th)
         gap = r.get("rank_gap")
-        watching = gap is not None and gap >= th
         g = _live_for(r["title"], league, live) if live else None
+        # 无脑买：进入尾盘时间窗且净胜≥3球 → 不看排名差，直接纳入
+        force = _force_qualified(g, cfg) if g else False
+        watching = (gap is not None and gap >= th) or force
         if g:
             matched.add(_live_key(g))
         sig = _signal_for(r["title"], signals) if signals else None
@@ -125,7 +138,7 @@ def build_watchlist(schedule: list, live: list, signals: dict, cfg: dict) -> lis
             "start": r.get("start", ""), "prob": r.get("prob"),
             "rank_gap": gap, "rank_pair": r.get("rank_pair"),
             "limit_price": r.get("limit_price"),
-            "threshold": th, "watching": watching,
+            "threshold": th, "watching": watching, "force": force,
             "live": live_txt, "in_play": bool(g),
             "signal": sig["result"] if sig else None,
             "signal_detail": sig.get("detail") if sig else None,
@@ -134,7 +147,7 @@ def build_watchlist(schedule: list, live: list, signals: dict, cfg: dict) -> lis
     for g in (live or []):
         if _live_key(g) in matched:
             continue
-        out.append(_row_from_live(g, signals, base_gap, top1_gap))
+        out.append(_row_from_live(g, signals, base_gap, top1_gap, cfg))
     out.sort(key=lambda x: x["start"] or "")
     return out
 
