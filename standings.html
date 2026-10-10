@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<title>积分榜 · 强队错杀</title>
+<style>
+  * { box-sizing: border-box; margin: 0; }
+  body { background: #0b0e11; color: #eaecef; font-family: -apple-system, "Segoe UI", "Microsoft YaHei", sans-serif; }
+  .nav { background: #161a1e; border-bottom: 1px solid #2b3139; padding: 0 16px; display: flex; align-items: center; gap: 4px; flex-wrap: wrap; position: sticky; top: 0; z-index: 10; }
+  .nav .brand { color: #f0b90b; font-weight: 700; padding: 12px 16px 12px 0; font-size: 15px; }
+  .nav a { color: #848e9c; text-decoration: none; padding: 12px 14px; font-size: 14px; border-bottom: 2px solid transparent; }
+  .nav a:hover { color: #eaecef; }
+  .nav a.active { color: #f0b90b; border-bottom-color: #f0b90b; }
+  .wrap { padding: 16px; max-width: 720px; margin: 0 auto; }
+  .muted { color: #848e9c; font-size: 12px; }
+  table { width: 100%; border-collapse: collapse; font-size: 14px; background: #1e2329; border-radius: 8px; }
+  th { text-align: left; color: #848e9c; font-weight: 500; padding: 8px 12px; border-bottom: 1px solid #2b3139; }
+  td { padding: 9px 12px; border-bottom: 1px solid #161a1e; }
+  tr.top4 td { color: #0ecb81; }
+  tr.bottom3 td { color: #f6465d; }
+  h1 { font-size: 20px; color: #f0b90b; margin: 14px 0 4px; }
+  #errbar { display: none; background: #3b1518; color: #f6465d; padding: 10px 16px; font-size: 13px; }
+</style>
+</head>
+<body>
+<nav class="nav">
+  <span class="brand">⚽ 强队错杀</span>
+  <a href="/">总览</a>
+  <a href="standings.html?league=英超">英超</a>
+  <a href="standings.html?league=西甲">西甲</a>
+  <a href="standings.html?league=德甲">德甲</a>
+  <a href="standings.html?league=意甲">意甲</a>
+  <a href="standings.html?league=法甲">法甲</a>
+  <a href="watchlist.html">尾盘观察清单</a>
+</nav>
+<div id="errbar"></div>
+<div class="wrap">
+  <h1 id="title">积分榜</h1>
+  <div class="muted" id="sub"></div>
+  <div class="muted" style="margin:10px 0">绿色 = 前四（欧冠区），红色 = 后三（降级区）。融合分 = 本赛季场均分与上赛季场均分按场次加权。</div>
+  <table>
+    <thead><tr><th>#</th><th>球队</th><th>融合分</th></tr></thead>
+    <tbody id="tbody"></tbody>
+  </table>
+</div>
+<script src="shared.js"></script>
+<script>
+const league = new URLSearchParams(location.search).get('league') || '英超';
+document.getElementById('title').textContent = league + '积分榜';
+document.title = league + '积分榜 · 强队错杀';
+document.querySelectorAll('.nav a').forEach(a => {
+  if (a.href.includes('league=' + encodeURIComponent(league))) a.classList.add('active');
+});
+async function refresh(){
+  const d = await loadData();
+  if (!d) return;
+  const st = d.standings || {};
+  document.getElementById('sub').textContent = '更新: ' + (st.updated || '-');
+  const rows = (st.leagues || {})[league] || [];
+  const n = rows.length;
+  document.getElementById('tbody').innerHTML = rows.map(r => {
+    const cls = r.rank <= 4 ? 'top4' : (r.rank > n - 3 ? 'bottom3' : '');
+    return `<tr class="${cls}"><td>${r.rank}</td><td>${r.team}</td><td>${r.score.toFixed(3)}</td></tr>`;
+  }).join('') || '<tr><td colspan="3" class="muted">暂无数据</td></tr>';
+}
+refresh(); setInterval(refresh, 60000);
+</script>
+</body>
+</html>
