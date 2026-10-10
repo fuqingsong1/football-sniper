@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-10 22:44:17",
+  "updated": "2026-10-10 22:50:21",
   "account": {
     "balances": {
       "CeDeFi": 10.14,
@@ -795,7 +795,7 @@
       "limit_price": 0.6,
       "threshold": 8,
       "watching": false,
-      "live": "2:1 83'",
+      "live": "2:1 89'",
       "in_play": true,
       "signal": null,
       "signal_detail": null
@@ -816,7 +816,7 @@
       "limit_price": 0.6,
       "threshold": 8,
       "watching": true,
-      "live": "0:1 55'",
+      "live": "0:1 61'",
       "in_play": true,
       "signal": null,
       "signal_detail": null
@@ -837,7 +837,7 @@
       "limit_price": null,
       "threshold": 8,
       "watching": false,
-      "live": "1:1 51'",
+      "live": "2:1 57'",
       "in_play": true,
       "signal": null,
       "signal_detail": null
@@ -858,7 +858,7 @@
       "limit_price": null,
       "threshold": 7,
       "watching": true,
-      "live": "1:1 54'",
+      "live": "1:1 60'",
       "in_play": true,
       "signal": null,
       "signal_detail": null
@@ -879,7 +879,7 @@
       "limit_price": null,
       "threshold": 8,
       "watching": false,
-      "live": "2:2 55'",
+      "live": "2:3 61'",
       "in_play": true,
       "signal": null,
       "signal_detail": null
@@ -900,7 +900,7 @@
       "limit_price": null,
       "threshold": 8,
       "watching": false,
-      "live": "0:0 55'",
+      "live": "0:0 61'",
       "in_play": true,
       "signal": null,
       "signal_detail": null
@@ -921,7 +921,7 @@
       "limit_price": 0.82,
       "threshold": 8,
       "watching": false,
-      "live": "2:0 44'",
+      "live": "2:0 48'",
       "in_play": true,
       "signal": null,
       "signal_detail": null
@@ -942,7 +942,7 @@
       "limit_price": null,
       "threshold": 8,
       "watching": false,
-      "live": "0:0 44'",
+      "live": "0:0 46'",
       "in_play": true,
       "signal": null,
       "signal_detail": null
@@ -963,7 +963,7 @@
       "limit_price": null,
       "threshold": 8,
       "watching": false,
-      "live": "1:1 44'",
+      "live": "1:1 50'",
       "in_play": true,
       "signal": null,
       "signal_detail": null
@@ -984,7 +984,7 @@
       "limit_price": null,
       "threshold": 8,
       "watching": true,
-      "live": "0:0 44'",
+      "live": "0:0 48'",
       "in_play": true,
       "signal": null,
       "signal_detail": null
@@ -1005,7 +1005,7 @@
       "limit_price": null,
       "threshold": 8,
       "watching": true,
-      "live": "0:0 29'",
+      "live": "0:1 35'",
       "in_play": true,
       "signal": null,
       "signal_detail": null

@@ -21,7 +21,8 @@
       "rank_ratio": 1.2,
       "discount": null,
       "position_pct": null,
-      "limit_price": null
+      "limit_price": null,
+      "placed": false
     },
     {
       "league": "意甲",
@@ -42,7 +43,8 @@
       "rank_ratio": 1.2,
       "discount": 0.8,
       "position_pct": 0.09,
-      "limit_price": 0.6
+      "limit_price": 0.6,
+      "placed": false
     },
     {
       "league": "德甲",
@@ -63,7 +65,8 @@
       "rank_ratio": 2.5,
       "discount": 0.8,
       "position_pct": 0.09,
-      "limit_price": 0.6
+      "limit_price": 0.6,
+      "placed": false
     },
     {
       "league": "德甲",
@@ -84,7 +87,8 @@
       "rank_ratio": 2.0,
       "discount": null,
       "position_pct": null,
-      "limit_price": null
+      "limit_price": null,
+      "placed": false
     },
     {
       "league": "德甲",
@@ -105,7 +109,8 @@
       "rank_ratio": 8.0,
       "discount": null,
       "position_pct": null,
-      "limit_price": null
+      "limit_price": null,
+      "placed": true
     },
     {
       "league": "德甲",
@@ -126,7 +131,8 @@
       "rank_ratio": 2.2,
       "discount": null,
       "position_pct": null,
-      "limit_price": null
+      "limit_price": null,
+      "placed": false
     },
     {
       "league": "德甲",
@@ -147,7 +153,8 @@
       "rank_ratio": 1.5,
       "discount": null,
       "position_pct": null,
-      "limit_price": null
+      "limit_price": null,
+      "placed": false
     },
     {
       "league": "英超",
@@ -168,7 +175,8 @@
       "rank_ratio": 1.4,
       "discount": 0.9,
       "position_pct": 0.11,
-      "limit_price": 0.82
+      "limit_price": 0.82,
+      "placed": false
     },
     {
       "league": "英超",
@@ -189,7 +197,8 @@
       "rank_ratio": 1.1,
       "discount": null,
       "position_pct": null,
-      "limit_price": null
+      "limit_price": null,
+      "placed": false
     },
     {
       "league": "英超",
@@ -210,7 +219,8 @@
       "rank_ratio": 1.5,
       "discount": null,
       "position_pct": null,
-      "limit_price": null
+      "limit_price": null,
+      "placed": false
     },
     {
       "league": "英超",
@@ -231,7 +241,8 @@
       "rank_ratio": 3.2,
       "discount": null,
       "position_pct": null,
-      "limit_price": null
+      "limit_price": null,
+      "placed": false
     },
     {
       "league": "西甲",
@@ -252,7 +263,8 @@
       "rank_ratio": 4.3,
       "discount": null,
       "position_pct": null,
-      "limit_price": null
+      "limit_price": null,
+      "placed": false
     },
     {
       "league": "意甲",
@@ -273,7 +285,8 @@
       "rank_ratio": 15.0,
       "discount": 0.85,
       "position_pct": 0.1,
-      "limit_price": 0.71
+      "limit_price": 0.71,
+      "placed": true
     },
     {
       "league": "西甲",
@@ -294,7 +307,8 @@
       "rank_ratio": 9.0,
       "discount": 0.9,
       "position_pct": 0.11,
-      "limit_price": 0.8
+      "limit_price": 0.8,
+      "placed": true
     },
     {
       "league": "法甲",
@@ -315,7 +329,8 @@
       "rank_ratio": 14.0,
       "discount": 0.9,
       "position_pct": 0.11,
-      "limit_price": 0.78
+      "limit_price": 0.78,
+      "placed": true
     },
     {
       "league": "西甲",
@@ -336,7 +351,8 @@
       "rank_ratio": 2.5,
       "discount": null,
       "position_pct": null,
-      "limit_price": null
+      "limit_price": null,
+      "placed": false
     }
   ]
 }
