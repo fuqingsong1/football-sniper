@@ -1,182 +1,680 @@
 {
-  "updated": "2026-10-11 02:57:10",
-  "source": "本机推送（Binance 预测市场）",
-  "schedule": [
-    {
-      "league": "西甲",
-      "title": "FC Barcelona vs. Getafe CF",
-      "title_zh": "巴塞罗那 vs 赫塔菲",
-      "team": "FC Barcelona",
-      "team_zh": "巴塞罗那",
-      "home_zh": "巴塞罗那",
-      "away_zh": "赫塔菲",
-      "home_logo": "",
-      "away_logo": "",
-      "team_logo": "",
-      "prob": 0.99,
-      "start": "2026-10-10T16:30:00+00:00",
-      "tick": 0.01,
-      "rank_gap": null,
-      "rank_pair": "-",
-      "rank_ratio": null,
-      "discount": 0.9,
-      "position_pct": 0.11,
-      "limit_price": 0.89,
-      "placed": true
-    },
-    {
-      "league": "英超",
-      "title": "Manchester United FC vs. Tottenham Hotspur FC",
-      "title_zh": "曼联 vs 热刺",
-      "team": "Manchester United FC",
-      "team_zh": "曼联",
-      "home_zh": "曼联",
-      "away_zh": "热刺",
-      "home_logo": "",
-      "away_logo": "",
-      "team_logo": "",
-      "prob": 0.01,
-      "start": "2026-10-10T16:30:00+00:00",
-      "tick": 0.01,
-      "rank_gap": null,
-      "rank_pair": "-",
-      "rank_ratio": null,
-      "discount": null,
-      "position_pct": null,
-      "limit_price": null,
-      "placed": false
-    },
-    {
-      "league": "法甲",
-      "title": "Paris Saint-Germain FC vs. Le Mans FC",
-      "title_zh": "巴黎圣日耳曼 vs 勒芒",
-      "team": "Paris Saint-Germain FC",
-      "team_zh": "巴黎圣日耳曼",
-      "home_zh": "巴黎圣日耳曼",
-      "away_zh": "勒芒",
-      "home_logo": "",
-      "away_logo": "",
-      "team_logo": "",
-      "prob": 0.855,
-      "start": "2026-10-10T18:45:00+00:00",
-      "tick": 0.01,
-      "rank_gap": null,
-      "rank_pair": "-",
-      "rank_ratio": null,
-      "discount": 0.9,
-      "position_pct": 0.11,
-      "limit_price": 0.76,
-      "placed": true
-    },
-    {
-      "league": "法甲",
-      "title": "Stade Brestois 29 vs. Angers SCO",
-      "title_zh": "布雷斯特 vs 昂热",
-      "team": "Stade Brestois 29",
-      "team_zh": "布雷斯特",
-      "home_zh": "布雷斯特",
-      "away_zh": "昂热",
-      "home_logo": "",
-      "away_logo": "",
-      "team_logo": "",
-      "prob": 0.715,
-      "start": "2026-10-10T18:45:00+00:00",
-      "tick": 0.01,
-      "rank_gap": null,
-      "rank_pair": "-",
-      "rank_ratio": null,
-      "discount": null,
-      "position_pct": null,
-      "limit_price": null,
-      "placed": false
-    },
-    {
-      "league": "意甲",
-      "title": "SSC Napoli vs. Frosinone Calcio",
-      "title_zh": "那不勒斯 vs 弗罗西诺内",
-      "team": "SSC Napoli",
-      "team_zh": "那不勒斯",
-      "home_zh": "那不勒斯",
-      "away_zh": "弗罗西诺内",
-      "home_logo": "",
-      "away_logo": "",
-      "team_logo": "",
-      "prob": 0.645,
-      "start": "2026-10-10T18:45:00+00:00",
-      "tick": 0.01,
-      "rank_gap": null,
-      "rank_pair": "-",
-      "rank_ratio": null,
-      "discount": null,
-      "position_pct": null,
-      "limit_price": null,
-      "placed": false
-    },
-    {
-      "league": "法甲",
-      "title": "AS Monaco FC vs. Toulouse FC",
-      "title_zh": "摩纳哥 vs 图卢兹",
-      "team": "AS Monaco FC",
-      "team_zh": "摩纳哥",
-      "home_zh": "摩纳哥",
-      "away_zh": "图卢兹",
-      "home_logo": "",
-      "away_logo": "",
-      "team_logo": "",
-      "prob": 0.575,
-      "start": "2026-10-10T18:45:00+00:00",
-      "tick": 0.01,
-      "rank_gap": null,
-      "rank_pair": "-",
-      "rank_ratio": null,
-      "discount": null,
-      "position_pct": null,
-      "limit_price": null,
-      "placed": false
-    },
-    {
-      "league": "法甲",
-      "title": "FC Lorient vs. Paris FC",
-      "title_zh": "洛里昂 vs 巴黎FC",
-      "team": "Paris FC",
-      "team_zh": "巴黎FC",
-      "home_zh": "洛里昂",
-      "away_zh": "巴黎FC",
-      "home_logo": "",
-      "away_logo": "",
-      "team_logo": "",
-      "prob": 0.475,
-      "start": "2026-10-10T18:45:00+00:00",
-      "tick": 0.01,
-      "rank_gap": null,
-      "rank_pair": "-",
-      "rank_ratio": null,
-      "discount": null,
-      "position_pct": null,
-      "limit_price": null,
-      "placed": false
-    },
-    {
-      "league": "西甲",
-      "title": "Real Madrid CF vs. Villarreal CF",
-      "title_zh": "皇家马德里 vs 比利亚雷亚尔",
-      "team": "Real Madrid CF",
-      "team_zh": "皇家马德里",
-      "home_zh": "皇家马德里",
-      "away_zh": "比利亚雷亚尔",
-      "home_logo": "",
-      "away_logo": "",
-      "team_logo": "",
-      "prob": 0.735,
-      "start": "2026-10-10T19:00:00+00:00",
-      "tick": 0.01,
-      "rank_gap": null,
-      "rank_pair": "-",
-      "rank_ratio": null,
-      "discount": null,
-      "position_pct": null,
-      "limit_price": null,
-      "placed": false
+  "updated": "2026-10-11 04:11:25 (北京时间)",
+  "source": "GitHub Actions 自动更新（Polymarket（公开数据））",
+  "schedule": [],
+  "standings": {
+    "updated": "2026-10-10 20:11",
+    "leagues": {
+      "英超": [
+        {
+          "rank": 1,
+          "team": "曼城",
+          "score": 1.674,
+          "logo": "logos/382.png"
+        },
+        {
+          "rank": 2,
+          "team": "阿森纳",
+          "score": 1.673,
+          "logo": "logos/359.png"
+        },
+        {
+          "rank": 3,
+          "team": "布莱顿",
+          "score": 1.217,
+          "logo": "logos/331.png"
+        },
+        {
+          "rank": 4,
+          "team": "利物浦",
+          "score": 1.161,
+          "logo": "logos/364.png"
+        },
+        {
+          "rank": 5,
+          "team": "曼联",
+          "score": 1.086,
+          "logo": "logos/360.png"
+        },
+        {
+          "rank": 6,
+          "team": "布伦特福德",
+          "score": 1.074,
+          "logo": "logos/337.png"
+        },
+        {
+          "rank": 7,
+          "team": "切尔西",
+          "score": 1.063,
+          "logo": "logos/363.png"
+        },
+        {
+          "rank": 8,
+          "team": "埃弗顿",
+          "score": 1.03,
+          "logo": "logos/368.png"
+        },
+        {
+          "rank": 9,
+          "team": "纽卡斯尔",
+          "score": 0.98,
+          "logo": "logos/361.png"
+        },
+        {
+          "rank": 10,
+          "team": "阿斯顿维拉",
+          "score": 0.971,
+          "logo": "logos/362.png"
+        },
+        {
+          "rank": 11,
+          "team": "利兹联",
+          "score": 0.959,
+          "logo": "logos/357.png"
+        },
+        {
+          "rank": 12,
+          "team": "伊普斯维奇",
+          "score": 0.857,
+          "logo": "logos/373.png"
+        },
+        {
+          "rank": 13,
+          "team": "赫尔城",
+          "score": 0.85,
+          "logo": "logos/306.png"
+        },
+        {
+          "rank": 14,
+          "team": "桑德兰",
+          "score": 0.799,
+          "logo": "logos/366.png"
+        },
+        {
+          "rank": 15,
+          "team": "伯恩茅斯",
+          "score": 0.786,
+          "logo": "logos/349.png"
+        },
+        {
+          "rank": 16,
+          "team": "诺丁汉森林",
+          "score": 0.771,
+          "logo": "logos/393.png"
+        },
+        {
+          "rank": 17,
+          "team": "水晶宫",
+          "score": 0.733,
+          "logo": "logos/384.png"
+        },
+        {
+          "rank": 18,
+          "team": "富勒姆",
+          "score": 0.682,
+          "logo": "logos/370.png"
+        },
+        {
+          "rank": 19,
+          "team": "西汉姆联",
+          "score": 0.616,
+          "logo": "logos/371.png"
+        },
+        {
+          "rank": 20,
+          "team": "热刺",
+          "score": 0.605,
+          "logo": "logos/367.png"
+        },
+        {
+          "rank": 21,
+          "team": "Coventry City",
+          "score": 0.6,
+          "logo": "logos/388.png"
+        },
+        {
+          "rank": 22,
+          "team": "伯恩利",
+          "score": 0.347,
+          "logo": "logos/379.png"
+        },
+        {
+          "rank": 23,
+          "team": "狼队",
+          "score": 0.316,
+          "logo": "logos/380.png"
+        }
+      ],
+      "西甲": [
+        {
+          "rank": 1,
+          "team": "巴塞罗那",
+          "score": 2.011,
+          "logo": "logos/83.png"
+        },
+        {
+          "rank": 2,
+          "team": "皇家马德里",
+          "score": 1.608,
+          "logo": "logos/86.png"
+        },
+        {
+          "rank": 3,
+          "team": "马德里竞技",
+          "score": 1.537,
+          "logo": "logos/1068.png"
+        },
+        {
+          "rank": 4,
+          "team": "皇家贝蒂斯",
+          "score": 1.373,
+          "logo": "logos/244.png"
+        },
+        {
+          "rank": 5,
+          "team": "比利亚雷亚尔",
+          "score": 1.139,
+          "logo": "logos/102.png"
+        },
+        {
+          "rank": 6,
+          "team": "塞维利亚",
+          "score": 1.054,
+          "logo": "logos/243.png"
+        },
+        {
+          "rank": 7,
+          "team": "皇家社会",
+          "score": 0.95,
+          "logo": "logos/89.png"
+        },
+        {
+          "rank": 8,
+          "team": "阿拉维斯",
+          "score": 0.921,
+          "logo": "logos/96.png"
+        },
+        {
+          "rank": 9,
+          "team": "巴列卡诺",
+          "score": 0.902,
+          "logo": "logos/101.png"
+        },
+        {
+          "rank": 10,
+          "team": "塞尔塔",
+          "score": 0.9,
+          "logo": "logos/85.png"
+        },
+        {
+          "rank": 11,
+          "team": "毕尔巴鄂竞技",
+          "score": 0.888,
+          "logo": "logos/93.png"
+        },
+        {
+          "rank": 12,
+          "team": "赫塔菲",
+          "score": 0.873,
+          "logo": "logos/2922.png"
+        },
+        {
+          "rank": 13,
+          "team": "Deportivo",
+          "score": 0.864,
+          "logo": "logos/90.png"
+        },
+        {
+          "rank": 14,
+          "team": "西班牙人",
+          "score": 0.822,
+          "logo": "logos/88.png"
+        },
+        {
+          "rank": 15,
+          "team": "奥萨苏纳",
+          "score": 0.816,
+          "logo": "logos/97.png"
+        },
+        {
+          "rank": 16,
+          "team": "Racing Santander",
+          "score": 0.727,
+          "logo": "logos/87.png"
+        },
+        {
+          "rank": 17,
+          "team": "莱万特",
+          "score": 0.712,
+          "logo": "logos/1538.png"
+        },
+        {
+          "rank": 18,
+          "team": "瓦伦西亚",
+          "score": 0.709,
+          "logo": "logos/94.png"
+        },
+        {
+          "rank": 19,
+          "team": "埃尔切",
+          "score": 0.69,
+          "logo": "logos/3751.png"
+        },
+        {
+          "rank": 20,
+          "team": "马略卡",
+          "score": 0.663,
+          "logo": "logos/84.png"
+        },
+        {
+          "rank": 21,
+          "team": "赫罗纳",
+          "score": 0.647,
+          "logo": "logos/9812.png"
+        },
+        {
+          "rank": 22,
+          "team": "Malaga",
+          "score": 0.565,
+          "logo": "logos/99.png"
+        },
+        {
+          "rank": 23,
+          "team": "奥维耶多",
+          "score": 0.458,
+          "logo": "logos/92.png"
+        }
+      ],
+      "德甲": [
+        {
+          "rank": 1,
+          "team": "拜仁慕尼黑",
+          "score": 1.728,
+          "logo": "logos/132.png"
+        },
+        {
+          "rank": 2,
+          "team": "多特蒙德",
+          "score": 1.616,
+          "logo": "logos/124.png"
+        },
+        {
+          "rank": 3,
+          "team": "莱比锡红牛",
+          "score": 1.31,
+          "logo": "logos/11420.png"
+        },
+        {
+          "rank": 4,
+          "team": "勒沃库森",
+          "score": 1.281,
+          "logo": "logos/131.png"
+        },
+        {
+          "rank": 5,
+          "team": "弗赖堡",
+          "score": 1.181,
+          "logo": "logos/126.png"
+        },
+        {
+          "rank": 6,
+          "team": "斯图加特",
+          "score": 1.121,
+          "logo": "logos/134.png"
+        },
+        {
+          "rank": 7,
+          "team": "奥格斯堡",
+          "score": 0.969,
+          "logo": "logos/3841.png"
+        },
+        {
+          "rank": 8,
+          "team": "霍芬海姆",
+          "score": 0.957,
+          "logo": "logos/7911.png"
+        },
+        {
+          "rank": 9,
+          "team": "美因茨",
+          "score": 0.879,
+          "logo": "logos/2950.png"
+        },
+        {
+          "rank": 10,
+          "team": "法兰克福",
+          "score": 0.832,
+          "logo": "logos/125.png"
+        },
+        {
+          "rank": 11,
+          "team": "云达不莱梅",
+          "score": 0.824,
+          "logo": "logos/137.png"
+        },
+        {
+          "rank": 12,
+          "team": "汉堡",
+          "score": 0.803,
+          "logo": "logos/127.png"
+        },
+        {
+          "rank": 13,
+          "team": "埃尔弗斯贝格",
+          "score": 0.8,
+          "logo": "logos/10388.png"
+        },
+        {
+          "rank": 14,
+          "team": "沙尔克04",
+          "score": 0.737,
+          "logo": "logos/133.png"
+        },
+        {
+          "rank": 15,
+          "team": "柏林联合",
+          "score": 0.716,
+          "logo": "logos/598.png"
+        },
+        {
+          "rank": 16,
+          "team": "Cologne",
+          "score": 0.656,
+          "logo": "logos/122.png"
+        },
+        {
+          "rank": 17,
+          "team": "帕德博恩",
+          "score": 0.65,
+          "logo": "logos/3307.png"
+        },
+        {
+          "rank": 18,
+          "team": "门兴",
+          "score": 0.529,
+          "logo": "logos/268.png"
+        },
+        {
+          "rank": 19,
+          "team": "沃尔夫斯堡",
+          "score": 0.512,
+          "logo": "logos/138.png"
+        },
+        {
+          "rank": 20,
+          "team": "1. Heidenheim 1846",
+          "score": 0.459,
+          "logo": "logos/6418.png"
+        },
+        {
+          "rank": 21,
+          "team": "圣保利",
+          "score": 0.459,
+          "logo": "logos/270.png"
+        }
+      ],
+      "意甲": [
+        {
+          "rank": 1,
+          "team": "国际米兰",
+          "score": 1.743,
+          "logo": "logos/110.png"
+        },
+        {
+          "rank": 2,
+          "team": "罗马",
+          "score": 1.514,
+          "logo": "logos/104.png"
+        },
+        {
+          "rank": 3,
+          "team": "AC米兰",
+          "score": 1.379,
+          "logo": "logos/103.png"
+        },
+        {
+          "rank": 4,
+          "team": "科莫",
+          "score": 1.341,
+          "logo": "logos/2572.png"
+        },
+        {
+          "rank": 5,
+          "team": "尤文图斯",
+          "score": 1.317,
+          "logo": "logos/111.png"
+        },
+        {
+          "rank": 6,
+          "team": "拉齐奥",
+          "score": 1.289,
+          "logo": "logos/112.png"
+        },
+        {
+          "rank": 7,
+          "team": "那不勒斯",
+          "score": 1.25,
+          "logo": "logos/114.png"
+        },
+        {
+          "rank": 8,
+          "team": "卡利亚里",
+          "score": 1.109,
+          "logo": "logos/2925.png"
+        },
+        {
+          "rank": 9,
+          "team": "亚特兰大",
+          "score": 0.999,
+          "logo": "logos/105.png"
+        },
+        {
+          "rank": 10,
+          "team": "弗罗西诺内",
+          "score": 0.95,
+          "logo": "logos/4057.png"
+        },
+        {
+          "rank": 11,
+          "team": "萨索洛",
+          "score": 0.93,
+          "logo": "logos/3997.png"
+        },
+        {
+          "rank": 12,
+          "team": "乌迪内斯",
+          "score": 0.792,
+          "logo": "logos/118.png"
+        },
+        {
+          "rank": 13,
+          "team": "博洛尼亚",
+          "score": 0.763,
+          "logo": "logos/107.png"
+        },
+        {
+          "rank": 14,
+          "team": "莱切",
+          "score": 0.75,
+          "logo": "logos/113.png"
+        },
+        {
+          "rank": 15,
+          "team": "都灵",
+          "score": 0.733,
+          "logo": "logos/239.png"
+        },
+        {
+          "rank": 16,
+          "team": "帕尔马",
+          "score": 0.698,
+          "logo": "logos/115.png"
+        },
+        {
+          "rank": 17,
+          "team": "佛罗伦萨",
+          "score": 0.664,
+          "logo": "logos/109.png"
+        },
+        {
+          "rank": 18,
+          "team": "热那亚",
+          "score": 0.653,
+          "logo": "logos/3263.png"
+        },
+        {
+          "rank": 19,
+          "team": "蒙扎",
+          "score": 0.65,
+          "logo": "logos/4007.png"
+        },
+        {
+          "rank": 20,
+          "team": "Cremonese",
+          "score": 0.537,
+          "logo": "logos/4050.png"
+        },
+        {
+          "rank": 21,
+          "team": "威尼斯",
+          "score": 0.45,
+          "logo": "logos/17530.png"
+        },
+        {
+          "rank": 22,
+          "team": "维罗纳",
+          "score": 0.332,
+          "logo": "logos/119.png"
+        },
+        {
+          "rank": 23,
+          "team": "Pisa",
+          "score": 0.284,
+          "logo": "logos/3956.png"
+        }
+      ],
+      "法甲": [
+        {
+          "rank": 1,
+          "team": "巴黎圣日耳曼",
+          "score": 1.406,
+          "logo": "logos/160.png"
+        },
+        {
+          "rank": 2,
+          "team": "里尔",
+          "score": 1.388,
+          "logo": "logos/166.png"
+        },
+        {
+          "rank": 3,
+          "team": "摩纳哥",
+          "score": 1.365,
+          "logo": "logos/174.png"
+        },
+        {
+          "rank": 4,
+          "team": "雷恩",
+          "score": 1.281,
+          "logo": "logos/169.png"
+        },
+        {
+          "rank": 5,
+          "team": "里昂",
+          "score": 1.28,
+          "logo": "logos/167.png"
+        },
+        {
+          "rank": 6,
+          "team": "朗斯",
+          "score": 1.216,
+          "logo": "logos/175.png"
+        },
+        {
+          "rank": 7,
+          "team": "巴黎FC",
+          "score": 1.132,
+          "logo": "logos/6851.png"
+        },
+        {
+          "rank": 8,
+          "team": "斯特拉斯堡",
+          "score": 1.051,
+          "logo": "logos/180.png"
+        },
+        {
+          "rank": 9,
+          "team": "马赛",
+          "score": 0.931,
+          "logo": "logos/176.png"
+        },
+        {
+          "rank": 10,
+          "team": "图卢兹",
+          "score": 0.85,
+          "logo": "logos/179.png"
+        },
+        {
+          "rank": 11,
+          "team": "洛里昂",
+          "score": 0.846,
+          "logo": "logos/273.png"
+        },
+        {
+          "rank": 12,
+          "team": "昂热",
+          "score": 0.826,
+          "logo": "logos/7868.png"
+        },
+        {
+          "rank": 13,
+          "team": "布雷斯特",
+          "score": 0.766,
+          "logo": "logos/6997.png"
+        },
+        {
+          "rank": 14,
+          "team": "欧塞尔",
+          "score": 0.75,
+          "logo": "logos/172.png"
+        },
+        {
+          "rank": 15,
+          "team": "勒芒",
+          "score": 0.75,
+          "logo": "logos/2697.png"
+        },
+        {
+          "rank": 16,
+          "team": "尼斯",
+          "score": 0.674,
+          "logo": "logos/2502.png"
+        },
+        {
+          "rank": 17,
+          "team": "Troyes",
+          "score": 0.65,
+          "logo": "logos/170.png"
+        },
+        {
+          "rank": 18,
+          "team": "勒阿弗尔",
+          "score": 0.536,
+          "logo": "logos/3236.png"
+        },
+        {
+          "rank": 19,
+          "team": "南特",
+          "score": 0.418,
+          "logo": "logos/165.png"
+        },
+        {
+          "rank": 20,
+          "team": "Metz",
+          "score": 0.3,
+          "logo": "logos/177.png"
+        }
+      ]
     }
-  ]
+  }
 }
