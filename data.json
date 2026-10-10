@@ -1,0 +1,156 @@
+{
+  "updated": "2026-10-10 19:36:26",
+  "schedule": [
+    {
+      "league": "德甲",
+      "title": "FC Augsburg vs. FC Bayern München",
+      "title_zh": "奥格斯堡 vs 拜仁慕尼黑",
+      "team": "FC Bayern München",
+      "team_zh": "拜仁慕尼黑",
+      "prob": 0.835,
+      "start": "2026-10-10T13:30:00+00:00",
+      "tick": 0.01,
+      "discount": 0.85,
+      "position_pct": 0.1,
+      "limit_price": 0.7
+    },
+    {
+      "league": "意甲",
+      "title": "FC Internazionale Milano vs. Parma Calcio 1913",
+      "title_zh": "国际米兰 vs 帕尔马",
+      "team": "FC Internazionale Milano",
+      "team_zh": "国际米兰",
+      "prob": 0.855,
+      "start": "2026-10-10T16:00:00+00:00",
+      "tick": 0.01,
+      "discount": 0.9,
+      "position_pct": 0.11,
+      "limit_price": 0.76
+    },
+    {
+      "league": "西甲",
+      "title": "FC Barcelona vs. Getafe CF",
+      "title_zh": "巴塞罗那 vs 赫塔菲",
+      "team": "FC Barcelona",
+      "team_zh": "巴塞罗那",
+      "prob": 0.895,
+      "start": "2026-10-10T16:30:00+00:00",
+      "tick": 0.01,
+      "discount": 0.9,
+      "position_pct": 0.11,
+      "limit_price": 0.8
+    },
+    {
+      "league": "法甲",
+      "title": "Paris Saint-Germain FC vs. Le Mans FC",
+      "title_zh": "巴黎圣日耳曼 vs 勒芒",
+      "team": "Paris Saint-Germain FC",
+      "team_zh": "巴黎圣日耳曼",
+      "prob": 0.875,
+      "start": "2026-10-10T18:45:00+00:00",
+      "tick": 0.01,
+      "discount": 0.9,
+      "position_pct": 0.11,
+      "limit_price": 0.78
+    },
+    {
+      "league": "西甲",
+      "title": "Real Madrid CF vs. Villarreal CF",
+      "title_zh": "皇家马德里 vs 比利亚雷亚尔",
+      "team": "Real Madrid CF",
+      "team_zh": "皇家马德里",
+      "prob": 0.715,
+      "start": "2026-10-10T19:00:00+00:00",
+      "tick": 0.01,
+      "discount": null,
+      "position_pct": null,
+      "limit_price": null
+    }
+  ],
+  "account": {
+    "balances": {
+      "CeDeFi": 11.26,
+      "SPOT": 0.0,
+      "FUNDING": 0.0
+    },
+    "realized_pnl": -2151.86651246,
+    "unrealized_pnl": -264.20959996,
+    "active_positions": 29
+  },
+  "orders": [
+    {
+      "order_id": "26101000001954855288",
+      "title": "FC Barcelona vs. Getafe CF",
+      "team": "FC Barcelona",
+      "league": "西甲",
+      "prob": 0.895,
+      "price": 0.8,
+      "shares": 1.55,
+      "usd": 1.24,
+      "start": "2026-10-10T16:30:00+00:00",
+      "placed_date": "2026-10-10",
+      "status": "OPEN",
+      "title_zh": "巴塞罗那 vs 赫塔菲",
+      "team_zh": "巴塞罗那"
+    },
+    {
+      "order_id": "26101000001954855422",
+      "title": "Paris Saint-Germain FC vs. Le Mans FC",
+      "team": "Paris Saint-Germain FC",
+      "league": "法甲",
+      "prob": 0.875,
+      "price": 0.78,
+      "shares": 1.59,
+      "usd": 1.24,
+      "start": "2026-10-10T18:45:00+00:00",
+      "placed_date": "2026-10-10",
+      "status": "OPEN",
+      "title_zh": "巴黎圣日耳曼 vs 勒芒",
+      "team_zh": "巴黎圣日耳曼"
+    },
+    {
+      "order_id": "26101000001954855410",
+      "title": "FC Internazionale Milano vs. Parma Calcio 1913",
+      "team": "FC Internazionale Milano",
+      "league": "意甲",
+      "prob": 0.855,
+      "price": 0.76,
+      "shares": 1.63,
+      "usd": 1.24,
+      "start": "2026-10-10T16:00:00+00:00",
+      "placed_date": "2026-10-10",
+      "status": "OPEN",
+      "title_zh": "国际米兰 vs 帕尔马",
+      "team_zh": "国际米兰"
+    },
+    {
+      "order_id": "26101000001954855295",
+      "title": "FC Augsburg vs. FC Bayern München",
+      "team": "FC Bayern München",
+      "league": "德甲",
+      "prob": 0.835,
+      "price": 0.7,
+      "shares": 1.61,
+      "usd": 1.13,
+      "start": "2026-10-10T13:30:00+00:00",
+      "placed_date": "2026-10-10",
+      "status": "OPEN",
+      "title_zh": "奥格斯堡 vs 拜仁慕尼黑",
+      "team_zh": "拜仁慕尼黑"
+    }
+  ],
+  "bankroll_history": [
+    {
+      "date": "2026-10-10",
+      "bankroll": 11.26
+    }
+  ],
+  "stats": {
+    "total_trades": 0,
+    "wins": 0,
+    "losses": 0,
+    "win_rate": null,
+    "profit_factor": null,
+    "net_pnl": 0
+  }
+}
