@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-11 01:58:45",
+  "updated": "2026-10-11 02:28:49",
   "account": {
     "balances": {
       "CeDeFi": 4.65,
@@ -234,12 +234,12 @@
       "rank_pair": "-",
       "limit_price": 0.85,
       "threshold": 8,
-      "watching": false,
-      "force": false,
-      "live": "2:0 62'",
+      "watching": true,
+      "force": true,
+      "live": "3:0 92'",
       "in_play": true,
-      "signal": null,
-      "signal_detail": null
+      "signal": "TRY",
+      "signal_detail": "Barcelona 领先3球 90'（≥3球，无视排名差）"
     },
     {
       "league": "德甲",
@@ -258,10 +258,10 @@
       "threshold": 8,
       "watching": false,
       "force": false,
-      "live": "5:0 69'",
-      "in_play": true,
-      "signal": null,
-      "signal_detail": null
+      "live": null,
+      "in_play": false,
+      "signal": "TRY",
+      "signal_detail": "RB Leipzig 领先6球 91'（≥3球，无视排名差）"
     },
     {
       "league": "英超",
@@ -280,8 +280,8 @@
       "threshold": 8,
       "watching": false,
       "force": false,
-      "live": "0:0 72'",
-      "in_play": true,
+      "live": null,
+      "in_play": false,
       "signal": null,
       "signal_detail": null
     },
