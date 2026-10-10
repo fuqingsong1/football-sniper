@@ -21,6 +21,7 @@ _SESSION.headers.update({"User-Agent": "Mozilla/5.0"})
 
 BASE = Path(__file__).parent
 CACHE = BASE / "strength.json"
+LOGO_DIR = BASE / "logos"      # 队徽本地化目录（见 dl_logos.py：ESPN CDN 直连不稳）
 K = 15          # 上赛季先验的等效场次
 PRIOR_W = 0.6   # 上赛季场均分再打 6 折（阵容会变，不能完全等同）
 
@@ -94,6 +95,19 @@ def _fetch(league_code: str, season: int) -> dict:
     return out
 
 
+def _logo_local(url: str) -> str:
+    """优先返回本地 logos/ 路径（浏览器一定能加载）；没有本地文件则保留远程 URL。
+    补齐由 dl_logos.py 负责。"""
+    if not url:
+        return ""
+    m = re.search(r"/(\d+)\.png", url)
+    if m:
+        f = LOGO_DIR / f"{m.group(1)}.png"
+        if f.exists() and f.stat().st_size > 200:
+            return f"logos/{m.group(1)}.png"
+    return url
+
+
 def refresh() -> dict:
     """拉全部五个联赛，本赛季+上赛季融合，按融合分排名。返回并写缓存。"""
     now = datetime.now()
@@ -124,7 +138,7 @@ def refresh() -> dict:
                 blended[team] = prev_ppg
         ranked = sorted(blended, key=lambda t: -blended[t])
         table[league] = {t: {"rank": i + 1, "score": round(blended[t], 3),
-                             "logo": logos.get(t, "")}
+                             "logo": _logo_local(logos.get(t, ""))}
                          for i, t in enumerate(ranked)}
     data = {"updated": now.strftime("%Y-%m-%d %H:%M"), "table": table}
     CACHE.write_text(json.dumps(data, ensure_ascii=False, indent=1), encoding="utf-8")
