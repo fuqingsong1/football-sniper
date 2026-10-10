@@ -82,7 +82,7 @@
 <div class="panel">
   <h2>👀 尾盘观察清单</h2>
   <table>
-    <thead><tr><th>开赛</th><th>联赛</th><th>对阵</th><th>强队</th><th>盘前胜率</th><th>排名差</th><th>排名比</th><th>挂单价</th><th>实时比分</th><th>状态</th></tr></thead>
+    <thead><tr><th>开赛</th><th>联赛</th><th>对阵</th><th>强队</th><th>盘前胜率</th><th>排名差</th><th>排名比</th><th>实时比分</th><th>挂单价</th><th>状态</th></tr></thead>
     <tbody id="watchlist"></tbody>
   </table>
 </div>
@@ -155,8 +155,8 @@ async function refresh(){
       <td>${w.prob != null ? (w.prob*100).toFixed(1) + '%' : '-'}</td>
       <td>${w.rank_gap != null ? w.rank_gap + '位' : '-'}</td>
       <td>${w.rank_pair && w.rank_pair !== '-' ? w.rank_pair : '-'}</td>
-      <td>${w.limit_price != null ? w.limit_price : '-'}</td>
-      <td>${w.live || '-'}</td><td>${status}</td></tr>`;
+      <td>${w.live || '-'}</td>
+      <td>${w.limit_price != null ? w.limit_price : '-'}</td><td>${status}</td></tr>`;
   }).join('') || '<tr><td colspan="10" class="muted">未来 72 小时暂无比赛</td></tr>';
 
   document.getElementById('log').textContent = d.log_tail || '';

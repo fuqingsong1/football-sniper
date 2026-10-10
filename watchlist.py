@@ -53,10 +53,51 @@ def _logo_of(league: str, name: str) -> str:
     return r.get("logo", "") if r else ""
 
 
+def _live_key(g: dict) -> str:
+    return g.get("espn_name") or f"{g['league']}|{g['home']['name']}|{g['away']['name']}"
+
+
+def _row_from_live(g: dict, signals: dict, base_gap: dict, top1_gap: dict):
+    """进行中（已开赛、已从 72h 赛程移除）的比赛 → 尾盘清单行。
+    盘前胜率/挂单价拿不到记 None，其余（排名差、实时比分、信号）照常。"""
+    league = g["league"]
+    home, away = g["home"]["name"], g["away"]["name"]
+    rh = strength.rank_of(league, home)
+    ra = strength.rank_of(league, away)
+    if rh and ra:
+        stronger = rh if rh["rank"] <= ra["rank"] else ra
+        strong = home if rh["rank"] <= ra["rank"] else away
+        gap = abs(rh["rank"] - ra["rank"])
+        pair = f"{min(rh['rank'], ra['rank'])} vs {max(rh['rank'], ra['rank'])}"
+    else:
+        strong, stronger, gap, pair = home, rh, None, "-"
+    th = base_gap.get(league, 8)
+    if stronger and stronger.get("rank") == 1:
+        th = top1_gap.get(league, th)
+    sig = _signal_for(f"{home} vs. {away}", signals) if signals else None
+    return {
+        "league": league,
+        "title_zh": f"{zh_of_norm(strength._norm(home))} vs {zh_of_norm(strength._norm(away))}",
+        "home_zh": zh_of_norm(strength._norm(home)),
+        "away_zh": zh_of_norm(strength._norm(away)),
+        "home_logo": _logo_of(league, home), "away_logo": _logo_of(league, away),
+        "team_zh": zh_of_norm(strength._norm(strong)),
+        "team_logo": _logo_of(league, strong),
+        "start": g.get("date", ""), "prob": None,
+        "rank_gap": gap, "rank_pair": pair, "limit_price": None,
+        "threshold": th, "watching": gap is not None and gap >= th,
+        "live": f"{g['home']['score']}:{g['away']['score']} {g['minute']}'",
+        "in_play": True,
+        "signal": sig["result"] if sig else None,
+        "signal_detail": sig.get("detail") if sig else None,
+    }
+
+
 def build_watchlist(schedule: list, live: list, signals: dict, cfg: dict) -> list:
     base_gap = cfg.get("inplay_min_rank_gap", {})
     top1_gap = cfg.get("inplay_top1_rank_gap", {})
     out = []
+    matched = set()          # 已被赛程行匹配上的 live 场次，避免重复
     for r in schedule:
         league = r["league"]
         home, away = strength.split_teams(r["title"])
@@ -71,6 +112,8 @@ def build_watchlist(schedule: list, live: list, signals: dict, cfg: dict) -> lis
         gap = r.get("rank_gap")
         watching = gap is not None and gap >= th
         g = _live_for(r["title"], league, live) if live else None
+        if g:
+            matched.add(_live_key(g))
         sig = _signal_for(r["title"], signals) if signals else None
         live_txt = f"{g['home']['score']}:{g['away']['score']} {g['minute']}'" if g else None
         out.append({
@@ -83,10 +126,15 @@ def build_watchlist(schedule: list, live: list, signals: dict, cfg: dict) -> lis
             "rank_gap": gap, "rank_pair": r.get("rank_pair"),
             "limit_price": r.get("limit_price"),
             "threshold": th, "watching": watching,
-            "live": live_txt,
+            "live": live_txt, "in_play": bool(g),
             "signal": sig["result"] if sig else None,
             "signal_detail": sig.get("detail") if sig else None,
         })
+    # 已开赛的比赛会从 72h 赛程里消失，但尾盘哨兵仍在盯它 → 补进清单，实时比分才显示得出来
+    for g in (live or []):
+        if _live_key(g) in matched:
+            continue
+        out.append(_row_from_live(g, signals, base_gap, top1_gap))
     out.sort(key=lambda x: x["start"] or "")
     return out
 

@@ -42,6 +42,8 @@ def _norm(name: str) -> str:
 # 难以自动匹配的手工别名（左边=市场队名 norm 后的关键部分，右边=ESPN 名的 norm）
 ALIAS = {
     "bayern munchen": "bayern munich",
+    "tsg hoffenheim": "hoffenheim",   # ESPN 全称 → 词表简称
+    "hamburg": "hamburger",           # ESPN "Hamburg SV" → 词表 "Hamburger SV"
     "internazionale milano": "inter",
     "inter milan": "inter",          # ESPN 叫法
     "internazionale": "inter",      # ESPN 积分榜简称
