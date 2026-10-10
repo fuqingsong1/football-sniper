@@ -37,6 +37,7 @@ def to_row(league, title, team, prob, start_iso, tick=0.01):
         "prob": round(prob, 4), "start": start_iso,
         "rank_gap": rg[2] if rg else None,
         "rank_pair": f"{rg[0]} vs {rg[1]}" if rg else "-",
+                "rank_ratio": round(rg[1] / rg[0], 1) if rg else None,
         "discount": tier["discount"] if tier else None,
         "position_pct": tier["position_pct"] if tier else None,
         "limit_price": round(int(prob * tier["discount"] / tick) * tick, 4) if tier else None,

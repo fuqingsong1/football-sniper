@@ -94,7 +94,7 @@ async function refresh(){
       : s.discount ? '<span class="tag t-ready">可挂</span>' : '<span class="tag t-watch">观察</span>';
     return `<tr><td>${fmtTime(s.start)}</td><td class="muted">${s.league}</td><td>${s.title_zh||s.title}</td>
       <td>${s.team_zh||s.team}</td><td class="${probClass(s.prob)}">${(s.prob*100).toFixed(1)}%</td>
-      <td>${s.rank_gap != null ? s.rank_gap + '位 (' + s.rank_pair + ')' : '-'}</td>
+      <td>${s.rank_gap != null ? s.rank_gap + '位 · ' + s.rank_ratio + 'x (' + s.rank_pair + ')' : '-'}</td>
       <td>${tier}</td><td>${s.limit_price ?? '-'}</td><td>${status}</td></tr>`;
   }).join('') || '<tr><td colspan="9" class="muted">未来几天暂无胜率&gt;70%的强弱对阵</td></tr>';
 
