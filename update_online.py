@@ -139,9 +139,13 @@ def scan_polymarket():
 def main():
     key, secret = os.environ.get("BINANCE_API_KEY"), os.environ.get("BINANCE_API_SECRET")
     source = "币安预测市场"
+    rows = []
     try:
         if key and secret:
             rows = scan_binance(key, secret)
+            if not rows:
+                # 币安对 runner 所在地区（美国）可能返回空数据 → 主动回落
+                raise RuntimeError("币安返回 0 场（地区限制）")
         else:
             raise RuntimeError("no secrets")
     except Exception as e:
@@ -156,7 +160,8 @@ def main():
             best[r["title"]] = r
     rows = sorted(best.values(), key=lambda r: r["start"])
 
-    out = {"updated": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+    now_cn = datetime.now(timezone.utc) + timedelta(hours=8)
+    out = {"updated": now_cn.strftime("%Y-%m-%d %H:%M:%S") + " (北京时间)",
            "source": f"GitHub Actions 自动更新（{source}）",
            "schedule": rows}
     with open("schedule.json", "w", encoding="utf-8") as f:
