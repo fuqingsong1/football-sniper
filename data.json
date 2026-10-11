@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-12 02:44:50",
+  "updated": "2026-10-12 03:14:55",
   "account": {
     "balances": {
       "CeDeFi": 2.52,
@@ -87,7 +87,7 @@
     }
   ],
   "standings": {
-    "updated": "2026-10-12 02:44",
+    "updated": "2026-10-12 03:14",
     "leagues": {
       "英超": [
         {
@@ -1053,6 +1053,72 @@
       "in_play": false,
       "signal": "TRY",
       "signal_detail": "Real Betis 领先3球 96'（≥3球，无视排名差）"
+    },
+    {
+      "league": "意甲",
+      "title_zh": "卡利亚里 vs 尤文图斯",
+      "home_zh": "卡利亚里",
+      "away_zh": "尤文图斯",
+      "home_logo": "logos/2925.png",
+      "away_logo": "logos/111.png",
+      "team_zh": "卡利亚里",
+      "team_logo": "logos/2925.png",
+      "start": "2026-10-11T18:45Z",
+      "prob": null,
+      "rank_gap": 3,
+      "rank_pair": "4 vs 7",
+      "limit_price": null,
+      "threshold": 8,
+      "force": false,
+      "watching": false,
+      "live": "1:0 28'",
+      "in_play": true,
+      "signal": null,
+      "signal_detail": null
+    },
+    {
+      "league": "法甲",
+      "title_zh": "特鲁瓦 vs 马赛",
+      "home_zh": "特鲁瓦",
+      "away_zh": "马赛",
+      "home_logo": "logos/170.png",
+      "away_logo": "logos/176.png",
+      "team_zh": "特鲁瓦",
+      "team_logo": "logos/170.png",
+      "start": "2026-10-11T18:45Z",
+      "prob": null,
+      "rank_gap": 1,
+      "rank_pair": "16 vs 17",
+      "limit_price": null,
+      "threshold": 8,
+      "force": false,
+      "watching": false,
+      "live": "0:0 30'",
+      "in_play": true,
+      "signal": null,
+      "signal_detail": null
+    },
+    {
+      "league": "西甲",
+      "title_zh": "桑坦德竞技 vs 瓦伦西亚",
+      "home_zh": "桑坦德竞技",
+      "away_zh": "瓦伦西亚",
+      "home_logo": "logos/87.png",
+      "away_logo": "logos/94.png",
+      "team_zh": "桑坦德竞技",
+      "team_logo": "logos/87.png",
+      "start": "2026-10-11T19:00Z",
+      "prob": null,
+      "rank_gap": 3,
+      "rank_pair": "16 vs 19",
+      "limit_price": null,
+      "threshold": 8,
+      "force": false,
+      "watching": false,
+      "live": "0:1 14'",
+      "in_play": true,
+      "signal": null,
+      "signal_detail": null
     }
   ],
   "stats": {
