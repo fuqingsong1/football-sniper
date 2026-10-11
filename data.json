@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-12 03:44:59",
+  "updated": "2026-10-12 04:35:57",
   "account": {
     "balances": {
       "CeDeFi": 252.45,
@@ -87,7 +87,7 @@
     }
   ],
   "standings": {
-    "updated": "2026-10-12 03:44",
+    "updated": "2026-10-12 04:35",
     "leagues": {
       "英超": [
         {
@@ -967,28 +967,6 @@
   },
   "watchlist": [
     {
-      "league": "意甲",
-      "title_zh": "卡利亚里 vs 尤文图斯",
-      "home_zh": "卡利亚里",
-      "away_zh": "尤文图斯",
-      "home_logo": "logos/2925.png",
-      "away_logo": "logos/111.png",
-      "team_zh": "卡利亚里",
-      "team_logo": "logos/2925.png",
-      "start": "2026-10-11T18:45:00+00:00",
-      "prob": 0.405,
-      "rank_gap": 3,
-      "rank_pair": "4 vs 7",
-      "limit_price": null,
-      "threshold": 8,
-      "watching": false,
-      "force": false,
-      "live": "1:0 47'",
-      "in_play": true,
-      "signal": null,
-      "signal_detail": null
-    },
-    {
       "league": "法甲",
       "title_zh": "特鲁瓦 vs 马赛",
       "home_zh": "特鲁瓦",
@@ -998,14 +976,36 @@
       "team_zh": "马赛",
       "team_logo": "logos/176.png",
       "start": "2026-10-11T18:45:00+00:00",
-      "prob": 0.395,
+      "prob": 0.735,
       "rank_gap": 1,
       "rank_pair": "16 vs 17",
       "limit_price": null,
       "threshold": 8,
       "watching": false,
       "force": false,
-      "live": "0:0 45'",
+      "live": "0:1 95'",
+      "in_play": true,
+      "signal": null,
+      "signal_detail": null
+    },
+    {
+      "league": "意甲",
+      "title_zh": "卡利亚里 vs 尤文图斯",
+      "home_zh": "卡利亚里",
+      "away_zh": "尤文图斯",
+      "home_logo": "logos/2925.png",
+      "away_logo": "logos/111.png",
+      "team_zh": "卡利亚里",
+      "team_logo": "logos/2925.png",
+      "start": "2026-10-11T18:45:00+00:00",
+      "prob": 0.475,
+      "rank_gap": 3,
+      "rank_pair": "4 vs 7",
+      "limit_price": null,
+      "threshold": 8,
+      "watching": false,
+      "force": false,
+      "live": "1:1 92'",
       "in_play": true,
       "signal": null,
       "signal_detail": null
@@ -1027,7 +1027,7 @@
       "threshold": 8,
       "watching": false,
       "force": false,
-      "live": "1:1 45'",
+      "live": "2:2 75'",
       "in_play": true,
       "signal": null,
       "signal_detail": null
