@@ -1,9 +1,9 @@
 {
-  "updated": "2026-10-11 17:05:06 (北京时间)",
+  "updated": "2026-10-11 23:49:49 (北京时间)",
   "source": "GitHub Actions 自动更新（Polymarket（公开数据））",
   "schedule": [],
   "standings": {
-    "updated": "2026-10-11 09:05",
+    "updated": "2026-10-11 15:49",
     "leagues": {
       "英超": [
         {
@@ -51,7 +51,7 @@
         {
           "rank": 8,
           "team": "埃弗顿",
-          "score": 1.03,
+          "score": 1.029,
           "logo": "logos/368.png"
         },
         {
@@ -81,32 +81,32 @@
         {
           "rank": 13,
           "team": "赫尔城",
-          "score": 0.85,
+          "score": 0.857,
           "logo": "logos/306.png"
         },
         {
           "rank": 14,
+          "team": "水晶宫",
+          "score": 0.841,
+          "logo": "logos/384.png"
+        },
+        {
+          "rank": 15,
           "team": "桑德兰",
           "score": 0.799,
           "logo": "logos/366.png"
         },
         {
-          "rank": 15,
+          "rank": 16,
           "team": "伯恩茅斯",
           "score": 0.786,
           "logo": "logos/349.png"
         },
         {
-          "rank": 16,
-          "team": "诺丁汉森林",
-          "score": 0.771,
-          "logo": "logos/393.png"
-        },
-        {
           "rank": 17,
-          "team": "水晶宫",
-          "score": 0.733,
-          "logo": "logos/384.png"
+          "team": "诺丁汉森林",
+          "score": 0.734,
+          "logo": "logos/393.png"
         },
         {
           "rank": 18,
@@ -196,15 +196,15 @@
         },
         {
           "rank": 9,
-          "team": "巴列卡诺",
-          "score": 0.902,
-          "logo": "logos/101.png"
+          "team": "塞尔塔",
+          "score": 0.904,
+          "logo": "logos/85.png"
         },
         {
           "rank": 10,
-          "team": "塞尔塔",
-          "score": 0.9,
-          "logo": "logos/85.png"
+          "team": "巴列卡诺",
+          "score": 0.902,
+          "logo": "logos/101.png"
         },
         {
           "rank": 11,
@@ -257,7 +257,7 @@
         {
           "rank": 19,
           "team": "埃尔切",
-          "score": 0.69,
+          "score": 0.704,
           "logo": "logos/3751.png"
         },
         {
@@ -366,21 +366,21 @@
         },
         {
           "rank": 14,
+          "team": "Cologne",
+          "score": 0.774,
+          "logo": "logos/122.png"
+        },
+        {
+          "rank": 15,
           "team": "沙尔克04",
           "score": 0.737,
           "logo": "logos/133.png"
         },
         {
-          "rank": 15,
+          "rank": 16,
           "team": "柏林联合",
           "score": 0.716,
           "logo": "logos/598.png"
-        },
-        {
-          "rank": 16,
-          "team": "Cologne",
-          "score": 0.656,
-          "logo": "logos/122.png"
         },
         {
           "rank": 17,
@@ -390,27 +390,27 @@
         },
         {
           "rank": 18,
-          "team": "门兴",
-          "score": 0.529,
-          "logo": "logos/268.png"
-        },
-        {
-          "rank": 19,
           "team": "沃尔夫斯堡",
           "score": 0.512,
           "logo": "logos/138.png"
         },
         {
-          "rank": 20,
-          "team": "圣保利",
-          "score": 0.459,
-          "logo": "logos/270.png"
+          "rank": 19,
+          "team": "门兴",
+          "score": 0.503,
+          "logo": "logos/268.png"
         },
         {
-          "rank": 21,
+          "rank": 20,
           "team": "1. Heidenheim 1846",
           "score": 0.459,
           "logo": "logos/6418.png"
+        },
+        {
+          "rank": 21,
+          "team": "圣保利",
+          "score": 0.459,
+          "logo": "logos/270.png"
         }
       ],
       "意甲": [
@@ -423,7 +423,7 @@
         {
           "rank": 2,
           "team": "罗马",
-          "score": 1.514,
+          "score": 1.49,
           "logo": "logos/104.png"
         },
         {
@@ -434,9 +434,9 @@
         },
         {
           "rank": 4,
-          "team": "科莫",
-          "score": 1.341,
-          "logo": "logos/2572.png"
+          "team": "拉齐奥",
+          "score": 1.371,
+          "logo": "logos/112.png"
         },
         {
           "rank": 5,
@@ -446,15 +446,15 @@
         },
         {
           "rank": 6,
-          "team": "尤文图斯",
-          "score": 1.317,
-          "logo": "logos/111.png"
+          "team": "科莫",
+          "score": 1.325,
+          "logo": "logos/2572.png"
         },
         {
           "rank": 7,
-          "team": "拉齐奥",
-          "score": 1.289,
-          "logo": "logos/112.png"
+          "team": "尤文图斯",
+          "score": 1.317,
+          "logo": "logos/111.png"
         },
         {
           "rank": 8,
@@ -482,27 +482,27 @@
         },
         {
           "rank": 12,
+          "team": "博洛尼亚",
+          "score": 0.87,
+          "logo": "logos/107.png"
+        },
+        {
+          "rank": 13,
           "team": "乌迪内斯",
           "score": 0.792,
           "logo": "logos/118.png"
         },
         {
-          "rank": 13,
-          "team": "博洛尼亚",
-          "score": 0.763,
-          "logo": "logos/107.png"
-        },
-        {
           "rank": 14,
-          "team": "莱切",
-          "score": 0.75,
-          "logo": "logos/113.png"
-        },
-        {
-          "rank": 15,
           "team": "都灵",
           "score": 0.733,
           "logo": "logos/239.png"
+        },
+        {
+          "rank": 15,
+          "team": "莱切",
+          "score": 0.714,
+          "logo": "logos/113.png"
         },
         {
           "rank": 16,
@@ -525,7 +525,7 @@
         {
           "rank": 19,
           "team": "蒙扎",
-          "score": 0.65,
+          "score": 0.619,
           "logo": "logos/4007.png"
         },
         {
@@ -599,7 +599,7 @@
         {
           "rank": 8,
           "team": "斯特拉斯堡",
-          "score": 1.051,
+          "score": 1.001,
           "logo": "logos/180.png"
         },
         {
@@ -634,21 +634,21 @@
         },
         {
           "rank": 14,
+          "team": "尼斯",
+          "score": 0.784,
+          "logo": "logos/2502.png"
+        },
+        {
+          "rank": 15,
           "team": "欧塞尔",
           "score": 0.75,
           "logo": "logos/172.png"
         },
         {
-          "rank": 15,
+          "rank": 16,
           "team": "勒芒",
           "score": 0.714,
           "logo": "logos/2697.png"
-        },
-        {
-          "rank": 16,
-          "team": "尼斯",
-          "score": 0.674,
-          "logo": "logos/2502.png"
         },
         {
           "rank": 17,
