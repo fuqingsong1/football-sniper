@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-12 00:24:36",
+  "updated": "2026-10-12 00:54:46",
   "account": {
     "balances": {
       "CeDeFi": 143.39,
@@ -931,7 +931,7 @@
       "threshold": 8,
       "watching": true,
       "force": false,
-      "live": "1:1 51'",
+      "live": "2:1 81'",
       "in_play": true,
       "signal": null,
       "signal_detail": null
@@ -953,7 +953,7 @@
       "threshold": 8,
       "watching": true,
       "force": false,
-      "live": "1:1 49'",
+      "live": "1:1 65'",
       "in_play": true,
       "signal": null,
       "signal_detail": null
@@ -975,7 +975,7 @@
       "threshold": 8,
       "watching": false,
       "force": false,
-      "live": "0:0 46'",
+      "live": "0:1 67'",
       "in_play": true,
       "signal": null,
       "signal_detail": null
@@ -997,7 +997,29 @@
       "threshold": 8,
       "force": false,
       "watching": false,
-      "live": "0:0 23'",
+      "live": "0:0 53'",
+      "in_play": true,
+      "signal": null,
+      "signal_detail": null
+    },
+    {
+      "league": "西甲",
+      "title_zh": "皇家贝蒂斯 vs 奥萨苏纳",
+      "home_zh": "皇家贝蒂斯",
+      "away_zh": "奥萨苏纳",
+      "home_logo": "logos/244.png",
+      "away_logo": "logos/97.png",
+      "team_zh": "皇家贝蒂斯",
+      "team_logo": "logos/244.png",
+      "start": "2026-10-11T16:30Z",
+      "prob": null,
+      "rank_gap": 7,
+      "rank_pair": "4 vs 11",
+      "limit_price": null,
+      "threshold": 8,
+      "force": false,
+      "watching": false,
+      "live": "1:0 21'",
       "in_play": true,
       "signal": null,
       "signal_detail": null
