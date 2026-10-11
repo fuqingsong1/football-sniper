@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-12 00:14:26",
+  "updated": "2026-10-12 00:24:36",
   "account": {
     "balances": {
       "CeDeFi": 143.39,
@@ -875,10 +875,10 @@
       "title_zh": "科隆 vs 门兴",
       "home_zh": "科隆",
       "away_zh": "门兴",
-      "home_logo": "logos/122.png",
+      "home_logo": "",
       "away_logo": "logos/268.png",
       "team_zh": "科隆",
-      "team_logo": "logos/122.png",
+      "team_logo": "",
       "start": "2026-10-11T13:30:00+00:00",
       "prob": 0.99,
       "rank_gap": null,
@@ -931,7 +931,7 @@
       "threshold": 8,
       "watching": true,
       "force": false,
-      "live": "1:1 48'",
+      "live": "1:1 51'",
       "in_play": true,
       "signal": null,
       "signal_detail": null
@@ -953,7 +953,7 @@
       "threshold": 8,
       "watching": true,
       "force": false,
-      "live": "1:1 45'",
+      "live": "1:1 49'",
       "in_play": true,
       "signal": null,
       "signal_detail": null
@@ -975,7 +975,7 @@
       "threshold": 8,
       "watching": false,
       "force": false,
-      "live": "0:0 43'",
+      "live": "0:0 46'",
       "in_play": true,
       "signal": null,
       "signal_detail": null
@@ -997,7 +997,7 @@
       "threshold": 8,
       "force": false,
       "watching": false,
-      "live": "0:0 13'",
+      "live": "0:0 23'",
       "in_play": true,
       "signal": null,
       "signal_detail": null
