@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-11 08:30:23",
+  "updated": "2026-10-11 09:00:26",
   "account": {
     "balances": {
       "CeDeFi": 6.41,
@@ -80,6 +80,10 @@
     {
       "date": "2026-10-10",
       "bankroll": 11.26
+    },
+    {
+      "date": "2026-10-11",
+      "bankroll": 20.0
     }
   ],
   "standings": {
