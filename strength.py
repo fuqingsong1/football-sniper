@@ -1,6 +1,10 @@
-"""球队实力排名模块：ESPN 积分榜（本赛季 + 上赛季按场次加权融合），国内直连无需代理。
-融合公式：blended_ppg = (本赛季积分 + 上赛季场均分 × K) / (本赛季场次 + K)，K=15。
-赛季初上赛季权重高，赛季深入后本赛季权重自然升高——平滑吸收转会/伤病影响。
+"""球队实力排名模块：ESPN 积分榜，国内直连无需代理。
+
+排名依据（rank）= **本赛季实时积分榜**，与各大公开积分榜一致：
+  只收录本赛季在册球队（英超/西甲/意甲 20 队，德甲/法甲 18 队），
+  按积分降序，同分依次比场均分、融合分。
+另附 strength 列（融合分）= (本赛季积分 + 上赛季场均分 × K) / (本赛季场次 + K)，K=15，
+  仅作参考，不参与排名（历史版本曾用它排名，会因上赛季权重过高而与真实榜相差 8 名）。
 缓存 strength.json，每天刷新一次。
 """
 import json
@@ -73,6 +77,17 @@ ALIAS = {
     "parma": "parma",
     "bologna": "bologna",
     "hellas verona": "hellas verona",
+    # 币安/市场全称 → ESPN 榜内名（实测匹配失败项，按 _norm 后的键书写）
+    "1. koln": "cologne",                 # 1. FC Köln → Cologne
+    "koln": "cologne",
+    "real racing club": "racing santander",   # Real Racing Club de Santander
+    "real racing": "racing santander",
+    "1. heidenheim": "1. heidenheim 1846",    # 1. FC Heidenheim → 1. Heidenheim 1846
+    "heidenheim": "1. heidenheim 1846",
+    "1. fsv mainz": "mainz",                  # 1. FSV Mainz 05
+    "1. fsv mainz 05": "mainz",
+    "bayer 04 leverkusen": "bayer leverkusen",
+    "sv 07 elversberg": "elversberg",
 }
 
 
@@ -109,10 +124,18 @@ def _logo_local(url: str) -> str:
 
 
 def refresh() -> dict:
-    """拉全部五个联赛，本赛季+上赛季融合，按融合分排名。返回并写缓存。"""
+    """拉全部五个联赛，本赛季+上赛季融合，按融合分排名。返回并写缓存。
+    容错：单个联赛失败沿用旧缓存；全部失败则不覆盖缓存（防止空表污染）。"""
     now = datetime.now()
     # ESPN season 参数 = 赛季开始年（如 2026 = 2026-27 赛季）；10 月属新赛季
     cur_season = now.year if now.month >= 7 else now.year - 1
+    # 读取旧缓存，用于「单联赛失败时沿用上次结果」的兜底
+    prev_table = {}
+    if CACHE.exists():
+        try:
+            prev_table = (json.loads(CACHE.read_text(encoding="utf-8")).get("table") or {})
+        except (ValueError, OSError):
+            prev_table = {}
     table = {}
     for league, code in LEAGUE_ESPN.items():
         try:
@@ -120,41 +143,56 @@ def refresh() -> dict:
             prev = _fetch(code, cur_season - 1)
         except Exception as e:
             log.warning("[%s] 积分榜拉取失败: %s", league, e)
+            if prev_table.get(league):
+                table[league] = prev_table[league]   # 沿用上一次该联赛的结果
             continue
         blended = {}
-        logos = {}
         for team in set(cur) | set(prev):
-            c = cur.get(team)
-            p = prev.get(team)
+            c, p = cur.get(team), prev.get(team)
             cp, cg = (c["pts"], c["gp"]) if c else (None, 0)
             pp, pg = (p["pts"], p["gp"]) if p else (None, 0)
-            logo = (c or p or {}).get("logo", "")
-            if logo:
-                logos[team] = logo
             prev_ppg = (pp / pg) * PRIOR_W if pg else 1.0 * PRIOR_W  # 升班马按场均1分算
-            if cg:
-                blended[team] = (cp + prev_ppg * K) / (cg + K)
-            else:
-                blended[team] = prev_ppg
-        ranked = sorted(blended, key=lambda t: -blended[t])
-        table[league] = {t: {"rank": i + 1, "score": round(blended[t], 3),
-                             "logo": _logo_local(logos.get(t, ""))}
-                         for i, t in enumerate(ranked)}
+            blended[team] = (cp + prev_ppg * K) / (cg + K) if cg else prev_ppg
+        # 排名 = 本赛季实时积分榜（与公开积分榜一致）：只含本赛季球队，积分降序，
+        # 同分依次比场均分、融合分。上赛季已降级球队不再计入（否则会混进榜里）。
+        rows = sorted(cur.items(),
+                      key=lambda kv: (-kv[1]["pts"], -kv[1]["pts"] / kv[1]["gp"],
+                                      -blended.get(kv[0], 0.0), kv[0]))
+        table[league] = {
+            t: {"rank": i + 1, "pts": int(v["pts"]), "gp": int(v["gp"]),
+                "score": round(blended.get(t, 0.0), 3),
+                "logo": _logo_local(v.get("logo", ""))}
+            for i, (t, v) in enumerate(rows)}
     data = {"updated": now.strftime("%Y-%m-%d %H:%M"), "table": table}
-    CACHE.write_text(json.dumps(data, ensure_ascii=False, indent=1), encoding="utf-8")
-    log.info("积分榜已刷新: %s", {k: len(v) for k, v in table.items()})
+    if table:
+        CACHE.write_text(json.dumps(data, ensure_ascii=False, indent=1), encoding="utf-8")
+        log.info("积分榜已刷新: %s", {k: len(v) for k, v in table.items()})
+    else:
+        # 全部联赛失败：绝不写入空表，保留旧缓存待下次重试
+        log.warning("积分榜全部联赛拉取失败，保留旧缓存不覆盖")
     return data
 
 
 def _load() -> dict:
+    cached = None
     if CACHE.exists():
         try:
             d = json.loads(CACHE.read_text(encoding="utf-8"))
-            if d.get("updated", "")[:10] == datetime.now().strftime("%Y-%m-%d"):
-                return d
+            if d.get("table"):                       # 空表一律视为无效缓存
+                cached = d
+                if d.get("updated", "")[:10] == datetime.now().strftime("%Y-%m-%d"):
+                    return d                         # 当天且非空 → 用缓存
         except (ValueError, OSError):
             pass
-    return refresh()
+    # 无缓存 / 空表缓存 / 缓存过期 → 刷新
+    try:
+        d = refresh()
+        if d.get("table"):
+            return d
+    except Exception as e:
+        log.warning("积分榜刷新失败: %s", e)
+    # 刷新仍失败：退回旧缓存（可能过期）或返回空表
+    return cached or {"updated": "", "table": {}}
 
 
 def _match_team(league_table: dict, name: str):

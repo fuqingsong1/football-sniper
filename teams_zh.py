@@ -26,6 +26,7 @@ TEAM_ZH = {
     "Ipswich Town FC": "伊普斯维奇", "Ipswich Town": "伊普斯维奇",
     "Leicester City FC": "莱斯特城", "Hull City AFC": "赫尔城",
     "Burnley FC": "伯恩利", "Burnley": "伯恩利",
+    "Coventry City FC": "考文垂", "Coventry City": "考文垂",
     # 西甲
     "Real Madrid CF": "皇家马德里", "Real Madrid": "皇家马德里",
     "FC Barcelona": "巴塞罗那", "Barcelona": "巴塞罗那",
@@ -45,6 +46,8 @@ TEAM_ZH = {
     "RCD Espanyol": "西班牙人", "Espanyol": "西班牙人",
     "Elche CF": "埃尔切", "RCD Mallorca": "马略卡", "Levante UD": "莱万特",
     "RC Deportivo A Coruña": "拉科鲁尼亚", "Real Racing Club": "桑坦德竞技",
+    "Deportivo": "拉科鲁尼亚", "Racing Santander": "桑坦德竞技",
+    "Málaga CF": "马拉加", "Malaga": "马拉加",
     "Real Oviedo": "奥维耶多", "UD Las Palmas": "拉斯帕尔马斯",
     # 德甲
     "FC Bayern München": "拜仁慕尼黑", "Bayern Munich": "拜仁慕尼黑", "Bayern München": "拜仁慕尼黑",
@@ -60,7 +63,7 @@ TEAM_ZH = {
     "1. FSV Mainz 05": "美因茨", "Mainz 05": "美因茨",
     "1. FC Union Berlin": "柏林联合", "Union Berlin": "柏林联合",
     "FC Augsburg": "奥格斯堡", "Augsburg": "奥格斯堡",
-    "1. FC Köln": "科隆", "FC Köln": "科隆",
+    "1. FC Köln": "科隆", "FC Köln": "科隆", "Cologne": "科隆",
     "SV Werder Bremen": "云达不莱梅", "Werder Bremen": "云达不莱梅",
     "VfL Bochum": "波鸿", "FC St. Pauli": "圣保利",
     "1. FC Heidenheim": "海登海姆", "Hamburger SV": "汉堡",
@@ -104,7 +107,7 @@ TEAM_ZH = {
     "Le Havre AC": "勒阿弗尔", "Le Havre": "勒阿弗尔",
     "Angers SCO": "昂热", "Angers": "昂热",
     "FC Lorient": "洛里昂", "Paris FC": "巴黎FC",
-    "ES Troyes AC": "特鲁瓦", "Le Mans FC": "勒芒",
+    "ES Troyes AC": "特鲁瓦", "Le Mans FC": "勒芒", "Troyes": "特鲁瓦",
     "Montpellier HSC": "蒙彼利埃", "AS Saint-Étienne": "圣埃蒂安",
     # 欧战常见
     "Sabah FK": "萨巴赫", "SK Slavia Praha": "布拉格斯拉维亚",
