@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-12 00:12:08",
+  "updated": "2026-10-12 00:13:48",
   "account": {
     "balances": {
       "CeDeFi": 143.39,
@@ -807,28 +807,6 @@
       "signal_detail": null
     },
     {
-      "league": "西甲",
-      "title_zh": "皇家社会 vs 拉科鲁尼亚",
-      "home_zh": "皇家社会",
-      "away_zh": "拉科鲁尼亚",
-      "home_logo": "logos/89.png",
-      "away_logo": "logos/90.png",
-      "team_zh": "皇家社会",
-      "team_logo": "logos/89.png",
-      "start": "2026-10-11T14:15Z",
-      "prob": null,
-      "rank_gap": 6,
-      "rank_pair": "7 vs 13",
-      "limit_price": null,
-      "threshold": 8,
-      "force": false,
-      "watching": false,
-      "live": "3:2 97'",
-      "in_play": true,
-      "signal": null,
-      "signal_detail": null
-    },
-    {
       "league": "法甲",
       "title_zh": "雷恩 vs 欧塞尔",
       "home_zh": "雷恩",
@@ -867,7 +845,7 @@
       "threshold": 8,
       "watching": true,
       "force": false,
-      "live": "1:1 42'",
+      "live": "1:1 44'",
       "in_play": true,
       "signal": null,
       "signal_detail": null
@@ -889,7 +867,7 @@
       "threshold": 8,
       "watching": false,
       "force": false,
-      "live": "0:0 41'",
+      "live": "0:0 42'",
       "in_play": true,
       "signal": null,
       "signal_detail": null
@@ -905,13 +883,13 @@
       "team_logo": "logos/103.png",
       "start": "2026-10-11T16:00Z",
       "prob": null,
-      "rank_gap": 7,
-      "rank_pair": "3 vs 10",
+      "rank_gap": 5,
+      "rank_pair": "5 vs 10",
       "limit_price": null,
       "threshold": 8,
       "force": false,
       "watching": false,
-      "live": "0:0 11'",
+      "live": "0:0 13'",
       "in_play": true,
       "signal": null,
       "signal_detail": null

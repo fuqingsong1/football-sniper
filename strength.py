@@ -173,6 +173,21 @@ def refresh() -> dict:
     return data
 
 
+def _cache_ok(d: dict) -> bool:
+    """缓存是否可用：非空 + 当天 + 新格式。
+    新格式每队带 pts/gp；旧版（上赛季并集、按融合分排名）没有这两个字段。
+    旧版进程每天 00:00 仍可能写回旧格式，故这里必须校验格式，否则会被静默回滚。"""
+    if d.get("updated", "")[:10] != datetime.now().strftime("%Y-%m-%d"):
+        return False
+    table = d.get("table") or {}
+    for league, rows in table.items():
+        if league not in LEAGUE_ESPN:
+            continue
+        for v in rows.values():
+            return "pts" in v and "gp" in v      # 抽查该联赛首个条目
+    return False
+
+
 def _load() -> dict:
     cached = None
     if CACHE.exists():
@@ -180,11 +195,11 @@ def _load() -> dict:
             d = json.loads(CACHE.read_text(encoding="utf-8"))
             if d.get("table"):                       # 空表一律视为无效缓存
                 cached = d
-                if d.get("updated", "")[:10] == datetime.now().strftime("%Y-%m-%d"):
-                    return d                         # 当天且非空 → 用缓存
+            if _cache_ok(d):
+                return d                             # 当天、非空、新格式
         except (ValueError, OSError):
             pass
-    # 无缓存 / 空表缓存 / 缓存过期 → 刷新
+    # 无缓存 / 空表 / 过期 / 旧格式 → 刷新
     try:
         d = refresh()
         if d.get("table"):
