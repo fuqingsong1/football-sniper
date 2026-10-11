@@ -153,7 +153,7 @@ def build_watchlist(schedule: list, live: list, signals: dict, cfg: dict) -> lis
 
 
 def build_standings() -> dict:
-    """本赛季实时积分榜 → {联赛: [{rank, team, pts, gp, score, logo}]}，用于网页展示。"""
+    """本赛季实时积分榜 → {联赛: [{rank, team, pts, gp, prev_rank, score, logo}]}，用于网页展示。"""
     try:
         d = strength._load()
     except Exception:
@@ -163,6 +163,7 @@ def build_standings() -> dict:
         rows = sorted(table.items(), key=lambda x: x[1]["rank"])
         out[league] = [{"rank": v["rank"], "team": zh_of_norm(t),
                         "pts": v.get("pts"), "gp": v.get("gp"),
+                        "prev_rank": v.get("prev_rank"),
                         "score": v.get("score"), "logo": v.get("logo", "")}
                        for t, v in rows]
     return {"updated": d.get("updated", ""), "leagues": out}

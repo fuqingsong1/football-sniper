@@ -26,6 +26,12 @@
   tr:last-child td { border-bottom: none; }
   td.rk { width: 28px; color: #848e9c; }
   td.sc { text-align: right; width: 52px; }
+  /* 「较上季」列：与上赛季最终名次之差（2 个类名以压过 tr.top4 td / tr.bottom3 td 的颜色） */
+  td.chg { text-align: right; width: 56px; white-space: nowrap; }
+  td.chg.up   { color: #0ecb81; font-weight: 600; }
+  td.chg.down { color: #f6465d; font-weight: 600; }
+  td.chg.flat { color: #5e6673; font-weight: 400; }
+  td.chg.new  { color: #f0b90b; font-weight: 500; }
   tr.top4 td { color: #0ecb81; }
   tr.bottom3 td { color: #f6465d; }
   h1 { font-size: 20px; color: #f0b90b; margin: 14px 0 4px; }
@@ -42,12 +48,24 @@
 <div class="wrap">
   <h1>五大联赛积分榜（本赛季实时）</h1>
   <div class="muted" id="sub"></div>
-  <div class="muted" style="margin:8px 0 0">数据源 ESPN · 按本赛季积分排序（与公开积分榜一致）· 同分依次比场均分、融合分。绿色 = 前四（欧冠区），红色 = 后三（降级区）。</div>
+  <div class="muted" style="margin:8px 0 0">数据源 ESPN · 按本赛季积分排序（与公开积分榜一致）· 同分依次比场均分、融合分。绿色 = 前四（欧冠区），红色 = 后三（降级区）。「较上季」= 与上赛季最终名次之差，<span style="color:#0ecb81">↑上升</span> / <span style="color:#f6465d">↓下降</span> / <span style="color:#f0b90b">新</span> = 本季升班马。</div>
   <div class="grid" id="grid"></div>
 </div>
 <script src="shared.js"></script>
 <script>
 const ORDER = ['英超', '西甲', '德甲', '意甲', '法甲'];
+
+// 「较上季」单元格：prev_rank(上赛季最终名次) − rank(本赛季名次)
+// 正数 = 名次前进（↑），负数 = 后退（↓），0 = 持平（—），无上季记录 = 升班马（新）
+function chgCell(r) {
+  const pr = r.prev_rank;
+  if (pr === null || pr === undefined) return '<td class="chg new">新</td>';
+  const d = pr - r.rank;
+  if (d > 0) return `<td class="chg up">↑${d}</td>`;
+  if (d < 0) return `<td class="chg down">↓${-d}</td>`;
+  return '<td class="chg flat">—</td>';
+}
+
 async function refresh(){
   const d = await loadData();
   if (!d) return;
@@ -61,10 +79,10 @@ async function refresh(){
     const n = rows.length;
     const body = rows.map(r => {
       const cls = r.rank <= 4 ? 'top4' : (r.rank > n - 3 ? 'bottom3' : '');
-      return `<tr class="${cls}"><td class="rk">${r.rank}</td><td>${teamLogo(r.logo, r.team)}${r.team}</td><td class="sc">${r.gp ?? ''}</td><td class="sc">${r.pts ?? ''}</td></tr>`;
-    }).join('') || '<tr><td colspan="4" class="muted">暂无数据</td></tr>';
+      return `<tr class="${cls}"><td class="rk">${r.rank}</td><td>${teamLogo(r.logo, r.team)}${r.team}</td><td class="sc">${r.gp ?? ''}</td><td class="sc">${r.pts ?? ''}</td>${chgCell(r)}</tr>`;
+    }).join('') || '<tr><td colspan="5" class="muted">暂无数据</td></tr>';
     return `<div class="panel"><h2>${league}<span class="cnt">${n} 队</span></h2>
-      <table><thead><tr><th>#</th><th>球队</th><th style="text-align:right">赛</th><th style="text-align:right">积分</th></tr></thead>
+      <table><thead><tr><th>#</th><th>球队</th><th style="text-align:right">赛</th><th style="text-align:right">积分</th><th style="text-align:right" title="与上赛季最终排名相比">较上季</th></tr></thead>
       <tbody>${body}</tbody></table></div>`;
   }).join('') || '<div class="panel muted">暂无数据</div>';
 }

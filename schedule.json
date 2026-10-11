@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-12 01:22:40",
+  "updated": "2026-10-12 01:25:20",
   "source": "本机推送（Binance 预测市场）",
   "schedule": [
     {
@@ -57,7 +57,7 @@
       "home_logo": "logos/126.png",
       "away_logo": "logos/133.png",
       "team_logo": "logos/126.png",
-      "prob": 0.925,
+      "prob": 0.985,
       "start": "2026-10-11T15:30:00+00:00",
       "tick": 0.01,
       "rank_gap": 10,
@@ -65,7 +65,7 @@
       "rank_ratio": 4.3,
       "discount": 0.9,
       "position_pct": 0.11,
-      "limit_price": 0.83,
+      "limit_price": 0.88,
       "placed": false
     },
     {
@@ -79,7 +79,7 @@
       "home_logo": "logos/3997.png",
       "away_logo": "logos/103.png",
       "team_logo": "logos/103.png",
-      "prob": 0.46,
+      "prob": 0.425,
       "start": "2026-10-11T16:00:00+00:00",
       "tick": 0.01,
       "rank_gap": 5,

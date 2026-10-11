@@ -153,6 +153,10 @@ def refresh() -> dict:
             pp, pg = (p["pts"], p["gp"]) if p else (None, 0)
             prev_ppg = (pp / pg) * PRIOR_W if pg else 1.0 * PRIOR_W  # 升班马按场均1分算
             blended[team] = (cp + prev_ppg * K) / (cg + K) if cg else prev_ppg
+        # 上赛季最终排名（同口径：积分降序、同分比场均分）→ 供「较上季」列使用
+        prev_rows = sorted(prev.items(),
+                           key=lambda kv: (-kv[1]["pts"], -kv[1]["pts"] / kv[1]["gp"], kv[0]))
+        prev_rank = {t: i + 1 for i, (t, _) in enumerate(prev_rows)}
         # 排名 = 本赛季实时积分榜（与公开积分榜一致）：只含本赛季球队，积分降序，
         # 同分依次比场均分、融合分。上赛季已降级球队不再计入（否则会混进榜里）。
         rows = sorted(cur.items(),
@@ -161,6 +165,7 @@ def refresh() -> dict:
         table[league] = {
             t: {"rank": i + 1, "pts": int(v["pts"]), "gp": int(v["gp"]),
                 "score": round(blended.get(t, 0.0), 3),
+                "prev_rank": prev_rank.get(t),      # None = 本季升班马（上季不在该联赛）
                 "logo": _logo_local(v.get("logo", ""))}
             for i, (t, v) in enumerate(rows)}
     data = {"updated": now.strftime("%Y-%m-%d %H:%M"), "table": table}
@@ -175,7 +180,7 @@ def refresh() -> dict:
 
 def _cache_ok(d: dict) -> bool:
     """缓存是否可用：非空 + 当天 + 新格式。
-    新格式每队带 pts/gp；旧版（上赛季并集、按融合分排名）没有这两个字段。
+    新格式每队带 pts/gp/prev_rank；旧版（上赛季并集、按融合分排名）没有这些字段。
     旧版进程每天 00:00 仍可能写回旧格式，故这里必须校验格式，否则会被静默回滚。"""
     if d.get("updated", "")[:10] != datetime.now().strftime("%Y-%m-%d"):
         return False
@@ -184,7 +189,7 @@ def _cache_ok(d: dict) -> bool:
         if league not in LEAGUE_ESPN:
             continue
         for v in rows.values():
-            return "pts" in v and "gp" in v      # 抽查该联赛首个条目
+            return "pts" in v and "gp" in v and "prev_rank" in v   # 抽查该联赛首个条目
     return False
 
 
