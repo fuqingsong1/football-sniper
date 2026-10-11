@@ -58,6 +58,8 @@ const ORDER = ['英超', '西甲', '德甲', '意甲', '法甲'];
 // 「较上季」单元格：prev_rank(上赛季最终名次) − rank(本赛季名次)
 // 正数 = 名次前进（↑），负数 = 后退（↓），0 = 持平（—），无上季记录 = 升班马（新）
 function chgCell(r) {
+  // 字段缺失 = 数据源还没带上该列（旧缓存）→ 显示「—」，不能误判成升班马
+  if (!Object.prototype.hasOwnProperty.call(r, 'prev_rank')) return '<td class="chg flat">—</td>';
   const pr = r.prev_rank;
   if (pr === null || pr === undefined) return '<td class="chg new">新</td>';
   const d = pr - r.rank;
