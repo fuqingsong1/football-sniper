@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-12 05:36:21",
+  "updated": "2026-10-12 06:06:33",
   "account": {
     "balances": {
       "CeDeFi": 252.45,
@@ -87,7 +87,7 @@
     }
   ],
   "standings": {
-    "updated": "2026-10-12 05:36",
+    "updated": "2026-10-12 06:06",
     "leagues": {
       "英超": [
         {
@@ -965,74 +965,7 @@
       ]
     }
   },
-  "watchlist": [
-    {
-      "league": "法甲",
-      "title_zh": "特鲁瓦 vs 马赛",
-      "home_zh": "特鲁瓦",
-      "away_zh": "马赛",
-      "home_logo": "logos/170.png",
-      "away_logo": "logos/176.png",
-      "team_zh": "马赛",
-      "team_logo": "logos/176.png",
-      "start": "2026-10-11T18:45:00+00:00",
-      "prob": 0.735,
-      "rank_gap": 1,
-      "rank_pair": "16 vs 17",
-      "limit_price": null,
-      "threshold": 8,
-      "watching": false,
-      "force": false,
-      "live": null,
-      "in_play": false,
-      "signal": "FILTERED",
-      "signal_detail": "排名差 -1 < 8（领先方排名更低，非碾压局）"
-    },
-    {
-      "league": "意甲",
-      "title_zh": "卡利亚里 vs 尤文图斯",
-      "home_zh": "卡利亚里",
-      "away_zh": "尤文图斯",
-      "home_logo": "logos/2925.png",
-      "away_logo": "logos/111.png",
-      "team_zh": "卡利亚里",
-      "team_logo": "logos/2925.png",
-      "start": "2026-10-11T18:45:00+00:00",
-      "prob": 0.475,
-      "rank_gap": 3,
-      "rank_pair": "4 vs 7",
-      "limit_price": null,
-      "threshold": 8,
-      "watching": false,
-      "force": false,
-      "live": null,
-      "in_play": false,
-      "signal": null,
-      "signal_detail": null
-    },
-    {
-      "league": "西甲",
-      "title_zh": "桑坦德竞技 vs 瓦伦西亚",
-      "home_zh": "桑坦德竞技",
-      "away_zh": "瓦伦西亚",
-      "home_logo": "logos/87.png",
-      "away_logo": "logos/94.png",
-      "team_zh": "桑坦德竞技",
-      "team_logo": "logos/87.png",
-      "start": "2026-10-11T19:00:00+00:00",
-      "prob": 0.415,
-      "rank_gap": 3,
-      "rank_pair": "16 vs 19",
-      "limit_price": null,
-      "threshold": 8,
-      "watching": false,
-      "force": false,
-      "live": null,
-      "in_play": false,
-      "signal": null,
-      "signal_detail": null
-    }
-  ],
+  "watchlist": [],
   "stats": {
     "total_trades": 0,
     "wins": 0,
