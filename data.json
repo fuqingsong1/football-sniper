@@ -1,8 +1,8 @@
 {
-  "updated": "2026-10-12 13:39:10",
+  "updated": "2026-10-12 14:09:55",
   "account": {
     "balances": {
-      "CeDeFi": 252.45,
+      "CeDeFi": 52.45,
       "SPOT": 0.0,
       "FUNDING": 0.0
     },
@@ -91,7 +91,7 @@
     }
   ],
   "standings": {
-    "updated": "2026-10-12 13:39",
+    "updated": "2026-10-12 14:09",
     "leagues": {
       "英超": [
         {
