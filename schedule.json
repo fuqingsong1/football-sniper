@@ -1,9 +1,9 @@
 {
-  "updated": "2026-10-12 17:49:56 (北京时间)",
+  "updated": "2026-10-13 03:25:26 (北京时间)",
   "source": "GitHub Actions 自动更新（Polymarket（公开数据））",
   "schedule": [],
   "standings": {
-    "updated": "2026-10-12 09:49",
+    "updated": "2026-10-12 19:25",
     "leagues": {
       "英超": [
         {
@@ -617,21 +617,21 @@
         },
         {
           "rank": 10,
+          "team": "亚特兰大",
+          "pts": 9,
+          "gp": 6,
+          "prev_rank": 7,
+          "score": 1.094,
+          "logo": "logos/105.png"
+        },
+        {
+          "rank": 11,
           "team": "萨索洛",
           "pts": 8,
           "gp": 6,
           "prev_rank": 11,
           "score": 0.934,
           "logo": "logos/3997.png"
-        },
-        {
-          "rank": 11,
-          "team": "亚特兰大",
-          "pts": 6,
-          "gp": 5,
-          "prev_rank": 7,
-          "score": 0.999,
-          "logo": "logos/105.png"
         },
         {
           "rank": 12,
@@ -709,9 +709,9 @@
           "rank": 20,
           "team": "威尼斯",
           "pts": 0,
-          "gp": 5,
+          "gp": 6,
           "prev_rank": null,
-          "score": 0.45,
+          "score": 0.429,
           "logo": "logos/17530.png"
         }
       ],
