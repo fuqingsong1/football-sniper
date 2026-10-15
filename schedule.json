@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-15 23:08:49 (北京时间)",
+  "updated": "2026-10-16 03:16:05 (北京时间)",
   "source": "GitHub Actions 自动更新（Polymarket（公开数据））",
   "schedule": [
     {
@@ -23,26 +23,6 @@
       "limit_price": 0.63
     },
     {
-      "league": "西甲",
-      "title": "Real Betis Balompié vs. FC Barcelona",
-      "title_zh": "皇家贝蒂斯 vs 巴塞罗那",
-      "team": "FC Barcelona",
-      "team_zh": "巴塞罗那",
-      "home_zh": "皇家贝蒂斯",
-      "away_zh": "巴塞罗那",
-      "home_logo": "logos/244.png",
-      "away_logo": "logos/83.png",
-      "team_logo": "logos/83.png",
-      "prob": 0.705,
-      "start": "2026-10-17T16:30:00+00:00",
-      "rank_gap": 2,
-      "rank_pair": "1 vs 3",
-      "rank_ratio": 3.0,
-      "discount": null,
-      "position_pct": null,
-      "limit_price": null
-    },
-    {
       "league": "德甲",
       "title": "FC Bayern München vs. RB Leipzig",
       "title_zh": "拜仁慕尼黑 vs 莱比锡红牛",
@@ -61,10 +41,30 @@
       "discount": 0.8,
       "position_pct": 0.09,
       "limit_price": 0.63
+    },
+    {
+      "league": "西甲",
+      "title": "Real Madrid CF vs. Sevilla FC",
+      "title_zh": "皇家马德里 vs 塞维利亚",
+      "team": "Real Madrid CF",
+      "team_zh": "皇家马德里",
+      "home_zh": "皇家马德里",
+      "away_zh": "塞维利亚",
+      "home_logo": "logos/86.png",
+      "away_logo": "logos/243.png",
+      "team_logo": "logos/86.png",
+      "prob": 0.785,
+      "start": "2026-10-18T19:00:00+00:00",
+      "rank_gap": 1,
+      "rank_pair": "4 vs 5",
+      "rank_ratio": 1.2,
+      "discount": 0.8,
+      "position_pct": 0.09,
+      "limit_price": 0.62
     }
   ],
   "standings": {
-    "updated": "2026-10-15 15:08",
+    "updated": "2026-10-15 19:16",
     "leagues": {
       "英超": [
         {
