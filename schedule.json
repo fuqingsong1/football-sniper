@@ -1,27 +1,7 @@
 {
-  "updated": "2026-10-17 18:59:02 (北京时间)",
+  "updated": "2026-10-17 22:03:15 (北京时间)",
   "source": "GitHub Actions 自动更新（Polymarket（公开数据））",
   "schedule": [
-    {
-      "league": "英超",
-      "title": "Manchester City FC vs. Ipswich Town FC",
-      "title_zh": "曼城 vs 伊普斯维奇",
-      "team": "Manchester City FC",
-      "team_zh": "曼城",
-      "home_zh": "曼城",
-      "away_zh": "伊普斯维奇",
-      "home_logo": "logos/382.png",
-      "away_logo": "logos/373.png",
-      "team_logo": "logos/382.png",
-      "prob": 0.785,
-      "start": "2026-10-17T14:00:00+00:00",
-      "rank_gap": 9,
-      "rank_pair": "1 vs 10",
-      "rank_ratio": 10.0,
-      "discount": 0.8,
-      "position_pct": 0.09,
-      "limit_price": 0.62
-    },
     {
       "league": "德甲",
       "title": "FC Bayern München vs. RB Leipzig",
@@ -33,14 +13,14 @@
       "home_logo": "logos/132.png",
       "away_logo": "logos/11420.png",
       "team_logo": "logos/132.png",
-      "prob": 0.815,
+      "prob": 0.805,
       "start": "2026-10-17T16:30:00+00:00",
       "rank_gap": 2,
       "rank_pair": "3 vs 5",
       "rank_ratio": 1.7,
       "discount": 0.85,
       "position_pct": 0.1,
-      "limit_price": 0.69
+      "limit_price": 0.68
     },
     {
       "league": "西甲",
@@ -64,7 +44,7 @@
     }
   ],
   "standings": {
-    "updated": "2026-10-17 10:59",
+    "updated": "2026-10-17 14:03",
     "leagues": {
       "英超": [
         {
@@ -96,6 +76,15 @@
         },
         {
           "rank": 4,
+          "team": "切尔西",
+          "pts": 13,
+          "gp": 7,
+          "prev_rank": 10,
+          "score": 1.151,
+          "logo": "logos/363.png"
+        },
+        {
+          "rank": 5,
           "team": "布伦特福德",
           "pts": 10,
           "gp": 6,
@@ -104,21 +93,12 @@
           "logo": "logos/337.png"
         },
         {
-          "rank": 5,
-          "team": "切尔西",
-          "pts": 10,
-          "gp": 6,
-          "prev_rank": 10,
-          "score": 1.063,
-          "logo": "logos/363.png"
-        },
-        {
           "rank": 6,
           "team": "埃弗顿",
           "pts": 10,
-          "gp": 6,
+          "gp": 7,
           "prev_rank": 12,
-          "score": 1.029,
+          "score": 0.982,
           "logo": "logos/368.png"
         },
         {
@@ -261,10 +241,10 @@
         {
           "rank": 2,
           "team": "马德里竞技",
-          "pts": 19,
-          "gp": 8,
+          "pts": 22,
+          "gp": 9,
           "prev_rank": 4,
-          "score": 1.537,
+          "score": 1.598,
           "logo": "logos/1068.png"
         },
         {
@@ -368,15 +348,6 @@
         },
         {
           "rank": 14,
-          "team": "西班牙人",
-          "pts": 8,
-          "gp": 8,
-          "prev_rank": 10,
-          "score": 0.822,
-          "logo": "logos/88.png"
-        },
-        {
-          "rank": 15,
           "team": "奥萨苏纳",
           "pts": 8,
           "gp": 8,
@@ -385,13 +356,22 @@
           "logo": "logos/97.png"
         },
         {
-          "rank": 16,
+          "rank": 15,
           "team": "桑坦德竞技",
           "pts": 8,
           "gp": 8,
           "prev_rank": null,
           "score": 0.739,
           "logo": "logos/87.png"
+        },
+        {
+          "rank": 16,
+          "team": "西班牙人",
+          "pts": 8,
+          "gp": 9,
+          "prev_rank": 10,
+          "score": 0.787,
+          "logo": "logos/88.png"
         },
         {
           "rank": 17,
