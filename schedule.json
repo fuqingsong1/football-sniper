@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-17 14:17:10 (北京时间)",
+  "updated": "2026-10-17 18:59:02 (北京时间)",
   "source": "GitHub Actions 自动更新（Polymarket（公开数据））",
   "schedule": [
     {
@@ -21,26 +21,6 @@
       "discount": 0.8,
       "position_pct": 0.09,
       "limit_price": 0.62
-    },
-    {
-      "league": "法甲",
-      "title": "RC Strasbourg Alsace vs. Paris Saint-Germain FC",
-      "title_zh": "斯特拉斯堡 vs 巴黎圣日耳曼",
-      "team": "Paris Saint-Germain FC",
-      "team_zh": "巴黎圣日耳曼",
-      "home_zh": "斯特拉斯堡",
-      "away_zh": "巴黎圣日耳曼",
-      "home_logo": "logos/180.png",
-      "away_logo": "logos/160.png",
-      "team_logo": "logos/160.png",
-      "prob": 0.705,
-      "start": "2026-10-17T15:15:00+00:00",
-      "rank_gap": 8,
-      "rank_pair": "4 vs 12",
-      "rank_ratio": 3.0,
-      "discount": null,
-      "position_pct": null,
-      "limit_price": null
     },
     {
       "league": "德甲",
@@ -73,18 +53,18 @@
       "home_logo": "logos/86.png",
       "away_logo": "logos/243.png",
       "team_logo": "logos/86.png",
-      "prob": 0.785,
+      "prob": 0.795,
       "start": "2026-10-18T19:00:00+00:00",
       "rank_gap": 1,
       "rank_pair": "4 vs 5",
       "rank_ratio": 1.2,
       "discount": 0.8,
       "position_pct": 0.09,
-      "limit_price": 0.62
+      "limit_price": 0.63
     }
   ],
   "standings": {
-    "updated": "2026-10-17 06:17",
+    "updated": "2026-10-17 10:59",
     "leagues": {
       "英超": [
         {
