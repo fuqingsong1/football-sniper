@@ -1,30 +1,9 @@
 {
-  "updated": "2026-10-19 01:36:37 (北京时间)",
+  "updated": "2026-10-19 03:43:16 (北京时间)",
   "source": "GitHub Actions 自动更新（Polymarket（公开数据））",
-  "schedule": [
-    {
-      "league": "西甲",
-      "title": "Real Madrid CF vs. Sevilla FC",
-      "title_zh": "皇家马德里 vs 塞维利亚",
-      "team": "Real Madrid CF",
-      "team_zh": "皇家马德里",
-      "home_zh": "皇家马德里",
-      "away_zh": "塞维利亚",
-      "home_logo": "logos/86.png",
-      "away_logo": "logos/243.png",
-      "team_logo": "logos/86.png",
-      "prob": 0.795,
-      "start": "2026-10-18T19:00:00+00:00",
-      "rank_gap": 1,
-      "rank_pair": "4 vs 5",
-      "rank_ratio": 1.2,
-      "discount": 0.8,
-      "position_pct": 0.09,
-      "limit_price": 0.63
-    }
-  ],
+  "schedule": [],
   "standings": {
-    "updated": "2026-10-18 17:36",
+    "updated": "2026-10-18 19:43",
     "leagues": {
       "英超": [
         {
@@ -247,21 +226,21 @@
         },
         {
           "rank": 5,
+          "team": "皇家社会",
+          "pts": 16,
+          "gp": 9,
+          "prev_rank": 11,
+          "score": 1.121,
+          "logo": "logos/89.png"
+        },
+        {
+          "rank": 6,
           "team": "塞维利亚",
           "pts": 14,
           "gp": 8,
           "prev_rank": 15,
           "score": 1.051,
           "logo": "logos/243.png"
-        },
-        {
-          "rank": 6,
-          "team": "皇家社会",
-          "pts": 13,
-          "gp": 8,
-          "prev_rank": 11,
-          "score": 1.039,
-          "logo": "logos/89.png"
         },
         {
           "rank": 7,
@@ -384,9 +363,9 @@
           "rank": 20,
           "team": "马拉加",
           "pts": 4,
-          "gp": 8,
+          "gp": 9,
           "prev_rank": null,
-          "score": 0.565,
+          "score": 0.542,
           "logo": "logos/99.png"
         }
       ],
@@ -584,6 +563,15 @@
         },
         {
           "rank": 4,
+          "team": "AC米兰",
+          "pts": 15,
+          "gp": 7,
+          "prev_rank": 5,
+          "score": 1.435,
+          "logo": "logos/103.png"
+        },
+        {
+          "rank": 5,
           "team": "科莫",
           "pts": 14,
           "gp": 7,
@@ -592,7 +580,7 @@
           "logo": "logos/2572.png"
         },
         {
-          "rank": 5,
+          "rank": 6,
           "team": "卡利亚里",
           "pts": 13,
           "gp": 6,
@@ -601,22 +589,13 @@
           "logo": "logos/2925.png"
         },
         {
-          "rank": 6,
+          "rank": 7,
           "team": "弗罗西诺内",
           "pts": 13,
           "gp": 7,
           "prev_rank": null,
           "score": 1.0,
           "logo": "logos/4057.png"
-        },
-        {
-          "rank": 7,
-          "team": "AC米兰",
-          "pts": 12,
-          "gp": 6,
-          "prev_rank": 5,
-          "score": 1.361,
-          "logo": "logos/103.png"
         },
         {
           "rank": 8,
@@ -640,9 +619,9 @@
           "rank": 10,
           "team": "亚特兰大",
           "pts": 9,
-          "gp": 6,
+          "gp": 7,
           "prev_rank": 7,
-          "score": 1.094,
+          "score": 1.044,
           "logo": "logos/105.png"
         },
         {
