@@ -1,9 +1,9 @@
 {
-  "updated": "2026-10-19 22:47:33 (北京时间)",
+  "updated": "2026-10-20 04:15:45 (北京时间)",
   "source": "GitHub Actions 自动更新（Polymarket（公开数据））",
   "schedule": [],
   "standings": {
-    "updated": "2026-10-19 14:47",
+    "updated": "2026-10-19 20:15",
     "leagues": {
       "英超": [
         {
@@ -583,9 +583,9 @@
           "rank": 6,
           "team": "卡利亚里",
           "pts": 13,
-          "gp": 6,
+          "gp": 7,
           "prev_rank": 14,
-          "score": 1.104,
+          "score": 1.054,
           "logo": "logos/2925.png"
         },
         {
@@ -653,6 +653,15 @@
         },
         {
           "rank": 14,
+          "team": "蒙扎",
+          "pts": 7,
+          "gp": 7,
+          "prev_rank": null,
+          "score": 0.727,
+          "logo": "logos/4007.png"
+        },
+        {
+          "rank": 15,
           "team": "博洛尼亚",
           "pts": 5,
           "gp": 7,
@@ -661,22 +670,13 @@
           "logo": "logos/107.png"
         },
         {
-          "rank": 15,
+          "rank": 16,
           "team": "帕尔马",
           "pts": 4,
           "gp": 6,
           "prev_rank": 12,
           "score": 0.698,
           "logo": "logos/115.png"
-        },
-        {
-          "rank": 16,
-          "team": "蒙扎",
-          "pts": 4,
-          "gp": 6,
-          "prev_rank": null,
-          "score": 0.619,
-          "logo": "logos/4007.png"
         },
         {
           "rank": 17,
