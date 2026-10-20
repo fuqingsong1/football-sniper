@@ -1,9 +1,30 @@
 {
-  "updated": "2026-10-21 02:01:44 (北京时间)",
+  "updated": "2026-10-21 05:44:33 (北京时间)",
   "source": "GitHub Actions 自动更新（Polymarket（公开数据））",
-  "schedule": [],
+  "schedule": [
+    {
+      "league": "德甲",
+      "title": "VfB Stuttgart vs. Borussia Mönchengladbach",
+      "title_zh": "斯图加特 vs 门兴",
+      "team": "VfB Stuttgart",
+      "team_zh": "斯图加特",
+      "home_zh": "斯图加特",
+      "away_zh": "门兴",
+      "home_logo": "logos/134.png",
+      "away_logo": "logos/268.png",
+      "team_logo": "logos/134.png",
+      "prob": 0.705,
+      "start": "2026-10-23T18:30:00+00:00",
+      "rank_gap": 5,
+      "rank_pair": "13 vs 18",
+      "rank_ratio": 1.4,
+      "discount": null,
+      "position_pct": null,
+      "limit_price": null
+    }
+  ],
   "standings": {
-    "updated": "2026-10-20 18:01",
+    "updated": "2026-10-20 21:44",
     "leagues": {
       "英超": [
         {
