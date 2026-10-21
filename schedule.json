@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-22 03:23:48 (北京时间)",
+  "updated": "2026-10-22 06:30:30 (北京时间)",
   "source": "GitHub Actions 自动更新（Polymarket（公开数据））",
   "schedule": [
     {
@@ -44,7 +44,7 @@
     }
   ],
   "standings": {
-    "updated": "2026-10-21 19:23",
+    "updated": "2026-10-21 22:30",
     "leagues": {
       "英超": [
         {
@@ -321,12 +321,12 @@
         },
         {
           "rank": 11,
-          "team": "毕尔巴鄂竞技",
-          "pts": 9,
-          "gp": 7,
-          "prev_rank": 12,
-          "score": 0.894,
-          "logo": "logos/93.png"
+          "team": "莱万特",
+          "pts": 10,
+          "gp": 9,
+          "prev_rank": 16,
+          "score": 0.831,
+          "logo": "logos/1538.png"
         },
         {
           "rank": 12,
@@ -339,6 +339,15 @@
         },
         {
           "rank": 13,
+          "team": "毕尔巴鄂竞技",
+          "pts": 9,
+          "gp": 8,
+          "prev_rank": 12,
+          "score": 0.855,
+          "logo": "logos/93.png"
+        },
+        {
+          "rank": 14,
           "team": "比利亚雷亚尔",
           "pts": 9,
           "gp": 9,
@@ -347,7 +356,7 @@
           "logo": "logos/102.png"
         },
         {
-          "rank": 14,
+          "rank": 15,
           "team": "赫塔菲",
           "pts": 9,
           "gp": 9,
@@ -356,7 +365,7 @@
           "logo": "logos/2922.png"
         },
         {
-          "rank": 15,
+          "rank": 16,
           "team": "西班牙人",
           "pts": 8,
           "gp": 9,
@@ -365,22 +374,13 @@
           "logo": "logos/88.png"
         },
         {
-          "rank": 16,
+          "rank": 17,
           "team": "桑坦德竞技",
           "pts": 8,
           "gp": 9,
           "prev_rank": null,
           "score": 0.708,
           "logo": "logos/87.png"
-        },
-        {
-          "rank": 17,
-          "team": "莱万特",
-          "pts": 7,
-          "gp": 8,
-          "prev_rank": 16,
-          "score": 0.737,
-          "logo": "logos/1538.png"
         },
         {
           "rank": 18,
