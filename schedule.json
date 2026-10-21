@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-21 23:23:57 (北京时间)",
+  "updated": "2026-10-22 03:23:48 (北京时间)",
   "source": "GitHub Actions 自动更新（Polymarket（公开数据））",
   "schedule": [
     {
@@ -21,10 +21,30 @@
       "discount": null,
       "position_pct": null,
       "limit_price": null
+    },
+    {
+      "league": "西甲",
+      "title": "Club Atlético de Madrid vs. RC Deportivo A Coruña",
+      "title_zh": "马德里竞技 vs 拉科鲁尼亚",
+      "team": "Club Atlético de Madrid",
+      "team_zh": "马德里竞技",
+      "home_zh": "马德里竞技",
+      "away_zh": "拉科鲁尼亚",
+      "home_logo": "logos/1068.png",
+      "away_logo": "logos/90.png",
+      "team_logo": "logos/1068.png",
+      "prob": 0.755,
+      "start": "2026-10-24T19:00:00+00:00",
+      "rank_gap": 8,
+      "rank_pair": "2 vs 10",
+      "rank_ratio": 5.0,
+      "discount": 0.8,
+      "position_pct": 0.09,
+      "limit_price": 0.6
     }
   ],
   "standings": {
-    "updated": "2026-10-21 15:23",
+    "updated": "2026-10-21 19:23",
     "leagues": {
       "英超": [
         {
