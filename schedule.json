@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-22 20:08:11 (北京时间)",
+  "updated": "2026-10-23 01:22:03 (北京时间)",
   "source": "GitHub Actions 自动更新（Polymarket（公开数据））",
   "schedule": [
     {
@@ -61,10 +61,30 @@
       "discount": null,
       "position_pct": null,
       "limit_price": null
+    },
+    {
+      "league": "德甲",
+      "title": "SC Freiburg vs. FC Bayern München",
+      "title_zh": "弗赖堡 vs 拜仁慕尼黑",
+      "team": "FC Bayern München",
+      "team_zh": "拜仁慕尼黑",
+      "home_zh": "弗赖堡",
+      "away_zh": "拜仁慕尼黑",
+      "home_logo": "logos/126.png",
+      "away_logo": "logos/132.png",
+      "team_logo": "logos/132.png",
+      "prob": 0.715,
+      "start": "2026-10-25T16:30:00+00:00",
+      "rank_gap": 3,
+      "rank_pair": "1 vs 4",
+      "rank_ratio": 4.0,
+      "discount": null,
+      "position_pct": null,
+      "limit_price": null
     }
   ],
   "standings": {
-    "updated": "2026-10-22 12:08",
+    "updated": "2026-10-22 17:21",
     "leagues": {
       "英超": [
         {
