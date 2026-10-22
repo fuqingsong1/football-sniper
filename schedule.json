@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-22 14:10:51 (北京时间)",
+  "updated": "2026-10-22 20:08:11 (北京时间)",
   "source": "GitHub Actions 自动更新（Polymarket（公开数据））",
   "schedule": [
     {
@@ -33,18 +33,38 @@
       "home_logo": "logos/1068.png",
       "away_logo": "logos/90.png",
       "team_logo": "logos/1068.png",
-      "prob": 0.755,
+      "prob": 0.765,
       "start": "2026-10-24T19:00:00+00:00",
       "rank_gap": 8,
       "rank_pair": "2 vs 10",
       "rank_ratio": 5.0,
       "discount": 0.8,
       "position_pct": 0.09,
-      "limit_price": 0.6
+      "limit_price": 0.61
+    },
+    {
+      "league": "意甲",
+      "title": "FC Internazionale Milano vs. ACF Fiorentina",
+      "title_zh": "国际米兰 vs 佛罗伦萨",
+      "team": "FC Internazionale Milano",
+      "team_zh": "国际米兰",
+      "home_zh": "国际米兰",
+      "away_zh": "佛罗伦萨",
+      "home_logo": "logos/110.png",
+      "away_logo": "logos/109.png",
+      "team_logo": "logos/110.png",
+      "prob": 0.725,
+      "start": "2026-10-25T11:30:00+00:00",
+      "rank_gap": 17,
+      "rank_pair": "1 vs 18",
+      "rank_ratio": 18.0,
+      "discount": null,
+      "position_pct": null,
+      "limit_price": null
     }
   ],
   "standings": {
-    "updated": "2026-10-22 06:10",
+    "updated": "2026-10-22 12:08",
     "leagues": {
       "英超": [
         {
