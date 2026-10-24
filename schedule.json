@@ -1,27 +1,7 @@
 {
-  "updated": "2026-10-25 02:52:08 (北京时间)",
+  "updated": "2026-10-25 05:16:18 (北京时间)",
   "source": "GitHub Actions 自动更新（Polymarket（公开数据））",
   "schedule": [
-    {
-      "league": "西甲",
-      "title": "Club Atlético de Madrid vs. RC Deportivo A Coruña",
-      "title_zh": "马德里竞技 vs 拉科鲁尼亚",
-      "team": "Club Atlético de Madrid",
-      "team_zh": "马德里竞技",
-      "home_zh": "马德里竞技",
-      "away_zh": "拉科鲁尼亚",
-      "home_logo": "logos/1068.png",
-      "away_logo": "logos/90.png",
-      "team_logo": "logos/1068.png",
-      "prob": 0.785,
-      "start": "2026-10-24T19:00:00+00:00",
-      "rank_gap": 9,
-      "rank_pair": "2 vs 11",
-      "rank_ratio": 5.5,
-      "discount": 0.8,
-      "position_pct": 0.09,
-      "limit_price": 0.62
-    },
     {
       "league": "意甲",
       "title": "FC Internazionale Milano vs. ACF Fiorentina",
@@ -35,16 +15,36 @@
       "team_logo": "logos/110.png",
       "prob": 0.725,
       "start": "2026-10-25T11:30:00+00:00",
-      "rank_gap": 17,
-      "rank_pair": "1 vs 18",
-      "rank_ratio": 18.0,
+      "rank_gap": 15,
+      "rank_pair": "2 vs 17",
+      "rank_ratio": 8.5,
+      "discount": null,
+      "position_pct": null,
+      "limit_price": null
+    },
+    {
+      "league": "意甲",
+      "title": "AS Roma vs. Cagliari Calcio",
+      "title_zh": "罗马 vs 卡利亚里",
+      "team": "AS Roma",
+      "team_zh": "罗马",
+      "home_zh": "罗马",
+      "away_zh": "卡利亚里",
+      "home_logo": "logos/104.png",
+      "away_logo": "logos/2925.png",
+      "team_logo": "logos/104.png",
+      "prob": 0.725,
+      "start": "2026-10-27T19:45:00+00:00",
+      "rank_gap": 5,
+      "rank_pair": "3 vs 8",
+      "rank_ratio": 2.7,
       "discount": null,
       "position_pct": null,
       "limit_price": null
     }
   ],
   "standings": {
-    "updated": "2026-10-24 18:52",
+    "updated": "2026-10-24 21:16",
     "leagues": {
       "英超": [
         {
@@ -241,10 +241,10 @@
         {
           "rank": 2,
           "team": "马德里竞技",
-          "pts": 22,
-          "gp": 9,
+          "pts": 25,
+          "gp": 10,
           "prev_rank": 4,
-          "score": 1.598,
+          "score": 1.654,
           "logo": "logos/1068.png"
         },
         {
@@ -323,9 +323,9 @@
           "rank": 11,
           "team": "拉科鲁尼亚",
           "pts": 11,
-          "gp": 9,
+          "gp": 10,
           "prev_rank": null,
-          "score": 0.833,
+          "score": 0.8,
           "logo": "logos/90.png"
         },
         {
@@ -577,21 +577,21 @@
       "意甲": [
         {
           "rank": 1,
+          "team": "拉齐奥",
+          "pts": 22,
+          "gp": 8,
+          "prev_rank": 9,
+          "score": 1.513,
+          "logo": "logos/112.png"
+        },
+        {
+          "rank": 2,
           "team": "国际米兰",
           "pts": 19,
           "gp": 7,
           "prev_rank": 1,
           "score": 1.8,
           "logo": "logos/110.png"
-        },
-        {
-          "rank": 2,
-          "team": "拉齐奥",
-          "pts": 19,
-          "gp": 7,
-          "prev_rank": 9,
-          "score": 1.445,
-          "logo": "logos/112.png"
         },
         {
           "rank": 3,
@@ -721,15 +721,6 @@
         },
         {
           "rank": 17,
-          "team": "帕尔马",
-          "pts": 4,
-          "gp": 7,
-          "prev_rank": 12,
-          "score": 0.666,
-          "logo": "logos/115.png"
-        },
-        {
-          "rank": 18,
           "team": "佛罗伦萨",
           "pts": 4,
           "gp": 7,
@@ -738,13 +729,22 @@
           "logo": "logos/109.png"
         },
         {
-          "rank": 19,
+          "rank": 18,
           "team": "热那亚",
           "pts": 4,
           "gp": 7,
           "prev_rank": 16,
           "score": 0.623,
           "logo": "logos/3263.png"
+        },
+        {
+          "rank": 19,
+          "team": "帕尔马",
+          "pts": 4,
+          "gp": 8,
+          "prev_rank": 12,
+          "score": 0.637,
+          "logo": "logos/115.png"
         },
         {
           "rank": 20,
@@ -797,9 +797,9 @@
           "rank": 5,
           "team": "巴黎FC",
           "pts": 14,
-          "gp": 7,
+          "gp": 8,
           "prev_rank": 11,
-          "score": 1.166,
+          "score": 1.115,
           "logo": "logos/6851.png"
         },
         {
@@ -813,6 +813,15 @@
         },
         {
           "rank": 7,
+          "team": "朗斯",
+          "pts": 13,
+          "gp": 8,
+          "prev_rank": 2,
+          "score": 1.371,
+          "logo": "logos/175.png"
+        },
+        {
+          "rank": 8,
           "team": "洛里昂",
           "pts": 11,
           "gp": 7,
@@ -821,22 +830,13 @@
           "logo": "logos/273.png"
         },
         {
-          "rank": 8,
+          "rank": 9,
           "team": "尼斯",
           "pts": 11,
           "gp": 8,
           "prev_rank": 16,
           "score": 0.847,
           "logo": "logos/2502.png"
-        },
-        {
-          "rank": 9,
-          "team": "朗斯",
-          "pts": 10,
-          "gp": 7,
-          "prev_rank": 2,
-          "score": 1.297,
-          "logo": "logos/175.png"
         },
         {
           "rank": 10,
