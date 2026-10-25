@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-26 02:28:16 (北京时间)",
+  "updated": "2026-10-26 05:02:08 (北京时间)",
   "source": "GitHub Actions 自动更新（Polymarket（公开数据））",
   "schedule": [
     {
@@ -35,9 +35,9 @@
       "team_logo": "logos/104.png",
       "prob": 0.725,
       "start": "2026-10-27T19:45:00+00:00",
-      "rank_gap": 5,
-      "rank_pair": "3 vs 8",
-      "rank_ratio": 2.7,
+      "rank_gap": 6,
+      "rank_pair": "3 vs 9",
+      "rank_ratio": 3.0,
       "discount": null,
       "position_pct": null,
       "limit_price": null
@@ -64,7 +64,7 @@
     }
   ],
   "standings": {
-    "updated": "2026-10-25 18:28",
+    "updated": "2026-10-25 21:02",
     "leagues": {
       "英超": [
         {
@@ -288,10 +288,10 @@
         {
           "rank": 5,
           "team": "皇家社会",
-          "pts": 16,
-          "gp": 9,
+          "pts": 19,
+          "gp": 10,
           "prev_rank": 11,
-          "score": 1.121,
+          "score": 1.196,
           "logo": "logos/89.png"
         },
         {
@@ -368,21 +368,21 @@
         },
         {
           "rank": 14,
-          "team": "莱万特",
-          "pts": 10,
-          "gp": 9,
-          "prev_rank": 16,
-          "score": 0.831,
-          "logo": "logos/1538.png"
-        },
-        {
-          "rank": 15,
           "team": "埃尔切",
           "pts": 10,
           "gp": 10,
           "prev_rank": 14,
           "score": 0.807,
           "logo": "logos/3751.png"
+        },
+        {
+          "rank": 15,
+          "team": "莱万特",
+          "pts": 10,
+          "gp": 10,
+          "prev_rank": 16,
+          "score": 0.798,
+          "logo": "logos/1538.png"
         },
         {
           "rank": 16,
@@ -642,6 +642,15 @@
         },
         {
           "rank": 6,
+          "team": "尤文图斯",
+          "pts": 14,
+          "gp": 8,
+          "prev_rank": 6,
+          "score": 1.319,
+          "logo": "logos/111.png"
+        },
+        {
+          "rank": 7,
           "team": "弗罗西诺内",
           "pts": 14,
           "gp": 8,
@@ -650,7 +659,7 @@
           "logo": "logos/4057.png"
         },
         {
-          "rank": 7,
+          "rank": 8,
           "team": "都灵",
           "pts": 13,
           "gp": 8,
@@ -659,22 +668,13 @@
           "logo": "logos/239.png"
         },
         {
-          "rank": 8,
+          "rank": 9,
           "team": "卡利亚里",
           "pts": 13,
           "gp": 8,
           "prev_rank": 14,
           "score": 1.008,
           "logo": "logos/2925.png"
-        },
-        {
-          "rank": 9,
-          "team": "尤文图斯",
-          "pts": 11,
-          "gp": 7,
-          "prev_rank": 6,
-          "score": 1.243,
-          "logo": "logos/111.png"
         },
         {
           "rank": 10,
@@ -698,9 +698,9 @@
           "rank": 12,
           "team": "莱切",
           "pts": 9,
-          "gp": 7,
+          "gp": 8,
           "prev_rank": 17,
-          "score": 0.818,
+          "score": 0.783,
           "logo": "logos/113.png"
         },
         {
