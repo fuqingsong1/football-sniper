@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-26 09:22:45 (北京时间)",
+  "updated": "2026-10-26 14:28:14 (北京时间)",
   "source": "GitHub Actions 自动更新（Polymarket（公开数据））",
   "schedule": [
     {
@@ -64,7 +64,7 @@
     }
   ],
   "standings": {
-    "updated": "2026-10-26 01:22",
+    "updated": "2026-10-26 06:28",
     "leagues": {
       "英超": [
         {
