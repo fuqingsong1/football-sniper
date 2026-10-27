@@ -1,27 +1,7 @@
 {
-  "updated": "2026-10-27 22:41:55 (北京时间)",
+  "updated": "2026-10-28 03:42:28 (北京时间)",
   "source": "GitHub Actions 自动更新（Polymarket（公开数据））",
   "schedule": [
-    {
-      "league": "意甲",
-      "title": "AS Roma vs. Cagliari Calcio",
-      "title_zh": "罗马 vs 卡利亚里",
-      "team": "AS Roma",
-      "team_zh": "罗马",
-      "home_zh": "罗马",
-      "away_zh": "卡利亚里",
-      "home_logo": "logos/104.png",
-      "away_logo": "logos/2925.png",
-      "team_logo": "logos/104.png",
-      "prob": 0.735,
-      "start": "2026-10-27T19:45:00+00:00",
-      "rank_gap": 6,
-      "rank_pair": "3 vs 9",
-      "rank_ratio": 3.0,
-      "discount": null,
-      "position_pct": null,
-      "limit_price": null
-    },
     {
       "league": "意甲",
       "title": "Venezia FC vs. FC Internazionale Milano",
@@ -35,16 +15,36 @@
       "team_logo": "logos/110.png",
       "prob": 0.725,
       "start": "2026-10-28T17:30:00+00:00",
-      "rank_gap": 19,
-      "rank_pair": "1 vs 20",
-      "rank_ratio": 20.0,
+      "rank_gap": 18,
+      "rank_pair": "2 vs 20",
+      "rank_ratio": 10.0,
       "discount": null,
       "position_pct": null,
       "limit_price": null
+    },
+    {
+      "league": "法甲",
+      "title": "Le Havre AC vs. Paris Saint-Germain FC",
+      "title_zh": "勒阿弗尔 vs 巴黎圣日耳曼",
+      "team": "Paris Saint-Germain FC",
+      "team_zh": "巴黎圣日耳曼",
+      "home_zh": "勒阿弗尔",
+      "away_zh": "巴黎圣日耳曼",
+      "home_logo": "logos/3236.png",
+      "away_logo": "logos/160.png",
+      "team_logo": "logos/160.png",
+      "prob": 0.795,
+      "start": "2026-10-30T18:00:00+00:00",
+      "rank_gap": 17,
+      "rank_pair": "1 vs 18",
+      "rank_ratio": 18.0,
+      "discount": 0.8,
+      "position_pct": 0.09,
+      "limit_price": 0.63
     }
   ],
   "standings": {
-    "updated": "2026-10-27 14:41",
+    "updated": "2026-10-27 19:42",
     "leagues": {
       "英超": [
         {
@@ -577,21 +577,21 @@
       "意甲": [
         {
           "rank": 1,
+          "team": "拉齐奥",
+          "pts": 25,
+          "gp": 9,
+          "prev_rank": 9,
+          "score": 1.575,
+          "logo": "logos/112.png"
+        },
+        {
+          "rank": 2,
           "team": "国际米兰",
           "pts": 22,
           "gp": 8,
           "prev_rank": 1,
           "score": 1.852,
           "logo": "logos/110.png"
-        },
-        {
-          "rank": 2,
-          "team": "拉齐奥",
-          "pts": 22,
-          "gp": 8,
-          "prev_rank": 9,
-          "score": 1.513,
-          "logo": "logos/112.png"
         },
         {
           "rank": 3,
@@ -696,9 +696,9 @@
           "rank": 14,
           "team": "萨索洛",
           "pts": 8,
-          "gp": 8,
+          "gp": 9,
           "prev_rank": 11,
-          "score": 0.852,
+          "score": 0.817,
           "logo": "logos/3997.png"
         },
         {
