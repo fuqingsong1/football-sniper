@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-28 03:42:28 (北京时间)",
+  "updated": "2026-10-28 07:16:32 (北京时间)",
   "source": "GitHub Actions 自动更新（Polymarket（公开数据））",
   "schedule": [
     {
@@ -44,7 +44,7 @@
     }
   ],
   "standings": {
-    "updated": "2026-10-27 19:42",
+    "updated": "2026-10-27 23:16",
     "leagues": {
       "英超": [
         {
@@ -596,29 +596,29 @@
         {
           "rank": 3,
           "team": "罗马",
-          "pts": 18,
-          "gp": 8,
+          "pts": 21,
+          "gp": 9,
           "prev_rank": 3,
-          "score": 1.534,
+          "score": 1.595,
           "logo": "logos/104.png"
         },
         {
           "rank": 4,
+          "team": "科莫",
+          "pts": 20,
+          "gp": 9,
+          "prev_rank": 4,
+          "score": 1.534,
+          "logo": "logos/2572.png"
+        },
+        {
+          "rank": 5,
           "team": "AC米兰",
           "pts": 18,
           "gp": 8,
           "prev_rank": 5,
           "score": 1.503,
           "logo": "logos/103.png"
-        },
-        {
-          "rank": 5,
-          "team": "科莫",
-          "pts": 17,
-          "gp": 8,
-          "prev_rank": 4,
-          "score": 1.47,
-          "logo": "logos/2572.png"
         },
         {
           "rank": 6,
@@ -642,18 +642,18 @@
           "rank": 8,
           "team": "都灵",
           "pts": 13,
-          "gp": 8,
+          "gp": 9,
           "prev_rank": 13,
-          "score": 1.029,
+          "score": 0.986,
           "logo": "logos/239.png"
         },
         {
           "rank": 9,
           "team": "卡利亚里",
           "pts": 13,
-          "gp": 8,
+          "gp": 9,
           "prev_rank": 14,
-          "score": 1.008,
+          "score": 0.966,
           "logo": "logos/2925.png"
         },
         {
