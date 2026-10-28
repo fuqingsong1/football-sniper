@@ -1,27 +1,7 @@
 {
-  "updated": "2026-10-28 23:31:26 (北京时间)",
+  "updated": "2026-10-29 04:37:01 (北京时间)",
   "source": "GitHub Actions 自动更新（Polymarket（公开数据））",
   "schedule": [
-    {
-      "league": "意甲",
-      "title": "Venezia FC vs. FC Internazionale Milano",
-      "title_zh": "威尼斯 vs 国际米兰",
-      "team": "FC Internazionale Milano",
-      "team_zh": "国际米兰",
-      "home_zh": "威尼斯",
-      "away_zh": "国际米兰",
-      "home_logo": "logos/17530.png",
-      "away_logo": "logos/110.png",
-      "team_logo": "logos/110.png",
-      "prob": 0.715,
-      "start": "2026-10-28T17:30:00+00:00",
-      "rank_gap": 18,
-      "rank_pair": "2 vs 20",
-      "rank_ratio": 10.0,
-      "discount": null,
-      "position_pct": null,
-      "limit_price": null
-    },
     {
       "league": "法甲",
       "title": "Le Havre AC vs. Paris Saint-Germain FC",
@@ -41,10 +21,70 @@
       "discount": 0.8,
       "position_pct": 0.09,
       "limit_price": 0.63
+    },
+    {
+      "league": "西甲",
+      "title": "Real Betis Balompié vs. Málaga CF",
+      "title_zh": "皇家贝蒂斯 vs 马拉加",
+      "team": "Real Betis Balompié",
+      "team_zh": "皇家贝蒂斯",
+      "home_zh": "皇家贝蒂斯",
+      "away_zh": "马拉加",
+      "home_logo": "logos/244.png",
+      "away_logo": "logos/99.png",
+      "team_logo": "logos/244.png",
+      "prob": 0.725,
+      "start": "2026-10-31T17:30:00+00:00",
+      "rank_gap": 16,
+      "rank_pair": "4 vs 20",
+      "rank_ratio": 5.0,
+      "discount": null,
+      "position_pct": null,
+      "limit_price": null
+    },
+    {
+      "league": "德甲",
+      "title": "FC Bayern München vs. BV Borussia 09 Dortmund",
+      "title_zh": "拜仁慕尼黑 vs BV Borussia 09 Dortmund",
+      "team": "FC Bayern München",
+      "team_zh": "拜仁慕尼黑",
+      "home_zh": "拜仁慕尼黑",
+      "away_zh": "Bv Borussia 09 Dortmund",
+      "home_logo": "logos/132.png",
+      "away_logo": "logos/124.png",
+      "team_logo": "logos/132.png",
+      "prob": 0.725,
+      "start": "2026-10-31T17:30:00+00:00",
+      "rank_gap": 1,
+      "rank_pair": "1 vs 2",
+      "rank_ratio": 2.0,
+      "discount": null,
+      "position_pct": null,
+      "limit_price": null
+    },
+    {
+      "league": "西甲",
+      "title": "FC Barcelona vs. Deportivo Alavés",
+      "title_zh": "巴塞罗那 vs 阿拉维斯",
+      "team": "FC Barcelona",
+      "team_zh": "巴塞罗那",
+      "home_zh": "巴塞罗那",
+      "away_zh": "阿拉维斯",
+      "home_logo": "logos/83.png",
+      "away_logo": "logos/90.png",
+      "team_logo": "logos/83.png",
+      "prob": 0.885,
+      "start": "2026-10-31T20:00:00+00:00",
+      "rank_gap": 11,
+      "rank_pair": "1 vs 12",
+      "rank_ratio": 12.0,
+      "discount": 0.9,
+      "position_pct": 0.11,
+      "limit_price": 0.79
     }
   ],
   "standings": {
-    "updated": "2026-10-28 15:31",
+    "updated": "2026-10-28 20:36",
     "leagues": {
       "英超": [
         {
@@ -577,21 +617,21 @@
       "意甲": [
         {
           "rank": 1,
+          "team": "国际米兰",
+          "pts": 25,
+          "gp": 9,
+          "prev_rank": 1,
+          "score": 1.9,
+          "logo": "logos/110.png"
+        },
+        {
+          "rank": 2,
           "team": "拉齐奥",
           "pts": 25,
           "gp": 9,
           "prev_rank": 9,
           "score": 1.575,
           "logo": "logos/112.png"
-        },
-        {
-          "rank": 2,
-          "team": "国际米兰",
-          "pts": 22,
-          "gp": 8,
-          "prev_rank": 1,
-          "score": 1.852,
-          "logo": "logos/110.png"
         },
         {
           "rank": 3,
@@ -615,9 +655,9 @@
           "rank": 5,
           "team": "AC米兰",
           "pts": 18,
-          "gp": 8,
+          "gp": 9,
           "prev_rank": 5,
-          "score": 1.503,
+          "score": 1.441,
           "logo": "logos/103.png"
         },
         {
@@ -667,6 +707,15 @@
         },
         {
           "rank": 11,
+          "team": "博洛尼亚",
+          "pts": 11,
+          "gp": 9,
+          "prev_rank": 8,
+          "score": 1.011,
+          "logo": "logos/107.png"
+        },
+        {
+          "rank": 12,
           "team": "亚特兰大",
           "pts": 10,
           "gp": 8,
@@ -675,22 +724,13 @@
           "logo": "logos/105.png"
         },
         {
-          "rank": 12,
+          "rank": 13,
           "team": "莱切",
           "pts": 9,
           "gp": 8,
           "prev_rank": 17,
           "score": 0.783,
           "logo": "logos/113.png"
-        },
-        {
-          "rank": 13,
-          "team": "博洛尼亚",
-          "pts": 8,
-          "gp": 8,
-          "prev_rank": 8,
-          "score": 0.924,
-          "logo": "logos/107.png"
         },
         {
           "rank": 14,
@@ -722,19 +762,19 @@
         {
           "rank": 17,
           "team": "乌迪内斯",
-          "pts": 4,
-          "gp": 8,
+          "pts": 5,
+          "gp": 9,
           "prev_rank": 10,
-          "score": 0.689,
+          "score": 0.702,
           "logo": "logos/118.png"
         },
         {
           "rank": 18,
           "team": "帕尔马",
-          "pts": 4,
-          "gp": 8,
+          "pts": 5,
+          "gp": 9,
           "prev_rank": 12,
-          "score": 0.637,
+          "score": 0.652,
           "logo": "logos/115.png"
         },
         {
@@ -750,9 +790,9 @@
           "rank": 20,
           "team": "威尼斯",
           "pts": 3,
-          "gp": 8,
+          "gp": 9,
           "prev_rank": null,
-          "score": 0.522,
+          "score": 0.5,
           "logo": "logos/17530.png"
         }
       ],
