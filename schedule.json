@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-29 14:08:40 (北京时间)",
+  "updated": "2026-10-29 21:22:58 (北京时间)",
   "source": "GitHub Actions 自动更新（Polymarket（公开数据））",
   "schedule": [
     {
@@ -73,18 +73,38 @@
       "home_logo": "logos/83.png",
       "away_logo": "logos/90.png",
       "team_logo": "logos/83.png",
-      "prob": 0.885,
+      "prob": 0.895,
       "start": "2026-10-31T20:00:00+00:00",
       "rank_gap": 11,
       "rank_pair": "1 vs 12",
       "rank_ratio": 12.0,
       "discount": 0.9,
       "position_pct": 0.11,
-      "limit_price": 0.79
+      "limit_price": 0.8
+    },
+    {
+      "league": "意甲",
+      "title": "Como 1907 vs. Venezia FC",
+      "title_zh": "科莫 vs 威尼斯",
+      "team": "Como 1907",
+      "team_zh": "科莫",
+      "home_zh": "科莫",
+      "away_zh": "威尼斯",
+      "home_logo": "logos/2572.png",
+      "away_logo": "logos/17530.png",
+      "team_logo": "logos/2572.png",
+      "prob": 0.755,
+      "start": "2026-11-01T11:30:00+00:00",
+      "rank_gap": 16,
+      "rank_pair": "4 vs 20",
+      "rank_ratio": 5.0,
+      "discount": 0.8,
+      "position_pct": 0.09,
+      "limit_price": 0.6
     }
   ],
   "standings": {
-    "updated": "2026-10-29 06:08",
+    "updated": "2026-10-29 13:22",
     "leagues": {
       "英超": [
         {
