@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-29 21:22:58 (北京时间)",
+  "updated": "2026-10-30 03:01:54 (北京时间)",
   "source": "GitHub Actions 自动更新（Polymarket（公开数据））",
   "schedule": [
     {
@@ -13,14 +13,14 @@
       "home_logo": "logos/3236.png",
       "away_logo": "logos/160.png",
       "team_logo": "logos/160.png",
-      "prob": 0.805,
+      "prob": 0.795,
       "start": "2026-10-30T18:00:00+00:00",
       "rank_gap": 17,
       "rank_pair": "1 vs 18",
       "rank_ratio": 18.0,
-      "discount": 0.85,
-      "position_pct": 0.1,
-      "limit_price": 0.68
+      "discount": 0.8,
+      "position_pct": 0.09,
+      "limit_price": 0.63
     },
     {
       "league": "西甲",
@@ -73,14 +73,14 @@
       "home_logo": "logos/83.png",
       "away_logo": "logos/90.png",
       "team_logo": "logos/83.png",
-      "prob": 0.895,
+      "prob": 0.875,
       "start": "2026-10-31T20:00:00+00:00",
       "rank_gap": 11,
       "rank_pair": "1 vs 12",
       "rank_ratio": 12.0,
       "discount": 0.9,
       "position_pct": 0.11,
-      "limit_price": 0.8
+      "limit_price": 0.78
     },
     {
       "league": "意甲",
@@ -101,10 +101,30 @@
       "discount": 0.8,
       "position_pct": 0.09,
       "limit_price": 0.6
+    },
+    {
+      "league": "西甲",
+      "title": "Real Racing Club vs. Real Madrid CF",
+      "title_zh": "桑坦德竞技 vs 皇家马德里",
+      "team": "Real Madrid CF",
+      "team_zh": "皇家马德里",
+      "home_zh": "桑坦德竞技",
+      "away_zh": "皇家马德里",
+      "home_logo": "logos/87.png",
+      "away_logo": "logos/86.png",
+      "team_logo": "logos/86.png",
+      "prob": 0.805,
+      "start": "2026-11-01T15:15:00+00:00",
+      "rank_gap": 10,
+      "rank_pair": "3 vs 13",
+      "rank_ratio": 4.3,
+      "discount": 0.85,
+      "position_pct": 0.1,
+      "limit_price": 0.68
     }
   ],
   "standings": {
-    "updated": "2026-10-29 13:22",
+    "updated": "2026-10-29 19:01",
     "leagues": {
       "英超": [
         {
