@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-30 03:01:54 (北京时间)",
+  "updated": "2026-10-30 07:25:05 (北京时间)",
   "source": "GitHub Actions 自动更新（Polymarket（公开数据））",
   "schedule": [
     {
@@ -13,14 +13,14 @@
       "home_logo": "logos/3236.png",
       "away_logo": "logos/160.png",
       "team_logo": "logos/160.png",
-      "prob": 0.795,
+      "prob": 0.785,
       "start": "2026-10-30T18:00:00+00:00",
       "rank_gap": 17,
       "rank_pair": "1 vs 18",
       "rank_ratio": 18.0,
       "discount": 0.8,
       "position_pct": 0.09,
-      "limit_price": 0.63
+      "limit_price": 0.62
     },
     {
       "league": "西甲",
@@ -113,7 +113,7 @@
       "home_logo": "logos/87.png",
       "away_logo": "logos/86.png",
       "team_logo": "logos/86.png",
-      "prob": 0.805,
+      "prob": 0.81,
       "start": "2026-11-01T15:15:00+00:00",
       "rank_gap": 10,
       "rank_pair": "3 vs 13",
@@ -124,7 +124,7 @@
     }
   ],
   "standings": {
-    "updated": "2026-10-29 19:01",
+    "updated": "2026-10-29 23:25",
     "leagues": {
       "英超": [
         {
@@ -703,10 +703,10 @@
         {
           "rank": 6,
           "team": "弗罗西诺内",
-          "pts": 14,
-          "gp": 8,
+          "pts": 17,
+          "gp": 9,
           "prev_rank": null,
-          "score": 1.0,
+          "score": 1.083,
           "logo": "logos/4057.png"
         },
         {
@@ -747,21 +747,21 @@
         },
         {
           "rank": 11,
+          "team": "亚特兰大",
+          "pts": 11,
+          "gp": 9,
+          "prev_rank": 7,
+          "score": 1.041,
+          "logo": "logos/105.png"
+        },
+        {
+          "rank": 12,
           "team": "博洛尼亚",
           "pts": 11,
           "gp": 9,
           "prev_rank": 8,
           "score": 1.011,
           "logo": "logos/107.png"
-        },
-        {
-          "rank": 12,
-          "team": "亚特兰大",
-          "pts": 10,
-          "gp": 8,
-          "prev_rank": 7,
-          "score": 1.042,
-          "logo": "logos/105.png"
         },
         {
           "rank": 13,
@@ -776,9 +776,9 @@
           "rank": 14,
           "team": "莱切",
           "pts": 9,
-          "gp": 8,
+          "gp": 9,
           "prev_rank": 17,
-          "score": 0.783,
+          "score": 0.75,
           "logo": "logos/113.png"
         },
         {
@@ -820,10 +820,10 @@
         {
           "rank": 19,
           "team": "佛罗伦萨",
-          "pts": 4,
-          "gp": 8,
+          "pts": 5,
+          "gp": 9,
           "prev_rank": 15,
-          "score": 0.606,
+          "score": 0.623,
           "logo": "logos/109.png"
         },
         {
