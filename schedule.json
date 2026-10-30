@@ -1,27 +1,7 @@
 {
-  "updated": "2026-10-31 00:03:11 (北京时间)",
+  "updated": "2026-10-31 04:54:51 (北京时间)",
   "source": "GitHub Actions 自动更新（Polymarket（公开数据））",
   "schedule": [
-    {
-      "league": "法甲",
-      "title": "Le Havre AC vs. Paris Saint-Germain FC",
-      "title_zh": "勒阿弗尔 vs 巴黎圣日耳曼",
-      "team": "Paris Saint-Germain FC",
-      "team_zh": "巴黎圣日耳曼",
-      "home_zh": "勒阿弗尔",
-      "away_zh": "巴黎圣日耳曼",
-      "home_logo": "logos/3236.png",
-      "away_logo": "logos/160.png",
-      "team_logo": "logos/160.png",
-      "prob": 0.755,
-      "start": "2026-10-30T18:00:00+00:00",
-      "rank_gap": 17,
-      "rank_pair": "1 vs 18",
-      "rank_ratio": 18.0,
-      "discount": 0.8,
-      "position_pct": 0.09,
-      "limit_price": 0.6
-    },
     {
       "league": "西甲",
       "title": "Real Betis Balompié vs. Málaga CF",
@@ -53,7 +33,7 @@
       "home_logo": "logos/132.png",
       "away_logo": "logos/124.png",
       "team_logo": "logos/132.png",
-      "prob": 0.735,
+      "prob": 0.725,
       "start": "2026-10-31T17:30:00+00:00",
       "rank_gap": 1,
       "rank_pair": "1 vs 2",
@@ -73,14 +53,14 @@
       "home_logo": "logos/83.png",
       "away_logo": "logos/90.png",
       "team_logo": "logos/83.png",
-      "prob": 0.875,
+      "prob": 0.885,
       "start": "2026-10-31T20:00:00+00:00",
       "rank_gap": 11,
       "rank_pair": "1 vs 12",
       "rank_ratio": 12.0,
       "discount": 0.9,
       "position_pct": 0.11,
-      "limit_price": 0.78
+      "limit_price": 0.79
     },
     {
       "league": "意甲",
@@ -124,7 +104,7 @@
     }
   ],
   "standings": {
-    "updated": "2026-10-30 16:03",
+    "updated": "2026-10-30 20:54",
     "leagues": {
       "英超": [
         {
@@ -840,19 +820,19 @@
         {
           "rank": 1,
           "team": "巴黎圣日耳曼",
-          "pts": 17,
-          "gp": 8,
+          "pts": 20,
+          "gp": 9,
           "prev_rank": 1,
-          "score": 1.614,
+          "score": 1.672,
           "logo": "logos/160.png"
         },
         {
           "rank": 2,
           "team": "雷恩",
           "pts": 16,
-          "gp": 8,
+          "gp": 9,
           "prev_rank": 6,
-          "score": 1.375,
+          "score": 1.317,
           "logo": "logos/169.png"
         },
         {
@@ -893,6 +873,15 @@
         },
         {
           "rank": 7,
+          "team": "尼斯",
+          "pts": 14,
+          "gp": 9,
+          "prev_rank": 16,
+          "score": 0.936,
+          "logo": "logos/2502.png"
+        },
+        {
+          "rank": 8,
           "team": "朗斯",
           "pts": 13,
           "gp": 8,
@@ -901,7 +890,7 @@
           "logo": "logos/175.png"
         },
         {
-          "rank": 8,
+          "rank": 9,
           "team": "马赛",
           "pts": 12,
           "gp": 8,
@@ -910,22 +899,13 @@
           "logo": "logos/176.png"
         },
         {
-          "rank": 9,
+          "rank": 10,
           "team": "洛里昂",
           "pts": 12,
           "gp": 8,
           "prev_rank": 9,
           "score": 1.04,
           "logo": "logos/273.png"
-        },
-        {
-          "rank": 10,
-          "team": "尼斯",
-          "pts": 11,
-          "gp": 8,
-          "prev_rank": 16,
-          "score": 0.847,
-          "logo": "logos/2502.png"
         },
         {
           "rank": 11,
@@ -994,9 +974,9 @@
           "rank": 18,
           "team": "勒阿弗尔",
           "pts": 2,
-          "gp": 8,
+          "gp": 9,
           "prev_rank": 14,
-          "score": 0.49,
+          "score": 0.469,
           "logo": "logos/3236.png"
         }
       ]
