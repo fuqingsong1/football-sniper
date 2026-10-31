@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-31 04:54:51 (北京时间)",
+  "updated": "2026-10-31 08:11:06 (北京时间)",
   "source": "GitHub Actions 自动更新（Polymarket（公开数据））",
   "schedule": [
     {
@@ -104,7 +104,7 @@
     }
   ],
   "standings": {
-    "updated": "2026-10-30 20:54",
+    "updated": "2026-10-31 00:11",
     "leagues": {
       "英超": [
         {
@@ -354,15 +354,6 @@
         },
         {
           "rank": 8,
-          "team": "比利亚雷亚尔",
-          "pts": 12,
-          "gp": 10,
-          "prev_rank": 3,
-          "score": 1.162,
-          "logo": "logos/102.png"
-        },
-        {
-          "rank": 9,
           "team": "塞尔塔",
           "pts": 12,
           "gp": 10,
@@ -371,13 +362,22 @@
           "logo": "logos/85.png"
         },
         {
-          "rank": 10,
+          "rank": 9,
           "team": "阿拉维斯",
           "pts": 12,
           "gp": 10,
           "prev_rank": 13,
           "score": 0.887,
           "logo": "logos/96.png"
+        },
+        {
+          "rank": 10,
+          "team": "比利亚雷亚尔",
+          "pts": 12,
+          "gp": 11,
+          "prev_rank": 3,
+          "score": 1.117,
+          "logo": "logos/102.png"
         },
         {
           "rank": 11,
@@ -408,6 +408,15 @@
         },
         {
           "rank": 14,
+          "team": "西班牙人",
+          "pts": 11,
+          "gp": 11,
+          "prev_rank": 10,
+          "score": 0.842,
+          "logo": "logos/88.png"
+        },
+        {
+          "rank": 15,
           "team": "埃尔切",
           "pts": 10,
           "gp": 10,
@@ -416,7 +425,7 @@
           "logo": "logos/3751.png"
         },
         {
-          "rank": 15,
+          "rank": 16,
           "team": "莱万特",
           "pts": 10,
           "gp": 10,
@@ -425,7 +434,7 @@
           "logo": "logos/1538.png"
         },
         {
-          "rank": 16,
+          "rank": 17,
           "team": "巴列卡诺",
           "pts": 9,
           "gp": 9,
@@ -434,22 +443,13 @@
           "logo": "logos/101.png"
         },
         {
-          "rank": 17,
+          "rank": 18,
           "team": "赫塔菲",
           "pts": 9,
           "gp": 10,
           "prev_rank": 7,
           "score": 0.843,
           "logo": "logos/2922.png"
-        },
-        {
-          "rank": 18,
-          "team": "西班牙人",
-          "pts": 8,
-          "gp": 10,
-          "prev_rank": 10,
-          "score": 0.756,
-          "logo": "logos/88.png"
         },
         {
           "rank": 19,
@@ -509,6 +509,15 @@
         },
         {
           "rank": 5,
+          "team": "埃尔弗斯贝格",
+          "pts": 13,
+          "gp": 8,
+          "prev_rank": null,
+          "score": 0.957,
+          "logo": "logos/10388.png"
+        },
+        {
+          "rank": 6,
           "team": "莱比锡红牛",
           "pts": 12,
           "gp": 7,
@@ -517,7 +526,7 @@
           "logo": "logos/11420.png"
         },
         {
-          "rank": 6,
+          "rank": 7,
           "team": "云达不莱梅",
           "pts": 12,
           "gp": 7,
@@ -526,22 +535,13 @@
           "logo": "logos/137.png"
         },
         {
-          "rank": 7,
+          "rank": 8,
           "team": "美因茨",
           "pts": 10,
-          "gp": 7,
+          "gp": 8,
           "prev_rank": 10,
-          "score": 0.936,
+          "score": 0.895,
           "logo": "logos/2950.png"
-        },
-        {
-          "rank": 8,
-          "team": "埃尔弗斯贝格",
-          "pts": 10,
-          "gp": 7,
-          "prev_rank": null,
-          "score": 0.864,
-          "logo": "logos/10388.png"
         },
         {
           "rank": 9,
@@ -828,21 +828,21 @@
         },
         {
           "rank": 2,
+          "team": "里尔",
+          "pts": 18,
+          "gp": 9,
+          "prev_rank": 3,
+          "score": 1.423,
+          "logo": "logos/166.png"
+        },
+        {
+          "rank": 3,
           "team": "雷恩",
           "pts": 16,
           "gp": 9,
           "prev_rank": 6,
           "score": 1.317,
           "logo": "logos/169.png"
-        },
-        {
-          "rank": 3,
-          "team": "里尔",
-          "pts": 15,
-          "gp": 8,
-          "prev_rank": 3,
-          "score": 1.354,
-          "logo": "logos/166.png"
         },
         {
           "rank": 4,
@@ -884,9 +884,9 @@
           "rank": 8,
           "team": "朗斯",
           "pts": 13,
-          "gp": 8,
+          "gp": 9,
           "prev_rank": 2,
-          "score": 1.371,
+          "score": 1.314,
           "logo": "logos/175.png"
         },
         {
