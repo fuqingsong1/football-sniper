@@ -1,9 +1,9 @@
 {
-  "updated": "2026-11-03 05:57:46 (北京时间)",
+  "updated": "2026-11-03 11:14:30 (北京时间)",
   "source": "GitHub Actions 自动更新（Polymarket（公开数据））",
   "schedule": [],
   "standings": {
-    "updated": "2026-11-02 21:57",
+    "updated": "2026-11-03 03:14",
     "leagues": {
       "英超": [
         {
@@ -62,6 +62,15 @@
         },
         {
           "rank": 7,
+          "team": "埃弗顿",
+          "pts": 13,
+          "gp": 9,
+          "prev_rank": 12,
+          "score": 1.025,
+          "logo": "logos/368.png"
+        },
+        {
+          "rank": 8,
           "team": "阿斯顿维拉",
           "pts": 12,
           "gp": 9,
@@ -70,7 +79,7 @@
           "logo": "logos/362.png"
         },
         {
-          "rank": 8,
+          "rank": 9,
           "team": "伯恩茅斯",
           "pts": 12,
           "gp": 9,
@@ -79,7 +88,7 @@
           "logo": "logos/349.png"
         },
         {
-          "rank": 9,
+          "rank": 10,
           "team": "热刺",
           "pts": 12,
           "gp": 9,
@@ -88,16 +97,16 @@
           "logo": "logos/367.png"
         },
         {
-          "rank": 10,
+          "rank": 11,
           "team": "纽卡斯尔",
           "pts": 11,
-          "gp": 8,
+          "gp": 9,
           "prev_rank": 13,
-          "score": 0.983,
+          "score": 0.942,
           "logo": "logos/361.png"
         },
         {
-          "rank": 11,
+          "rank": 12,
           "team": "利兹联",
           "pts": 11,
           "gp": 9,
@@ -106,7 +115,7 @@
           "logo": "logos/357.png"
         },
         {
-          "rank": 12,
+          "rank": 13,
           "team": "赫尔城",
           "pts": 11,
           "gp": 9,
@@ -115,22 +124,13 @@
           "logo": "logos/306.png"
         },
         {
-          "rank": 13,
+          "rank": 14,
           "team": "伊普斯维奇",
           "pts": 11,
           "gp": 9,
           "prev_rank": null,
           "score": 0.833,
           "logo": "logos/373.png"
-        },
-        {
-          "rank": 14,
-          "team": "埃弗顿",
-          "pts": 10,
-          "gp": 8,
-          "prev_rank": 12,
-          "score": 0.939,
-          "logo": "logos/368.png"
         },
         {
           "rank": 15,
