@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-05 02:43:03 (北京时间)",
+  "updated": "2026-11-05 07:58:54 (北京时间)",
   "source": "GitHub Actions 自动更新（Polymarket（公开数据））",
   "schedule": [
     {
@@ -33,14 +33,14 @@
       "home_logo": "logos/124.png",
       "away_logo": "logos/10388.png",
       "team_logo": "logos/124.png",
-      "prob": 0.755,
+      "prob": 0.745,
       "start": "2026-11-07T14:30:00+00:00",
       "rank_gap": 5,
       "rank_pair": "2 vs 7",
       "rank_ratio": 3.5,
-      "discount": 0.8,
-      "position_pct": 0.09,
-      "limit_price": 0.6
+      "discount": null,
+      "position_pct": null,
+      "limit_price": null
     },
     {
       "league": "英超",
@@ -61,10 +61,70 @@
       "discount": 0.85,
       "position_pct": 0.1,
       "limit_price": 0.71
+    },
+    {
+      "league": "法甲",
+      "title": "Paris Saint-Germain FC vs. ES Troyes AC",
+      "title_zh": "巴黎圣日耳曼 vs 特鲁瓦",
+      "team": "Paris Saint-Germain FC",
+      "team_zh": "巴黎圣日耳曼",
+      "home_zh": "巴黎圣日耳曼",
+      "away_zh": "特鲁瓦",
+      "home_logo": "logos/160.png",
+      "away_logo": "logos/170.png",
+      "team_logo": "logos/160.png",
+      "prob": 0.875,
+      "start": "2026-11-07T19:45:00+00:00",
+      "rank_gap": 15,
+      "rank_pair": "1 vs 16",
+      "rank_ratio": 16.0,
+      "discount": 0.9,
+      "position_pct": 0.11,
+      "limit_price": 0.78
+    },
+    {
+      "league": "意甲",
+      "title": "AS Roma vs. US Sassuolo Calcio",
+      "title_zh": "罗马 vs 萨索洛",
+      "team": "AS Roma",
+      "team_zh": "罗马",
+      "home_zh": "罗马",
+      "away_zh": "萨索洛",
+      "home_logo": "logos/104.png",
+      "away_logo": "logos/3997.png",
+      "team_logo": "logos/104.png",
+      "prob": 0.755,
+      "start": "2026-11-07T19:45:00+00:00",
+      "rank_gap": 12,
+      "rank_pair": "3 vs 15",
+      "rank_ratio": 5.0,
+      "discount": 0.8,
+      "position_pct": 0.09,
+      "limit_price": 0.6
+    },
+    {
+      "league": "西甲",
+      "title": "Valencia CF vs. Real Madrid CF",
+      "title_zh": "瓦伦西亚 vs 皇家马德里",
+      "team": "Real Madrid CF",
+      "team_zh": "皇家马德里",
+      "home_zh": "瓦伦西亚",
+      "away_zh": "皇家马德里",
+      "home_logo": "logos/94.png",
+      "away_logo": "logos/86.png",
+      "team_logo": "logos/86.png",
+      "prob": 0.755,
+      "start": "2026-11-07T20:00:00+00:00",
+      "rank_gap": 16,
+      "rank_pair": "3 vs 19",
+      "rank_ratio": 6.3,
+      "discount": 0.8,
+      "position_pct": 0.09,
+      "limit_price": 0.6
     }
   ],
   "standings": {
-    "updated": "2026-11-04 18:42",
+    "updated": "2026-11-04 23:58",
     "leagues": {
       "英超": [
         {
