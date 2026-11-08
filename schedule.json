@@ -1,9 +1,9 @@
 {
-  "updated": "2026-11-08 16:06:45 (北京时间)",
+  "updated": "2026-11-08 23:24:07 (北京时间)",
   "source": "GitHub Actions 自动更新（Polymarket（公开数据））",
   "schedule": [],
   "standings": {
-    "updated": "2026-11-08 08:06",
+    "updated": "2026-11-08 15:24",
     "leagues": {
       "英超": [
         {
@@ -218,10 +218,10 @@
         {
           "rank": 4,
           "team": "皇家贝蒂斯",
-          "pts": 23,
-          "gp": 11,
+          "pts": 26,
+          "gp": 12,
           "prev_rank": 5,
-          "score": 1.431,
+          "score": 1.489,
           "logo": "logos/244.png"
         },
         {
@@ -334,21 +334,21 @@
         },
         {
           "rank": 17,
-          "team": "埃尔切",
-          "pts": 10,
-          "gp": 11,
-          "prev_rank": 14,
-          "score": 0.776,
-          "logo": "logos/3751.png"
-        },
-        {
-          "rank": 18,
           "team": "莱万特",
           "pts": 10,
           "gp": 11,
           "prev_rank": 16,
           "score": 0.767,
           "logo": "logos/1538.png"
+        },
+        {
+          "rank": 18,
+          "team": "埃尔切",
+          "pts": 10,
+          "gp": 12,
+          "prev_rank": 14,
+          "score": 0.748,
+          "logo": "logos/3751.png"
         },
         {
           "rank": 19,
@@ -537,10 +537,10 @@
         {
           "rank": 1,
           "team": "拉齐奥",
-          "pts": 28,
-          "gp": 10,
+          "pts": 29,
+          "gp": 11,
           "prev_rank": 9,
-          "score": 1.632,
+          "score": 1.607,
           "logo": "logos/112.png"
         },
         {
@@ -618,10 +618,10 @@
         {
           "rank": 10,
           "team": "那不勒斯",
-          "pts": 14,
-          "gp": 10,
+          "pts": 15,
+          "gp": 11,
           "prev_rank": 2,
-          "score": 1.28,
+          "score": 1.269,
           "logo": "logos/114.png"
         },
         {
