@@ -1,9 +1,30 @@
 {
-  "updated": "2026-11-17 21:39:43 (北京时间)",
+  "updated": "2026-11-18 05:56:06 (北京时间)",
   "source": "GitHub Actions 自动更新（Polymarket（公开数据））",
-  "schedule": [],
+  "schedule": [
+    {
+      "league": "德甲",
+      "title": "FC Bayern München vs. 1. FC Köln",
+      "title_zh": "拜仁慕尼黑 vs 科隆",
+      "team": "FC Bayern München",
+      "team_zh": "拜仁慕尼黑",
+      "home_zh": "拜仁慕尼黑",
+      "away_zh": "科隆",
+      "home_logo": "logos/132.png",
+      "away_logo": "logos/122.png",
+      "team_logo": "logos/132.png",
+      "prob": 0.905,
+      "start": "2026-11-20T19:30:00+00:00",
+      "rank_gap": 14,
+      "rank_pair": "1 vs 15",
+      "rank_ratio": 15.0,
+      "discount": 0.9,
+      "position_pct": 0.11,
+      "limit_price": 0.81
+    }
+  ],
   "standings": {
-    "updated": "2026-11-17 13:39",
+    "updated": "2026-11-17 21:56",
     "leagues": {
       "英超": [
         {
