@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-19 17:33:34 (北京时间)",
+  "updated": "2026-11-20 02:42:00 (北京时间)",
   "source": "GitHub Actions 自动更新（Polymarket（公开数据））",
   "schedule": [
     {
@@ -121,10 +121,70 @@
       "discount": 0.85,
       "position_pct": 0.1,
       "limit_price": 0.71
+    },
+    {
+      "league": "意甲",
+      "title": "Juventus FC vs. Venezia FC",
+      "title_zh": "尤文图斯 vs 威尼斯",
+      "team": "Juventus FC",
+      "team_zh": "尤文图斯",
+      "home_zh": "尤文图斯",
+      "away_zh": "威尼斯",
+      "home_logo": "logos/111.png",
+      "away_logo": "logos/17530.png",
+      "team_logo": "logos/111.png",
+      "prob": 0.725,
+      "start": "2026-11-22T11:30:00+00:00",
+      "rank_gap": 12,
+      "rank_pair": "7 vs 19",
+      "rank_ratio": 2.7,
+      "discount": null,
+      "position_pct": null,
+      "limit_price": null
+    },
+    {
+      "league": "西甲",
+      "title": "FC Barcelona vs. Villarreal CF",
+      "title_zh": "巴塞罗那 vs 比利亚雷亚尔",
+      "team": "FC Barcelona",
+      "team_zh": "巴塞罗那",
+      "home_zh": "巴塞罗那",
+      "away_zh": "比利亚雷亚尔",
+      "home_logo": "logos/83.png",
+      "away_logo": "logos/102.png",
+      "team_logo": "logos/83.png",
+      "prob": 0.815,
+      "start": "2026-11-22T13:00:00+00:00",
+      "rank_gap": 7,
+      "rank_pair": "1 vs 8",
+      "rank_ratio": 8.0,
+      "discount": 0.85,
+      "position_pct": 0.1,
+      "limit_price": 0.69
+    },
+    {
+      "league": "法甲",
+      "title": "Paris FC vs. Angers SCO",
+      "title_zh": "巴黎FC vs 昂热",
+      "team": "Paris FC",
+      "team_zh": "巴黎FC",
+      "home_zh": "巴黎FC",
+      "away_zh": "昂热",
+      "home_logo": "logos/6851.png",
+      "away_logo": "logos/7868.png",
+      "team_logo": "logos/6851.png",
+      "prob": 0.735,
+      "start": "2026-11-22T14:00:00+00:00",
+      "rank_gap": 12,
+      "rank_pair": "3 vs 15",
+      "rank_ratio": 5.0,
+      "discount": null,
+      "position_pct": null,
+      "limit_price": null
     }
   ],
   "standings": {
-    "updated": "2026-11-19 09:33",
+    "updated": "2026-11-19 18:41",
     "leagues": {
       "英超": [
         {
