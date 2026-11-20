@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-20 02:42:00 (北京时间)",
+  "updated": "2026-11-20 08:57:19 (北京时间)",
   "source": "GitHub Actions 自动更新（Polymarket（公开数据））",
   "schedule": [
     {
@@ -21,6 +21,26 @@
       "discount": 0.9,
       "position_pct": 0.11,
       "limit_price": 0.82
+    },
+    {
+      "league": "英超",
+      "title": "Manchester City FC vs. Fulham FC",
+      "title_zh": "曼城 vs 富勒姆",
+      "team": "Manchester City FC",
+      "team_zh": "曼城",
+      "home_zh": "曼城",
+      "away_zh": "富勒姆",
+      "home_logo": "logos/382.png",
+      "away_logo": "logos/370.png",
+      "team_logo": "logos/382.png",
+      "prob": 0.705,
+      "start": "2026-11-21T12:30:00+00:00",
+      "rank_gap": 12,
+      "rank_pair": "3 vs 15",
+      "rank_ratio": 5.0,
+      "discount": null,
+      "position_pct": null,
+      "limit_price": null
     },
     {
       "league": "意甲",
@@ -53,7 +73,7 @@
       "home_logo": "logos/112.png",
       "away_logo": "logos/113.png",
       "team_logo": "logos/112.png",
-      "prob": 0.715,
+      "prob": 0.705,
       "start": "2026-11-21T14:00:00+00:00",
       "rank_gap": 13,
       "rank_pair": "1 vs 14",
@@ -184,7 +204,7 @@
     }
   ],
   "standings": {
-    "updated": "2026-11-19 18:41",
+    "updated": "2026-11-20 00:57",
     "leagues": {
       "英超": [
         {
