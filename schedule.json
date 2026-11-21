@@ -1,87 +1,7 @@
 {
-  "updated": "2026-11-21 19:51:15 (北京时间)",
+  "updated": "2026-11-22 02:18:47 (北京时间)",
   "source": "GitHub Actions 自动更新（Polymarket（公开数据））",
   "schedule": [
-    {
-      "league": "英超",
-      "title": "Manchester City FC vs. Fulham FC",
-      "title_zh": "曼城 vs 富勒姆",
-      "team": "Manchester City FC",
-      "team_zh": "曼城",
-      "home_zh": "曼城",
-      "away_zh": "富勒姆",
-      "home_logo": "logos/382.png",
-      "away_logo": "logos/370.png",
-      "team_logo": "logos/382.png",
-      "prob": 0.705,
-      "start": "2026-11-21T12:30:00+00:00",
-      "rank_gap": 12,
-      "rank_pair": "3 vs 15",
-      "rank_ratio": 5.0,
-      "discount": null,
-      "position_pct": null,
-      "limit_price": null
-    },
-    {
-      "league": "意甲",
-      "title": "Como 1907 vs. Cagliari Calcio",
-      "title_zh": "科莫 vs 卡利亚里",
-      "team": "Como 1907",
-      "team_zh": "科莫",
-      "home_zh": "科莫",
-      "away_zh": "卡利亚里",
-      "home_logo": "logos/2572.png",
-      "away_logo": "logos/2925.png",
-      "team_logo": "logos/2572.png",
-      "prob": 0.765,
-      "start": "2026-11-21T14:00:00+00:00",
-      "rank_gap": 4,
-      "rank_pair": "5 vs 9",
-      "rank_ratio": 1.8,
-      "discount": 0.8,
-      "position_pct": 0.09,
-      "limit_price": 0.61
-    },
-    {
-      "league": "德甲",
-      "title": "Bayer 04 Leverkusen vs. SC Paderborn 07",
-      "title_zh": "勒沃库森 vs 帕德博恩",
-      "team": "Bayer 04 Leverkusen",
-      "team_zh": "勒沃库森",
-      "home_zh": "勒沃库森",
-      "away_zh": "帕德博恩",
-      "home_logo": "logos/131.png",
-      "away_logo": "logos/3307.png",
-      "team_logo": "logos/131.png",
-      "prob": 0.755,
-      "start": "2026-11-21T14:30:00+00:00",
-      "rank_gap": 8,
-      "rank_pair": "5 vs 13",
-      "rank_ratio": 2.6,
-      "discount": 0.8,
-      "position_pct": 0.09,
-      "limit_price": 0.6
-    },
-    {
-      "league": "意甲",
-      "title": "Parma Calcio 1913 vs. AS Roma",
-      "title_zh": "帕尔马 vs 罗马",
-      "team": "AS Roma",
-      "team_zh": "罗马",
-      "home_zh": "帕尔马",
-      "away_zh": "罗马",
-      "home_logo": "logos/115.png",
-      "away_logo": "logos/104.png",
-      "team_logo": "logos/104.png",
-      "prob": 0.795,
-      "start": "2026-11-21T17:00:00+00:00",
-      "rank_gap": 14,
-      "rank_pair": "3 vs 17",
-      "rank_ratio": 5.7,
-      "discount": 0.8,
-      "position_pct": 0.09,
-      "limit_price": 0.63
-    },
     {
       "league": "西甲",
       "title": "Real Madrid CF vs. RC Celta de Vigo",
@@ -95,9 +15,9 @@
       "team_logo": "logos/86.png",
       "prob": 0.845,
       "start": "2026-11-21T20:00:00+00:00",
-      "rank_gap": 10,
-      "rank_pair": "2 vs 12",
-      "rank_ratio": 6.0,
+      "rank_gap": 11,
+      "rank_pair": "2 vs 13",
+      "rank_ratio": 6.5,
       "discount": 0.85,
       "position_pct": 0.1,
       "limit_price": 0.71
@@ -135,9 +55,9 @@
       "team_logo": "logos/83.png",
       "prob": 0.815,
       "start": "2026-11-22T13:00:00+00:00",
-      "rank_gap": 7,
-      "rank_pair": "1 vs 8",
-      "rank_ratio": 8.0,
+      "rank_gap": 8,
+      "rank_pair": "1 vs 9",
+      "rank_ratio": 9.0,
       "discount": 0.85,
       "position_pct": 0.1,
       "limit_price": 0.69
@@ -153,7 +73,7 @@
       "home_logo": "logos/6851.png",
       "away_logo": "logos/7868.png",
       "team_logo": "logos/6851.png",
-      "prob": 0.735,
+      "prob": 0.745,
       "start": "2026-11-22T14:00:00+00:00",
       "rank_gap": 13,
       "rank_pair": "3 vs 16",
@@ -164,7 +84,7 @@
     }
   ],
   "standings": {
-    "updated": "2026-11-21 11:51",
+    "updated": "2026-11-21 18:18",
     "leagues": {
       "英超": [
         {
@@ -188,10 +108,10 @@
         {
           "rank": 3,
           "team": "曼城",
-          "pts": 21,
-          "gp": 10,
+          "pts": 22,
+          "gp": 11,
           "prev_rank": 2,
-          "score": 1.579,
+          "score": 1.557,
           "logo": "logos/382.png"
         },
         {
@@ -205,15 +125,24 @@
         },
         {
           "rank": 5,
-          "team": "切尔西",
-          "pts": 16,
-          "gp": 10,
-          "prev_rank": 10,
-          "score": 1.133,
-          "logo": "logos/363.png"
+          "team": "伯恩茅斯",
+          "pts": 18,
+          "gp": 11,
+          "prev_rank": 6,
+          "score": 1.212,
+          "logo": "logos/349.png"
         },
         {
           "rank": 6,
+          "team": "利兹联",
+          "pts": 17,
+          "gp": 11,
+          "prev_rank": 14,
+          "score": 1.082,
+          "logo": "logos/357.png"
+        },
+        {
+          "rank": 7,
           "team": "埃弗顿",
           "pts": 16,
           "gp": 10,
@@ -222,16 +151,25 @@
           "logo": "logos/368.png"
         },
         {
-          "rank": 7,
-          "team": "伯恩茅斯",
-          "pts": 15,
-          "gp": 10,
-          "prev_rank": 6,
-          "score": 1.14,
-          "logo": "logos/349.png"
+          "rank": 8,
+          "team": "切尔西",
+          "pts": 16,
+          "gp": 11,
+          "prev_rank": 10,
+          "score": 1.089,
+          "logo": "logos/363.png"
         },
         {
-          "rank": 8,
+          "rank": 9,
+          "team": "热刺",
+          "pts": 15,
+          "gp": 11,
+          "prev_rank": 17,
+          "score": 0.95,
+          "logo": "logos/367.png"
+        },
+        {
+          "rank": 10,
           "team": "布伦特福德",
           "pts": 14,
           "gp": 10,
@@ -240,25 +178,16 @@
           "logo": "logos/337.png"
         },
         {
-          "rank": 9,
-          "team": "利兹联",
-          "pts": 14,
-          "gp": 10,
-          "prev_rank": 14,
-          "score": 1.005,
-          "logo": "logos/357.png"
-        },
-        {
-          "rank": 10,
+          "rank": 11,
           "team": "阿斯顿维拉",
-          "pts": 13,
-          "gp": 10,
+          "pts": 14,
+          "gp": 11,
           "prev_rank": 4,
-          "score": 1.136,
+          "score": 1.131,
           "logo": "logos/362.png"
         },
         {
-          "rank": 11,
+          "rank": 12,
           "team": "纽卡斯尔",
           "pts": 12,
           "gp": 10,
@@ -267,16 +196,16 @@
           "logo": "logos/361.png"
         },
         {
-          "rank": 12,
-          "team": "热刺",
+          "rank": 13,
+          "team": "考文垂",
           "pts": 12,
-          "gp": 10,
-          "prev_rank": 17,
-          "score": 0.868,
-          "logo": "logos/367.png"
+          "gp": 11,
+          "prev_rank": null,
+          "score": 0.808,
+          "logo": "logos/388.png"
         },
         {
-          "rank": 13,
+          "rank": 14,
           "team": "赫尔城",
           "pts": 11,
           "gp": 10,
@@ -285,43 +214,43 @@
           "logo": "logos/306.png"
         },
         {
-          "rank": 14,
-          "team": "伊普斯维奇",
-          "pts": 11,
-          "gp": 10,
-          "prev_rank": null,
-          "score": 0.8,
-          "logo": "logos/373.png"
-        },
-        {
           "rank": 15,
           "team": "富勒姆",
-          "pts": 10,
-          "gp": 10,
+          "pts": 11,
+          "gp": 11,
           "prev_rank": 11,
-          "score": 0.893,
+          "score": 0.897,
           "logo": "logos/370.png"
         },
         {
           "rank": 16,
-          "team": "诺丁汉森林",
-          "pts": 9,
-          "gp": 10,
-          "prev_rank": 16,
-          "score": 0.777,
-          "logo": "logos/393.png"
+          "team": "伊普斯维奇",
+          "pts": 11,
+          "gp": 11,
+          "prev_rank": null,
+          "score": 0.769,
+          "logo": "logos/373.png"
         },
         {
           "rank": 17,
-          "team": "考文垂",
+          "team": "桑德兰",
           "pts": 9,
-          "gp": 10,
-          "prev_rank": null,
-          "score": 0.72,
-          "logo": "logos/388.png"
+          "gp": 11,
+          "prev_rank": 7,
+          "score": 0.838,
+          "logo": "logos/366.png"
         },
         {
           "rank": 18,
+          "team": "诺丁汉森林",
+          "pts": 9,
+          "gp": 11,
+          "prev_rank": 16,
+          "score": 0.747,
+          "logo": "logos/393.png"
+        },
+        {
+          "rank": 19,
           "team": "曼联",
           "pts": 8,
           "gp": 10,
@@ -330,21 +259,12 @@
           "logo": "logos/360.png"
         },
         {
-          "rank": 19,
-          "team": "桑德兰",
-          "pts": 8,
-          "gp": 10,
-          "prev_rank": 7,
-          "score": 0.832,
-          "logo": "logos/366.png"
-        },
-        {
           "rank": 20,
           "team": "水晶宫",
           "pts": 7,
-          "gp": 10,
+          "gp": 11,
           "prev_rank": 15,
-          "score": 0.706,
+          "score": 0.679,
           "logo": "logos/384.png"
         }
       ],
@@ -414,21 +334,21 @@
         },
         {
           "rank": 8,
+          "team": "阿拉维斯",
+          "pts": 16,
+          "gp": 13,
+          "prev_rank": 13,
+          "score": 0.935,
+          "logo": "logos/96.png"
+        },
+        {
+          "rank": 9,
           "team": "比利亚雷亚尔",
           "pts": 15,
           "gp": 12,
           "prev_rank": 3,
           "score": 1.187,
           "logo": "logos/102.png"
-        },
-        {
-          "rank": 9,
-          "team": "拉科鲁尼亚",
-          "pts": 15,
-          "gp": 12,
-          "prev_rank": null,
-          "score": 0.889,
-          "logo": "logos/90.png"
         },
         {
           "rank": 10,
@@ -441,6 +361,15 @@
         },
         {
           "rank": 11,
+          "team": "拉科鲁尼亚",
+          "pts": 15,
+          "gp": 13,
+          "prev_rank": null,
+          "score": 0.857,
+          "logo": "logos/90.png"
+        },
+        {
+          "rank": 12,
           "team": "桑坦德竞技",
           "pts": 14,
           "gp": 12,
@@ -449,7 +378,7 @@
           "logo": "logos/87.png"
         },
         {
-          "rank": 12,
+          "rank": 13,
           "team": "塞尔塔",
           "pts": 13,
           "gp": 12,
@@ -458,31 +387,22 @@
           "logo": "logos/85.png"
         },
         {
-          "rank": 13,
-          "team": "阿拉维斯",
-          "pts": 13,
-          "gp": 12,
-          "prev_rank": 13,
-          "score": 0.859,
-          "logo": "logos/96.png"
-        },
-        {
           "rank": 14,
-          "team": "巴列卡诺",
-          "pts": 12,
-          "gp": 11,
-          "prev_rank": 8,
-          "score": 0.917,
-          "logo": "logos/101.png"
-        },
-        {
-          "rank": 15,
           "team": "赫塔菲",
           "pts": 12,
           "gp": 12,
           "prev_rank": 7,
           "score": 0.892,
           "logo": "logos/2922.png"
+        },
+        {
+          "rank": 15,
+          "team": "巴列卡诺",
+          "pts": 12,
+          "gp": 12,
+          "prev_rank": 8,
+          "score": 0.883,
+          "logo": "logos/101.png"
         },
         {
           "rank": 16,
@@ -495,6 +415,15 @@
         },
         {
           "rank": 17,
+          "team": "瓦伦西亚",
+          "pts": 12,
+          "gp": 13,
+          "prev_rank": 9,
+          "score": 0.843,
+          "logo": "logos/94.png"
+        },
+        {
+          "rank": 18,
           "team": "莱万特",
           "pts": 11,
           "gp": 12,
@@ -503,22 +432,13 @@
           "logo": "logos/1538.png"
         },
         {
-          "rank": 18,
+          "rank": 19,
           "team": "埃尔切",
           "pts": 10,
           "gp": 12,
           "prev_rank": 14,
           "score": 0.748,
           "logo": "logos/3751.png"
-        },
-        {
-          "rank": 19,
-          "team": "瓦伦西亚",
-          "pts": 9,
-          "gp": 12,
-          "prev_rank": 9,
-          "score": 0.763,
-          "logo": "logos/94.png"
         },
         {
           "rank": 20,
@@ -533,6 +453,15 @@
       "德甲": [
         {
           "rank": 1,
+          "team": "多特蒙德",
+          "pts": 24,
+          "gp": 10,
+          "prev_rank": 2,
+          "score": 1.733,
+          "logo": "logos/124.png"
+        },
+        {
+          "rank": 2,
           "team": "拜仁慕尼黑",
           "pts": 22,
           "gp": 10,
@@ -541,39 +470,30 @@
           "logo": "logos/132.png"
         },
         {
-          "rank": 2,
-          "team": "多特蒙德",
-          "pts": 21,
-          "gp": 9,
-          "prev_rank": 2,
-          "score": 1.68,
-          "logo": "logos/124.png"
-        },
-        {
           "rank": 3,
           "team": "弗赖堡",
-          "pts": 19,
-          "gp": 9,
+          "pts": 22,
+          "gp": 10,
           "prev_rank": 7,
-          "score": 1.31,
+          "score": 1.378,
           "logo": "logos/126.png"
         },
         {
           "rank": 4,
           "team": "莱比锡红牛",
-          "pts": 18,
-          "gp": 9,
+          "pts": 21,
+          "gp": 10,
           "prev_rank": 3,
-          "score": 1.467,
+          "score": 1.528,
           "logo": "logos/11420.png"
         },
         {
           "rank": 5,
           "team": "勒沃库森",
-          "pts": 16,
-          "gp": 9,
+          "pts": 19,
+          "gp": 10,
           "prev_rank": 6,
-          "score": 1.317,
+          "score": 1.385,
           "logo": "logos/131.png"
         },
         {
@@ -587,15 +507,24 @@
         },
         {
           "rank": 7,
-          "team": "埃尔弗斯贝格",
-          "pts": 13,
-          "gp": 9,
-          "prev_rank": null,
-          "score": 0.917,
-          "logo": "logos/10388.png"
+          "team": "法兰克福",
+          "pts": 15,
+          "gp": 10,
+          "prev_rank": 8,
+          "score": 1.066,
+          "logo": "logos/125.png"
         },
         {
           "rank": 8,
+          "team": "埃尔弗斯贝格",
+          "pts": 13,
+          "gp": 10,
+          "prev_rank": null,
+          "score": 0.88,
+          "logo": "logos/10388.png"
+        },
+        {
+          "rank": 9,
           "team": "斯图加特",
           "pts": 12,
           "gp": 9,
@@ -604,31 +533,22 @@
           "logo": "logos/134.png"
         },
         {
-          "rank": 9,
-          "team": "霍芬海姆",
-          "pts": 12,
-          "gp": 9,
-          "prev_rank": 5,
-          "score": 1.173,
-          "logo": "logos/7911.png"
-        },
-        {
           "rank": 10,
-          "team": "法兰克福",
-          "pts": 12,
-          "gp": 9,
-          "prev_rank": 8,
-          "score": 0.985,
-          "logo": "logos/125.png"
-        },
-        {
-          "rank": 11,
           "team": "汉堡",
           "pts": 12,
           "gp": 9,
           "prev_rank": 13,
           "score": 0.919,
           "logo": "logos/127.png"
+        },
+        {
+          "rank": 11,
+          "team": "霍芬海姆",
+          "pts": 12,
+          "gp": 10,
+          "prev_rank": 5,
+          "score": 1.126,
+          "logo": "logos/7911.png"
         },
         {
           "rank": 12,
@@ -643,9 +563,9 @@
           "rank": 13,
           "team": "帕德博恩",
           "pts": 10,
-          "gp": 9,
+          "gp": 10,
           "prev_rank": null,
-          "score": 0.792,
+          "score": 0.76,
           "logo": "logos/3307.png"
         },
         {
@@ -670,9 +590,9 @@
           "rank": 16,
           "team": "柏林联合",
           "pts": 7,
-          "gp": 9,
+          "gp": 10,
           "prev_rank": 11,
-          "score": 0.722,
+          "score": 0.693,
           "logo": "logos/598.png"
         },
         {
@@ -688,9 +608,9 @@
           "rank": 18,
           "team": "门兴",
           "pts": 4,
-          "gp": 9,
+          "gp": 10,
           "prev_rank": 12,
-          "score": 0.586,
+          "score": 0.562,
           "logo": "logos/268.png"
         }
       ],
@@ -698,10 +618,10 @@
         {
           "rank": 1,
           "team": "拉齐奥",
-          "pts": 29,
-          "gp": 11,
+          "pts": 32,
+          "gp": 12,
           "prev_rank": 9,
-          "score": 1.607,
+          "score": 1.659,
           "logo": "logos/112.png"
         },
         {
@@ -724,21 +644,21 @@
         },
         {
           "rank": 4,
+          "team": "科莫",
+          "pts": 26,
+          "gp": 12,
+          "prev_rank": 4,
+          "score": 1.586,
+          "logo": "logos/2572.png"
+        },
+        {
+          "rank": 5,
           "team": "AC米兰",
           "pts": 24,
           "gp": 11,
           "prev_rank": 5,
           "score": 1.561,
           "logo": "logos/103.png"
-        },
-        {
-          "rank": 5,
-          "team": "科莫",
-          "pts": 23,
-          "gp": 11,
-          "prev_rank": 4,
-          "score": 1.531,
-          "logo": "logos/2572.png"
         },
         {
           "rank": 6,
@@ -771,9 +691,9 @@
           "rank": 9,
           "team": "卡利亚里",
           "pts": 16,
-          "gp": 11,
+          "gp": 12,
           "prev_rank": 14,
-          "score": 1.007,
+          "score": 0.97,
           "logo": "logos/2925.png"
         },
         {
@@ -816,9 +736,9 @@
           "rank": 14,
           "team": "莱切",
           "pts": 10,
-          "gp": 11,
+          "gp": 12,
           "prev_rank": 17,
-          "score": 0.731,
+          "score": 0.704,
           "logo": "logos/113.png"
         },
         {
