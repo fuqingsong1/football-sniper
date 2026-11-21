@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-21 06:44:24 (北京时间)",
+  "updated": "2026-11-21 11:34:52 (北京时间)",
   "source": "GitHub Actions 自动更新（Polymarket（公开数据））",
   "schedule": [
     {
@@ -41,26 +41,6 @@
       "discount": 0.8,
       "position_pct": 0.09,
       "limit_price": 0.6
-    },
-    {
-      "league": "意甲",
-      "title": "SS Lazio vs. US Lecce",
-      "title_zh": "拉齐奥 vs 莱切",
-      "team": "SS Lazio",
-      "team_zh": "拉齐奥",
-      "home_zh": "拉齐奥",
-      "away_zh": "莱切",
-      "home_logo": "logos/112.png",
-      "away_logo": "logos/113.png",
-      "team_logo": "logos/112.png",
-      "prob": 0.705,
-      "start": "2026-11-21T14:00:00+00:00",
-      "rank_gap": 13,
-      "rank_pair": "1 vs 14",
-      "rank_ratio": 14.0,
-      "discount": null,
-      "position_pct": null,
-      "limit_price": null
     },
     {
       "league": "德甲",
@@ -184,7 +164,7 @@
     }
   ],
   "standings": {
-    "updated": "2026-11-20 22:44",
+    "updated": "2026-11-21 03:34",
     "leagues": {
       "英超": [
         {
