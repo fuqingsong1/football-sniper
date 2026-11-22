@@ -1,27 +1,7 @@
 {
-  "updated": "2026-11-22 11:21:06 (北京时间)",
+  "updated": "2026-11-22 19:42:49 (北京时间)",
   "source": "GitHub Actions 自动更新（Polymarket（公开数据））",
   "schedule": [
-    {
-      "league": "意甲",
-      "title": "Juventus FC vs. Venezia FC",
-      "title_zh": "尤文图斯 vs 威尼斯",
-      "team": "Juventus FC",
-      "team_zh": "尤文图斯",
-      "home_zh": "尤文图斯",
-      "away_zh": "威尼斯",
-      "home_logo": "logos/111.png",
-      "away_logo": "logos/17530.png",
-      "team_logo": "logos/111.png",
-      "prob": 0.715,
-      "start": "2026-11-22T11:30:00+00:00",
-      "rank_gap": 12,
-      "rank_pair": "7 vs 19",
-      "rank_ratio": 2.7,
-      "discount": null,
-      "position_pct": null,
-      "limit_price": null
-    },
     {
       "league": "西甲",
       "title": "FC Barcelona vs. Villarreal CF",
@@ -33,7 +13,7 @@
       "home_logo": "logos/83.png",
       "away_logo": "logos/102.png",
       "team_logo": "logos/83.png",
-      "prob": 0.825,
+      "prob": 0.835,
       "start": "2026-11-22T13:00:00+00:00",
       "rank_gap": 8,
       "rank_pair": "1 vs 9",
@@ -53,18 +33,18 @@
       "home_logo": "logos/6851.png",
       "away_logo": "logos/7868.png",
       "team_logo": "logos/6851.png",
-      "prob": 0.745,
+      "prob": 0.755,
       "start": "2026-11-22T14:00:00+00:00",
       "rank_gap": 13,
       "rank_pair": "3 vs 16",
       "rank_ratio": 5.3,
-      "discount": null,
-      "position_pct": null,
-      "limit_price": null
+      "discount": 0.8,
+      "position_pct": 0.09,
+      "limit_price": 0.6
     }
   ],
   "standings": {
-    "updated": "2026-11-22 03:21",
+    "updated": "2026-11-22 11:42",
     "leagues": {
       "英超": [
         {
