@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-27 16:50:09 (北京时间)",
+  "updated": "2026-11-28 02:30:22 (北京时间)",
   "source": "GitHub Actions 自动更新（Polymarket（公开数据））",
   "schedule": [
     {
@@ -13,14 +13,14 @@
       "home_logo": "logos/127.png",
       "away_logo": "logos/132.png",
       "team_logo": "logos/132.png",
-      "prob": 0.775,
+      "prob": 0.765,
       "start": "2026-11-28T14:30:00+00:00",
       "rank_gap": 10,
       "rank_pair": "2 vs 12",
       "rank_ratio": 6.0,
       "discount": 0.8,
       "position_pct": 0.09,
-      "limit_price": 0.62
+      "limit_price": 0.61
     },
     {
       "league": "法甲",
@@ -33,14 +33,14 @@
       "home_logo": "logos/160.png",
       "away_logo": "logos/273.png",
       "team_logo": "logos/160.png",
-      "prob": 0.815,
+      "prob": 0.825,
       "start": "2026-11-28T19:45:00+00:00",
       "rank_gap": 9,
       "rank_pair": "1 vs 10",
       "rank_ratio": 10.0,
       "discount": 0.85,
       "position_pct": 0.1,
-      "limit_price": 0.69
+      "limit_price": 0.7
     },
     {
       "league": "意甲",
@@ -124,7 +124,7 @@
     }
   ],
   "standings": {
-    "updated": "2026-11-27 08:50",
+    "updated": "2026-11-27 18:30",
     "leagues": {
       "英超": [
         {
