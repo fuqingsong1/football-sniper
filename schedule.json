@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-26 23:51:30 (北京时间)",
+  "updated": "2026-11-27 08:06:55 (北京时间)",
   "source": "GitHub Actions 自动更新（Polymarket（公开数据））",
   "schedule": [
     {
@@ -101,10 +101,30 @@
       "discount": 0.85,
       "position_pct": 0.1,
       "limit_price": 0.68
+    },
+    {
+      "league": "意甲",
+      "title": "AS Roma vs. AC Monza",
+      "title_zh": "罗马 vs 蒙扎",
+      "team": "AS Roma",
+      "team_zh": "罗马",
+      "home_zh": "罗马",
+      "away_zh": "蒙扎",
+      "home_logo": "logos/104.png",
+      "away_logo": "logos/4007.png",
+      "team_logo": "logos/104.png",
+      "prob": 0.815,
+      "start": "2026-11-29T17:00:00+00:00",
+      "rank_gap": 13,
+      "rank_pair": "2 vs 15",
+      "rank_ratio": 7.5,
+      "discount": 0.85,
+      "position_pct": 0.1,
+      "limit_price": 0.69
     }
   ],
   "standings": {
-    "updated": "2026-11-26 15:51",
+    "updated": "2026-11-27 00:06",
     "leagues": {
       "英超": [
         {
